@@ -1,0 +1,4 @@
+![[Semigruppo]]
+![[Monoide]]
+![[Gruppo]]
+![[Anello]]
