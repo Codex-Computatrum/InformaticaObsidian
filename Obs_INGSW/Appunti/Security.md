@@ -1,0 +1,1 @@
+The ability of the system to protect itself against accidental or deliberate intrusion.
