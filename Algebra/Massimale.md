@@ -1,6 +1,6 @@
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]]:
 
-$$D \in S \text{ è un massimale} \iff \nexists x \in S (x > D)$$ ^c13a1a
+$$d \in S \text{ è un massimale} \iff \nexists x \in S (x > d)$$ ^c13a1a
 ## Teorema
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]]: un [[Massimo|massimo]] è sempre un massimale ed è l'unico massimale. $\cancel{\impliedby}$
 $$a = max(S) \implies a \text{ unico massimale}$$
