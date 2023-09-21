@@ -1,5 +1,6 @@
 ---
-tags:
+layout: pages
+title: Congruenza
 ---
 Siano $a,b,m \in \mathbb{Z}$
 $$a \equiv_m b \iff \frac{m}{(a,b)} \iff \exists c \in \mathbb{Z} : a-b=cm$$
