@@ -1,7 +1,6 @@
 ---
 author: Simone Parente Martone, Mario Penna
 tags:
-  - Strutture_algebriche
 ---
 Sia $(A,+,\cdot)$ un [[Dominio di integrità|dominio di integrità]] e siano $a,b \in A$. Si dice che:
 - $a$ è un divisore di $b$ ^caf605

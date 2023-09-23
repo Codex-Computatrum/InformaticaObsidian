@@ -1,10 +1,5 @@
 ---
 tags:
-- Strutture_algebriche
-- commutativa
-- associativa
-- distributiva
-- simmetrico
 author: Simone Parente Martone, Mario Penna
 ---
 Sia $(S, +, \cdot)$ una struttura algebrica:

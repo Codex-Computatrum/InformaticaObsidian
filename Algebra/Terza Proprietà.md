@@ -1,7 +1,6 @@
 ---
 author: Simone Parente Martone, Mario Penna
 tags:
-  - Corrispondenze/ClassiDiEquivalenza/Proprietà
 ---
 Siano $A$ un insieme, $\rho$ una relazione di equivalenza definita su $A$ e siano $a,b \in A$.
 Allora:
