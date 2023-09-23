@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Sia $\rho$ una [[- Corrispondenza|relazione]] definita su A.
 
 $\rho$ è una relazione d'ordine se e solo se è:

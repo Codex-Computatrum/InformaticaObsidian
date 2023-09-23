@@ -1,3 +1,6 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
 Sia data $\forall n \in \mathbb{N} (n \leq n_0)$ una proposizione $P(n)$ .
 Se sono soddisfatte le seguenti condizioni:
 1. $P(n_0)$ è vera <span style="color:red">BASE INDUTTIVA</span>

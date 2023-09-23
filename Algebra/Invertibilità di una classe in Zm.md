@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Sia $m \in \mathbb{N} \backslash \{0\}$ e sia $a \in \mathbb{Z} \backslash \{\overline{0}\}$.
 $\overline{a}$ è invertibile in $Z_m \iff MCD(a,m)[>0]=1$
 ### Dimostrazione

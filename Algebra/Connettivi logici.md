@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 I connettivi logici sono parole o simboli che collegano tra loro due o più proposizioni. I connettivi logici più comuni sono:
 - **E** ($\land$) - La proposizione composta è vera se tutte le proposizioni collegate sono vere.
 - **O** ($\lor$) - La proposizione composta è vera se almeno una delle proposizioni collegate è vera.

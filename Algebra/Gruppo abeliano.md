@@ -1,4 +1,5 @@
 ---
+author: Simone Parente Martone, Mario Penna
 tags:
 - Strutture_algebriche
 - commutativa

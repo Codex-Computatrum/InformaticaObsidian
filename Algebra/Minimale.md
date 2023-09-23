@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]]:
 
 $$c \in S \text{ è un minimale} \iff \nexists x \in S (x <c)$$ ^12dc8b

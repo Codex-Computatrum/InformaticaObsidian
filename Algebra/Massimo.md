@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]] e  $a \in S$ e [[confrontabile]] con tutti gli elementi di $S$:
 
 $$b = max(S) \iff \forall x \in S (b\geq x)$$ ^3e0315

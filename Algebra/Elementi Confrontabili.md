@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Sia $(A, \rho)$ un [[insieme ordinato]]:
 
 $$a, b \in A \text{ sono confrontabili} \iff (a\rho b) \lor (b \rho a)$$

@@ -1,6 +1,5 @@
 ---
-layout: pages
-title: Congruenza
+author: Simone Parente Martone, Mario Penna
 ---
 Siano $a,b,m \in \mathbb{Z}$
 $$a \equiv_m b \iff \frac{m}{(a,b)} \iff \exists c \in \mathbb{Z} : a-b=cm$$

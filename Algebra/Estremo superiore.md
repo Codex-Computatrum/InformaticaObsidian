@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]] e sia $X \subseteq S$
 $b \in S \text{ è estremo superiore} \iff b$  è il [[Minimo|minimo]] dei [[Maggiorante|maggioranti]] di X
 $$b \in S \text{ è estremo superiore} \iff$$ ^a51f40

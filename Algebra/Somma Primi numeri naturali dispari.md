@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Supponiamo di voler dimostrare
 	$P(n)$ = la somma dei primi $n \in \mathbb{N}/n$  dispari è $n^2$
 

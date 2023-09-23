@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Sia $(S, +, \cdot)$ una struttura algebrica:
 1. $(S,+)$ è un [[Gruppo abeliano|gruppo abeliano]].
 2. $(S,\cdot)$ è un [[Gruppo abeliano|gruppo abeliano]].

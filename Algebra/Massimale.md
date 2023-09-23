@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]]:
 
 $$d \in S \text{ è un massimale} \iff \nexists x \in S (x > d)$$ ^c13a1a

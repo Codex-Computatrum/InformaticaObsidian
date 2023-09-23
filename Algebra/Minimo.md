@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]] e  $a \in S$ e [[confrontabile]] con tutti gli elementi di $S$:
 
 $$a = min(S) \iff \forall x \in S (a \leq x)$$ ^fad11a

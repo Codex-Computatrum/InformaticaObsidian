@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 I diagrammi di Hasse sono rappresentazioni grafiche utilizzate per visualizzare e analizzare relazioni d'ordine in un [[Insieme Ordinato|insieme ordinato]] finito.
 
 ---

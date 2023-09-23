@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 - per il 2, è possibile stabilire che qualsiasi numero naturale è divisibile per due quando esso è pari o termina con 0, 2, 4 e 6;
 - per il 3, invece, un numero risulta divisibile per 3 quando la somma delle sue cifre è a sua volta divisibile per 3: quindi se si tratta di 3, 6, 9, 12 e così via;
     89546518654

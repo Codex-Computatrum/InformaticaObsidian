@@ -1,3 +1,7 @@
+---
+author: Simone Parente Martone, Mario Penna
+---
+
 Data la struttura algebrica $(S, \star): a \in S$ è invertibile $\leftrightarrow \exists b \in S : a \star b = b \star a = \epsilon$
 ## Proprietà
 - Il simmetrico di un elemento è **unico** (per ogni operazione): $b$ è l'unico simmetrico di $a$.
