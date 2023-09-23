@@ -1,7 +1,9 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - theorem
+  - to-do
 ---
-
 Supponiamo di voler dimostrare
 	$P(n)$ = la somma dei primi $n \in \mathbb{N}/n$  dispari è $n^2$
 

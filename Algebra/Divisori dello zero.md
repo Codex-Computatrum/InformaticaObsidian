@@ -1,6 +1,8 @@
 ---
 author: Simone Parente Martone, Mario Penna
 tags:
+  - definition/property
+  - example
 ---
 Un divisore dello zero è un elemento di un [[Anello|anello]] del tipo $(A,\cdot, \star)$ tale che:
 $$a \in A, \exists b \in A : a \star b = 0 \; \lor \; b \star a = 0$$

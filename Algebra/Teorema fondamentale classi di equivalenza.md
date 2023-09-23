@@ -1,6 +1,8 @@
 ---
 author: Simone Parente Martone, Mario Penna
 tags:
+  - theorem
+  - example
 ---
 Sia $A \neq \emptyset$.
 1. Se $\rho$ è una [[Relazione di equivalenza|relazione di equivalenza]] definita su $A$, allora l'insieme quoziente $\frac{A}{\rho}$ è una partizione di $A$.

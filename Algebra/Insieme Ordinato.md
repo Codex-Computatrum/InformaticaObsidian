@@ -1,7 +1,10 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - definition
+  - basics
+  - example
 ---
-
 Un insieme si definisce ordinato se al suo interno è definita una [[Relazioni d'ordine|relazione d'ordine]].
 ### Esempio
 #### Relazione d'ordine usuale in $\mathbb{Z (\leq)}$

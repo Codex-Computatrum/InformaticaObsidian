@@ -1,7 +1,9 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - example
+  - definition/property/structure
 ---
-
 Una **relazione binaria definita su $A$** è una tripletta del tipo $(A,A, \rho)$ con $\rho \subseteq A \times A$.
 Supponiamo che $\rho$ sia una qualsiasi relazione binaria definita su $A$:
 ![[Riflessiva#^riflessiva]]

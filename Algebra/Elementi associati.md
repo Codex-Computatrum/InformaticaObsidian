@@ -1,5 +1,8 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - example
+  - definition/property/structure
 ---
 Sia $a \in A / \{0\}$ e sia $b \in A$, $b$ è **associato** $\iff \exists u \in U(A): b=ua$, dove $U(A)$ è l'insieme degli [[Elementi invertibili (o simmetrizzabili)|invertibili]] di A.
 #### Esempio

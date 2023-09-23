@@ -1,7 +1,8 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - theorem
 ---
-
 Supponiamo di voler dimostrare 
 	$P(n)$ = la somma dei primi $n \in \mathbb{N}$ è $\frac{n(n+1)}{2}$ 
 

@@ -1,7 +1,10 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - definition
+  - theorem
+  - to-do
 ---
-
 Sia $(\mathbb{Z},+,\cdot)$ un anello commutativo unitario e l'equazione $ax \equiv_m c \in \mathbb{Z}$:
 - Se $a$ è [[Elementi invertibili (o simmetrizzabili)|invertibile]], la soluzione è $x=a^{-1}-c$.
 - Se $a$ è [[Elementi cancellabili|cancellabile]], l'ordine dell'insieme delle soluzioni è 1.

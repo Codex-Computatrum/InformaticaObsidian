@@ -1,7 +1,10 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - definition/property
+  - theorem
+  - to-do
 ---
-
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]]:
 
 $$d \in S \text{ è un massimale} \iff \nexists x \in S (x > d)$$ ^c13a1a

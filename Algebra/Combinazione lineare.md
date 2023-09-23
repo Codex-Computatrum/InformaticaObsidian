@@ -1,7 +1,9 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - definition
+  - example
 ---
-
 Una combinazione lineare equivale alla somma di tutti gli elementi moltiplicati per dei valori variabili.
 ### Esempio
 $$a,b,x,y,z \in \mathbb{R} : z=ax+by$$

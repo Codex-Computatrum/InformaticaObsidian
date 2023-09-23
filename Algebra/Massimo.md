@@ -1,8 +1,12 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - definition/property
+  - theorem
+  - example
+  - to-do
 ---
-
-Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]] e  $a \in S$ e [[confrontabile]] con tutti gli elementi di $S$:
+Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]] e  $a \in S$ e [[Elemento Confrontabile|confrontabile]] con tutti gli elementi di $S$:
 
 $$b = max(S) \iff \forall x \in S (b\geq x)$$ ^3e0315
 ### Esempi

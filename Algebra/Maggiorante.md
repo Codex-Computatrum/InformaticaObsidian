@@ -1,7 +1,9 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - definition/property
+  - example
 ---
-
 Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]] e sia $X \subseteq S$
 $$a \text{ è un maggiorante di X} \iff \forall h \in X(a \geq h)$$ ^4a8b90
 ### Esempio 1

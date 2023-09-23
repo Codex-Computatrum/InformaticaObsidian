@@ -1,6 +1,7 @@
 ---
 author: Simone Parente Martone, Mario Penna
 tags:
+  - definition
 ---
 Sia $A$ un insieme e $\rho$ una relazione di equivalenza definita su $A$
 $$[a]_\rho = \{ x \in A (x \rho a) \}$$

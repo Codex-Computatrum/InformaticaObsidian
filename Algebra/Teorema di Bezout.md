@@ -1,7 +1,9 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - theorem
+  - to-do
 ---
-
 Siano $a,b \in \mathbb{Z}, \; d \in MCD(a,b), \; c \in \mathbb{Z}$.
 Queste proposizioni sono equivalenti:
 1. $\exists u,v,k \in \mathbb{Z} \; (d=au+bv) \land (a(u+kb)+b(v-ka))=d$.

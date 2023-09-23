@@ -1,5 +1,8 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - definition
+  - theorem
 ---
 Sia data $\forall n \in \mathbb{N} (n \leq n_0)$ una proposizione $P(n)$ .
 Se sono soddisfatte le seguenti condizioni:

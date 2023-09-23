@@ -1,14 +1,18 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - definition/property
+  - theorem
+  - example
+  - to-do
 ---
-
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]]:
 
 $$c \in S \text{ è un minimale} \iff \nexists x \in S (x <c)$$ ^12dc8b
 
 A differenza del [[Minimo|minimo]]: ^86cb4a
 - Non è detto che un minimale sia unico, possono esisterne di diversi.
-- Non è necessario che sia confrontabile con tutti gli elementi. 
+- Non è necessario che sia [[Elemento Confrontabile|confrontabile]] con tutti gli elementi. 
 ## Teorema
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]]: un [[Minimo|minimo]] è sempre un minimale ed è l'unico minimale. $\cancel{\impliedby}$
 $$a = min(S) \implies a \text{ unico minimale}$$

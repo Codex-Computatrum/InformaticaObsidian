@@ -1,5 +1,6 @@
 ---
 tags:
+  - definition/structure
 author: Simone Parente Martone, Mario Penna
 ---
 Sia $(S, +, \cdot)$ una struttura algebrica:

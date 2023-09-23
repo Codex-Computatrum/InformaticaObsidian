@@ -1,7 +1,9 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - definition/property
+  - example
 ---
-
 Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]] e sia $X \subseteq S$
 $$a \text{ è un minorante di X} \iff \forall h \in X(a \leq h)$$ ^e16006
 ### Esempio

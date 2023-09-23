@@ -1,7 +1,8 @@
 ---
 author: Simone Parente Martone, Mario Penna
+tags:
+  - definition/property
 ---
-
 Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]] e sia $X \subseteq S$
 $a \in S \text{ è estremo inferiore} \iff a$ è il [[Massimo|massimo]] dei [[Minorante|minoranti]] di $X$
 $$a \in S \text{ è estremo inferiore} \iff$$
