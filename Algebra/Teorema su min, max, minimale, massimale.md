@@ -1,5 +1,5 @@
 ---
-author: Simone Parente Martone, Mario Penna
+author: Simone Parente, Mario Penna
 tags:
   - theorem
   - example

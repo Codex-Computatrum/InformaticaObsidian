@@ -1,5 +1,5 @@
 ---
-author: Simone Parente Martone, Mario Penna
+author: Simone Parente, Mario Penna
 tags:
   - definition/property
   - theorem
@@ -7,7 +7,6 @@ tags:
   - to-do
 ---
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]]:
-
 $$c \in S \text{ è un minimale} \iff \nexists x \in S (x <c)$$ ^12dc8b
 
 A differenza del [[Minimo|minimo]]: ^86cb4a
