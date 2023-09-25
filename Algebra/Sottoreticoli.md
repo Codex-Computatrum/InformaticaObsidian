@@ -9,7 +9,7 @@ $$H \text{ è un sottoreticolo di S} \iff \forall x,y \in H((x \lor y) \in H) \l
 Cioè se $\inf(S) = \inf(H) \land \sup(S)=\sup(H)$
 
 ## Esempio
-Sia $S=\{a,b,c,d,e,f\}$ e $H=\{a,b,d,f\}$.
+Sia $S=\{a,b,c,d,e,f\}$ e $H=\{a,c,d,f\}$.
 Il relativo [[Diagrammi di Hasse|diagramma di Hasse]] sarà:
 
 ```start-multi-column
