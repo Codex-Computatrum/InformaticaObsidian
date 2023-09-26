@@ -5,7 +5,7 @@ tags:
   - definition/property
 ---
 
-Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]], in particolare un [[Algebra/Reticolo|reticolo]].
+Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]], in particolare un [[Reticolo|reticolo]].
 ![[Reticolo#^703fff]]
 Definiamo quindi due operazioni reticolari:
 1. $\inf\{x,y\} = x \land y$, $\land$ sta per **intersezione reticolare**
