@@ -18,4 +18,14 @@ $\implies \overline{1} = \overline{ha+km} \implies \overline{1} = \overline{h} \
 Dove $\overline{k} \overline{m} = 0$, di conseguenza $\overline{a}$ è invertibile, con inverso $k$.
 
 #### Esercizio
-Sia $\mathbb{Z}_6$ l'insieme delle classi 
+Sia $\mathbb{Z}_6$ l'insieme delle classi di resto di $6$, cioè:
+$$\mathbb{Z}_6\{\overline{1},\overline{2},\overline{3},\overline{4},\overline{5}\}$$
+L'insieme degli invertibili $U(Z_6)$ è l'insieme degli elementi definiti come:
+$$\exists x \in \mathbb{Z}_6:MCD(x,6)=1$$
+$$MCD(0,6)=6\neq1$$
+$$\textcolor{green}{MCD(1,6)=1}$$
+$$MCD(2,6)=2\neq1$$
+$$MCD(3,6)=3\neq1$$
+$$MCD(4,6)=2\neq1$$
+$$\textcolor{green}{MCD(5,6)=1}$$
+Quindi l'insieme $U(\mathbb{Z}_6)=\{\overline{1},\overline{6}\}$.
