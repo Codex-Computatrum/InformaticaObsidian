@@ -5,7 +5,7 @@ tags:
   - theorem
 ---
 Siano $a,b,m \in \mathbb{Z}$
-$$a \equiv_m b \iff \frac{m}{(a,b)} \iff \exists c \in \mathbb{Z} : a-b=cm$$
+$$a \equiv_m b \iff m|(a-b) \iff \exists c \in \mathbb{Z} : a-b=cm$$
 ###### _Esempio 1_
 $m =5, \ a=7, \ b=10 \implies 7\equiv_5 10 \iff \frac{5}{7-10} = \frac{5}{-3}$
 La congruenza non vale perché $5$ non divide $-3$
@@ -118,10 +118,6 @@ $12 = 7 \cdot 1 + 5$
 $7 = 5 \cdot 1 + 2$
 $5 = 2 \cdot 2 + 1$
  _Scrivi tu mi sto ingrippando, grz_
-
-
-
-
 
 
 
