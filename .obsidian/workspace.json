@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LSO/Slides/3_2_mount.pdf",
+                "file": "LSO/Lezioni/2023-09-29.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LSO/Slides/3_2_mount.pdf",
+                "file": "LSO/Lezioni/2023-09-29.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LSO/Slides/3_2_mount.pdf"
+                "file": "LSO/Lezioni/2023-09-29.md"
               }
             }
           },
@@ -151,7 +151,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "LSO/Slides/3_2_mount.pdf",
+                "file": "LSO/Lezioni/2023-09-29.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -198,10 +198,10 @@
       "graph:Open graph view": false
     }
   },
-  "active": "752c17bc11c92391",
+  "active": "f89777463fd697ef",
   "lastOpenFiles": [
-    "Reti/Lezioni/2023-09-28.md",
     "LSO/Slides/3_2_mount.pdf",
+    "Reti/Lezioni/2023-09-28.md",
     "LSO/Lezioni/2023-09-29.md",
     "LSO/Slides/3.2_mount.pdf",
     "Algebra/Strutture Algebriche.md",
