@@ -7,4 +7,5 @@ tags:
 ![[Semigruppo]]
 ![[Monoide]]
 ![[Gruppo]]
+![[Gruppo abeliano]]
 ![[Anello]]
