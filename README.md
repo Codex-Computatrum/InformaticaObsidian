@@ -6,7 +6,7 @@
 - Per leggerli al meglio, bisogna aprirli dall'app.
 ## ©️ *Creato da*
 
-- 🧑🏻‍💻  [Simone Parente Martone](https://github.com/simoneparente)
+- 🧑🏻‍💻  [Simone Parente](https://github.com/simoneparente)
 - 🧑🏻‍💻  [Mario Penna](https://github.com/bickpenna/)
 - 🧑🏻‍💻  [Lorenzo Tecchia](https://github.com/lorenzotecchia)
 
