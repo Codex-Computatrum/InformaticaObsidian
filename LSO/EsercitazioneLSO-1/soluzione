@@ -1,0 +1,8 @@
+mkdir EsercitazioneLSO-1;
+cd EsercitazioneLSO-1;
+touch provaFile.txt;
+echo $USER $HOSTNAME >> provaFile.txt;
+a=$(cat provaFile.txt);
+a=$a$(ls);
+touch prova;
+echo $a >> prova;
