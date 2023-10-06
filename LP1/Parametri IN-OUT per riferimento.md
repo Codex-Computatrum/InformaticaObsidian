@@ -1,0 +1,1 @@
+Quando viene passato un parametro con *\[MODE]* **IN/OUT** per copia, viene copiato il valore passato dalla funzione chiamante in una variabile locale e qualsiasi modifica apportata vale solo nell'ambiente locale, quando la funzione più "interna" termina, il valore viene ritornato alla funzione "esterna".
