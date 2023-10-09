@@ -3,6 +3,20 @@ I metodi vanno cercati nelle classi dei tipi *dichiarati* degli oggetti e nella 
 Se esiste un override in una sottoclasse e il tipo effettivo dell'object è quello della sottoclasse, la firma scelta sarà quella dell'override
 
 ---
+>[!danger] Importante
+>Prima di continuare, leggere [[Firme candidate|come trovare le firme candidate]].
+
+
+---
+
+>[!tip] Come determinare quale metodo sarà chiamato
+>1. Leggere il tipo della classe dichiarata dell'object che sta effettuando la chiamata (tipo dichiarato).
+>2. Cercare le firme candidate all'interno della suddetta classe e nelle relative superclassi
+>3. Decidere quale è la più specifica
+>4. Controllare il tipo effettivo dell'object che ha effettuato la chiamata, se è presente un override della chiave candidata scelta nella superclasse, il metodo chiamato sarà quello della classe figlia.
+
+
+---
 ## Visibilità dei metodi
 >[!info] 
 >Siano `A` e B delle classi precedentemente dichiarate, e sia `B` sottoclasse di `A`.
@@ -31,3 +45,21 @@ public class Main {
 ```
 ---
 ## Operatore `instanceof`
+>[!important]
+L'operatore `instanceof` in Java viene utilizzato per verificare se un oggetto è un'istanza di una determinata classe.
+Restituisce un valore booleano (`true` o `false`) a seconda se l'oggetto è un'istanza della classe o implementa l'interfaccia specificata.
+
+>[!info] 
+> Siano `A` e `B` classi, e sia `B` sottoclasse di `A`:
+
+```java
+B beta = new B();  
+A alfa = beta;  
+System.out.println(beta.getClass() == alfa.getClass()); //Stampa true
+```
+
+```java
+B beta = new B();  
+A alfa = new A();  
+System.out.println(beta.getClass() == alfa.getClass()); //Stampa false
+```
