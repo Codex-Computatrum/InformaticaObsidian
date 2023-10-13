@@ -1,0 +1,77 @@
+---
+author: Lorenzo Tecchia
+tags:
+  - operation/graph
+  - algorithm
+  - to-do/implementation
+---
+Dato un [[grafo]] [[orientato]] [[Cycle|ciclico]], si richiede di identificare le componenti fortemente connesse e un loro [[Ordinamento Topologico|ordine topologico]] 
+
+Ricordiamo la definizione di Componenti fortemente connesse:
+![[Strongly connected components]]
+
+---
+
+In questo esempio sono cerchiate le componenti fortemente connesse.
+![[Pasted image 20230910163001.png]]
+Così com’è non è possibile calcolare le componenti fortemente connesse, dato che non sappiamo da dove parta la visita.
+Se ad esempio la visita in [[profondità]] partisse da c, troverebbe anche altre componenti:
+- $b,d,e,f$
+- $n$
+- $g,h,i$
+- $j,k,l,m$ 
+e la includerebbe nella sua , formando quindi un'unica componente, il che è sbagliato
+
+Bisogna quindi seguire tre step:
+1. Eseguire l’[[ordinamento]] topologico in profondità su G
+2. Calcolare il grafo trasposto $G^T$ di $G$
+3. Eseguire una $\textbf{DFS}$ leggermente modificata su $G^T$ e sullo [[stack]] $S$ restituito dall’ordinamento topologico
+
+L’ordinamento topologico in profondità, restituisce uno stack $S$ con i vertici ordinati in modo decrescente per tempo di fine visita, ovvero dall’ultimo che finisce al primo che finisce.
+
+La visita in $G^T$ viene fatta sui vertici nello stack $S$ (dall’ord. topologico di prima)
+![[Pasted image 20230910163336.png]]
+- Parte da $a$ ma non ci sono archi uscenti, quindi termina la sua visita.
+- Continua con $o$ ma non ci sono archi uscenti, quindi termina la sua visita.
+- Continua con $c$ ma non ci sono archi uscenti, quindi termina la sua visita.
+- Continua con $j$ c'è un arco uscente quindi scende in $m$:
+	- $m$ scende in $l$
+	- $l$ prova a visitare $j$ ma è stato già scoperto; visita $k$
+	- $k$ prova a visitare $j$ ma  è stato già scoperto.
+	- ***Le viste terminano***
+- E così via per tutti gli altri nodi
+
+Se non avessimo trasposto il grafo, nella prima visita, il nodo $a$ avrebbe trovato $b$ e $c$ come archi uscenti e il risultato sarebbe stato sbagliato.
+
+## Algoritmi
+>[!important] 
+>$$G=<V,E>\;\;\;G^{T}=<V,E^{-1}>$$
+
+![[Pasted image 20230910163935.png|450]]
+- I vertici rimangono gli stessi, quindi faccio una semplice copia.
+- Gli archi sono rappresentati dagli adiacenti di un vertice, in questo caso da $v$ a $w$.
+- Basterà quindi inserire nell’insieme degli archi del grafo trasposto $E_{G^{T}}$ , l’arco che va da $w$ a $v$.
+
+### Strongly [[Connected]] Component
+![[Pasted image 20230910164147.png|450]]
+Il vettore ***scc*** contiene il vertice rappresentante della componente alla quale l’$i$-esimo vertice partecipa.
+
+Ad esempio, la componente $j, k, l, m$ ha come rappresentate $j$ solo perché compare prima nell’ordinamento topologico, ma ognuno di questi vertici sarebbe potuto esserlo.
+- $scc(j):j\;\;\;\;\;j$ si trova nella componente con rappresentante $j$
+- $scc(k):j\;\;\;\;\;k$ si trova nella componente con rappresentante $j$
+- $scc(l):j\;\;\;\;\;l$ si trova nella componente con rappresentante $j$
+- $scc(m):j\;\;\;\;\;m$ si trova nella componente con rappresentante $j$
+
+
+![[Pasted image 20230910164803.png|600]]
+- $Init$ imposta i colori dei vertici a bianco e dichiara un vettore $scc$
+- Scorre i vertici dello stack, ovvero i vertici dell’ordinamento topologico ordinati in ordine inverso sul tempo di fine visita, ed esegue una $\textbf{DFS}$ su di essi.
+![[Pasted image 20230910164902.png|600]]
+- Il parametro $v$ è il vertice rappresentante della componente.
+- Il parametro $w$ è il vertice attuale.
+- Lo scopo è quello di scendere in profondità impostando la componente rappresentante di ogni vertice della componente, ovvero $scc(w) \leftarrow v$ 
+
+## Implementazione
+```C
+// da implementare
+```
