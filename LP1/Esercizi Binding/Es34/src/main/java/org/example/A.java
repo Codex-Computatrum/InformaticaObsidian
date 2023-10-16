@@ -1,0 +1,6 @@
+package org.example;
+
+class A {
+    public String f (Object x, A y, B z) { return "A1"; }
+    private String f(A x, B y, A z) { return "A2"; }
+}
