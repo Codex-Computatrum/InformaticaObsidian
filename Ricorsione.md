@@ -1,3 +1,6 @@
+---
+author: Simone Parente
+---
 >[!summary] Riassunto
 >Una funzione ricorsiva è una funzione espressa in termini di sé stessa, suddividendo il problema in tanti piccoli(ssimi) sottoproblemi di più facile soluzione.
 
