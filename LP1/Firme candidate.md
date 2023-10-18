@@ -12,4 +12,4 @@ Date due firme con stesso nome e numero di argomenti:
 La prima firma è **più specifica** (a prescindere dai parametri passati alla chiamata) della seconda se:
 - T1 è [[Assegnabilità#^b1919b|assegnabile]] a U1
 - ...
-- T2 è [[Assegnabilità#^b1919b|assegnabile]] a U2
+- Tn è [[Assegnabilità#^b1919b|assegnabile]] a Un
