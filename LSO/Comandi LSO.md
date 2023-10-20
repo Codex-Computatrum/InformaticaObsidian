@@ -143,7 +143,7 @@ stampa le righe del file che corrispondono al pattern (è un espressione regolar
 	- -F (Full) anche altro 
 	- -o elenco_campi:  visualizza i campi specificati 
 
-## Sort \[opzions] \[file]
+## Sort \[options] \[file]
 
 - riordina e fonde insieme il cntenuto dei file, o riordina le linee in input 
 	senza opzioni avviene in base al primo campo e in ordine alfabetico
@@ -159,7 +159,7 @@ stampa le righe del file che corrispondono al pattern (è un espressione regolar
 - **tail \[numero] file** : visualizza le ultime n righe di un file , 10 se vuoto  
 ## pipe ( | ) 
 
-- concatena l' output di una funzione nell' input di un altra ( quello di sinistra come input per quello di destra )
+- concatena l'output di una funzione nell' input di un altra ( quello di sinistra come input per quello di destra )
 #### Comandi concatenabili 
 - inizio pipe:
 	echo, ls, (e tutti quelli che scrivono su stdout)
