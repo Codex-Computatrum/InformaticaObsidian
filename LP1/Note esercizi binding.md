@@ -30,7 +30,7 @@ public class Main {
 L'object `alfa` potrà accedere a tutti i metodi di `A` e tutti quelli di `B`.
 
 ---
-## getClass()
+## `getClass()`
 Questo metodo restituisce l'oggetto di tipo Class del riferimento dell'oggetto su cui viene applicato.
 >[!info] 
 >Siano `A` e B delle classi precedentemente dichiarate, e sia `B` sottoclasse di `A`.
@@ -44,22 +44,3 @@ public class Main {
 }
 ```
 ---
-## Operatore `instanceof`
->[!important]
-L'operatore `instanceof` in Java viene utilizzato per verificare se un oggetto è un'istanza di una determinata classe.
-Restituisce un valore booleano (`true` o `false`) a seconda se l'oggetto è un'istanza della classe o implementa l'interfaccia specificata.
-
->[!info] 
-> Siano `A` e `B` classi, e sia `B` sottoclasse di `A`:
-
-```java
-B beta = new B();  
-A alfa = beta;  
-System.out.println(beta.getClass() == alfa.getClass()); //Stampa true
-```
-
-```java
-B beta = new B();  
-A alfa = new A();  
-System.out.println(beta.getClass() == alfa.getClass()); //Stampa false
-```

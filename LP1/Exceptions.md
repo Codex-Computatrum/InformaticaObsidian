@@ -101,7 +101,9 @@ Error <|-- Error_SubClasses
 Le sottoclassi di `Error` e `RuntimeException` sono dette <span style="color:#ff0000">eccezioni  unchecked</span>
 - In particolare, la classe `Error` rappresenta eccezioni lanciate dalla JVM, in genere non vengono catturate perché il programma non sarebbe in grado di riprendersi in queste occasioni.
 - La classe `RuntimeException` rappresenta eventi eccezionali ma dovuti al programma, anche queste non vengono generalmente catturate, sarebbe buona norma risolvere i problemi che le causano.
-## Creazione di nuove `Exceptions`
+>[!fail] Attenzione
+>Le eccezioni <span style="color:#ff0000">unchecked</span> **non devono** essere catturate
+## Creazione di nuove `Exceptions`<span style="color:#ff0000"><span style="color:#ff0000"><span style="color:#ff0000"><span style="color:#ff0000"><span style="color:#ff0000"><span style="color:#ff0000"></span></span></span></span></span></span>
 È possibile creare nuove eccezioni in questo modo: 
 ```Java
 class MiaEccezione extends Exception { ... } // (o estendendo qualunque altra sottoclasse di Exception)
