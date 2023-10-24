@@ -1,1 +1,0 @@
-È la conseguenza dell' [[Most General Unifier|unificazione]], può essere rappresentata come un insieme di coppie variabile-valore, dove ciascuna coppia specifica come una variabile è istanziata.
