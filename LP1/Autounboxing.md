@@ -1,3 +1,8 @@
+---
+author: Simone Parente
+tags:
+  - Java
+---
 >[!summary]
 > L'autounboxing è la conversione automatica che il compilatore Java effettua tra le [[Classi Wrapper|classi wrapper]] degli oggetti e i rispettivi tipi primitivi.
 

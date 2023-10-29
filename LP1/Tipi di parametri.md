@@ -1,3 +1,7 @@
+---
+author: Simone Parente
+---
+
 ![[Parametri IN per copia]]
 ![[Parametri IN per riferimento]]
 ![[Parametri OUT per copia o riferimento]]

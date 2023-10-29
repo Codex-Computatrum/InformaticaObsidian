@@ -2,6 +2,7 @@
 author: Simone Parente
 tags:
   - to-do
+  - Java
 ---
 
 >[!info] 
@@ -35,7 +36,9 @@ Per lanciare un'eccezione bisogna seguire i seguenti passaggi:
 				//succede qualcosa  
 			}  
 		}  }
-```
+---
+
+
 >[!error] Attenzione
 >Non dichiarare nessun blocco `catch` (oppure `finally`, che vedremo dopo) dopo un blocco `try` causa un errore di compilazione.
 ### Il blocco `finally`

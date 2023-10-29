@@ -1,5 +1,7 @@
 ---
 author: Simone Parente
+tags:
+  - Java
 ---
 
 - I metodi “padre” devono essere <span style="color:#ff0000"><b>non private, non static e non final </b></span>.

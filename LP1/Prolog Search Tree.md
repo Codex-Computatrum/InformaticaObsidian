@@ -1,3 +1,9 @@
+---
+author: Simone Parente
+tags:
+  - prolog
+---
+
 >[!summary]  L'idea generale
 >1. Scrivere la query iniziale in un box al centro della pagina, questo box sarà una sorta di to-do list.
 >2. Disegnare le branch basandosi sul numero di clausole definite dal predicato.

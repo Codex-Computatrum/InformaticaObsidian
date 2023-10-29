@@ -1,7 +1,9 @@
 ---
 author: Simone Parente
+tags:
+  - Java
 ---
-# Cast
+## Cast
 
 >[!tldr] TL;DR 
 >Un cast (o coercizione di tipo) è una conversione esplicita di un tipo in un altro.
