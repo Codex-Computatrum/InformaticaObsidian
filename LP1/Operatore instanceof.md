@@ -1,3 +1,8 @@
+---
+author: Simone Parente
+tags:
+  - Java
+---
 # Operatore `instanceof`
 >[!important]
 L'operatore `instanceof` in Java viene utilizzato per verificare se un oggetto è un'istanza di una determinata classe.

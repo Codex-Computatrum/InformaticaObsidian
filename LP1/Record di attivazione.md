@@ -1,3 +1,7 @@
+---
+author: Simone Parente
+---
+
 Il RdA di una funzione contiene (a differenza del blocco anonimo):
 
 - Puntatore di catena dinamica \[link a rda precedente o sottostante (immagina fisicamente una pila)].

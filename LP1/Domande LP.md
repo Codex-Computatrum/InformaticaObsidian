@@ -1,5 +1,5 @@
 ### Todo
-- [ ] Funzioni di ordine superiore ML
+- [x] Funzioni di ordine superiore ML
 - [ ] Funtori
 - [ ] 
 
@@ -24,8 +24,8 @@ Esercizi da voto 21 in giù in genere
 8. Perdita di informazioni dopo conversioni
 	   - Succede solo tramite [[Cast|conversioni esplicite]], alcuni esempi sono le conversioni di un `double` in `int`, in cui viene persa la parte decimale, oppure di un `long` in `int` per numeri superiori a $2.147.483.647$
 9. Esercizio su prolog, dati fatti e regole dire se fanno match utilizzando il MGU
-10. Cos'è il MGU
-11. Differenza tra sostituzione e unificazione in prolog
-12. Come trovare una firma candidata
-13. Early e late binding
-14. Differenza tra modificatori di visibilità
+10. Cos'è il [[Unificazione e MGU|MGU]]
+11. Differenza tra [[Sostituzione|sostituzione]] e [[Unificazione e MGU|unificazione]] in prolog
+12. Come trovare una [[Firme candidate|firma candidata]]
+13. [[Binding|Early e late binding]]
+14. Differenza tra [[Modificatori|modificatori]].

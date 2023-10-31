@@ -1,3 +1,9 @@
+---
+author: Simone Parente
+tags:
+  - Java
+---
+
 La **relazione di assegnabilità** (o _**compatibilità**_) tra tipi stabilisce quando è possibile **assegnare un valore** di un certo tipo `T` ad una variabile di tipo `U`.
 
 Si dice che `T` è **assegnabile** ad `U` se: ^641102

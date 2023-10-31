@@ -1,3 +1,8 @@
+---
+author: Simone Parente
+tags:
+  - Java
+---
 >[!warning] Importante
 I metodi vanno cercati nelle classi dei tipi *dichiarati* degli oggetti e nella superclasse (oltre che in `Object`).
 Se esiste un override in una sottoclasse e il tipo effettivo dell'object è quello della sottoclasse, la firma scelta sarà quella dell'override
