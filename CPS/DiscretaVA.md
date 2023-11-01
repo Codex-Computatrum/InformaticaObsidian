@@ -1,7 +1,10 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, probability, aleatoryVariable]
+tags: [definition, probability, aleatoryVariable, to-do]
 ---
+>[!todo]
+> Inserire grafico
+
 Si dice **discreta** una [[variabile aleatoria]] che può assumere una quantità finita o numerabile di valori.
 
 Se $X$ è una **variabile aleatoria discreta**, la sua _funzione di massa di probabilità_ o _funzione di massa_ di definisce nel modo seguente: $$p(a) = \mathbb{P}(X=a)$$ ^a918c6
