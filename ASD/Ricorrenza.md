@@ -9,7 +9,7 @@ Una ***ricorrenza*** è una equazione o disequazione che descrive una funzione i
 > Per risolvere al pieno equazioni di ricorrenza ricorre in ogni caso, utilizzare un mix dei metodi proposti qui sotto.
 
 >[!important]
-> Permette di descrivere i [[tempi di esecuzione]] degli algoritmi divide et impera.
+> Permette di descrivere i [[Analisi asintotica#Notazione $ Theta$|tempi di esecuzione]] degli algoritmi divide et impera.
 ## Risoluzioni
 ### Sostituzione
 Nel ***metodo di sostituzione***, ipotizziamo un limite e poi usiamo l'induzione matematica per dimostrare che la nostra ipotesi sia corretta

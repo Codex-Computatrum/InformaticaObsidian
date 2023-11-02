@@ -8,17 +8,17 @@ tags:
 >[!todo] 
 >- [ ] Implementazione in C
 
-Un albero **red-black** è un [[albero binario di ricerca]] con un bit aggiuntivo di memoria per ogni nodo: il colore del nodo, che può essere <span style="color:#ff0000"><b>rosso</b></span> o <span style="color:#999999"><b>nero</b></span>
+Un albero **red-black** è un [[albero binario di ricerca]] con un bit aggiuntivo di memoria per ogni nodo: il colore del nodo, che può essere RED o BLACK.
 
 Inoltre i dati sono presenti solo nei nodi interni:
 - Le foglie non contengono dati (contengono il valore `NULL`), sono quindi tutte identiche
 - I genitori delle foglie punteranno tutti ad un unico nodo `NULL` cosi da evitare spreco di memoria.
 ### Vincoli
-1. Tutti i nodi sono o **<span style="color:#ff0000"><b>rossi</b></span> o <span style="color:#999999"><b>neri</b></span>
-2. Tutte le foglie sono **nere**.
-3. Se un nodo è <span style="color:#ff0000"><b>rosso</b></span>, allora entrambi i figli sono <span style="color:#999999"><b>neri</b></span>. Ossia i nodi <span style="color:#ff0000"><b>rossi</b></span> **non possono** avere figli **rossi**:([[Path|path]])
+1. Tutti i nodi sono o **rossi** o **neri**
+2. Tutte le foglie sono **nere**
+3. Se un nodo è rosso, allora entrambi i figli sono neri. Ossia i nodi **rossi** non possono avere figli **rossi**:([[Path|path]])
 $$\forall x \in T, \exists h \in \mathbb{N}: \forall \pi \in Path(x) \lvert \pi \rvert = h$$
-4. Ogni cammino da una radice ad una foglia deve contenere lo stesso numero di nodi <span style="color:#999999"><b>neri</b></span>.
+4. Ogni cammino dalla radice ad una foglia deve contenere lo stesso numero di nodi **neri**.
 ---
 ### [[Altezza]] nera 
 Definiamo altezza nera di un nodo $x$, indicata con $bh(x)$ (black height), il numero di nodi neri lungo un [[Cammino semplice|cammino semplice]] che inizia dal nodo $x$ e finisce a una foglia.
@@ -39,7 +39,7 @@ Il numero di nodi interni è: (Internal Nodes) $IN(x) \geq 2^{bh(h)}-1$
 
 ---
 ### Teorema albero red-black
-![[appuntiIngenito (dragged) copy 3.pdf]]
+![[appuntiIngenito.pdf#page=45]]
 
 ---
 ## Inserimento di un nodo

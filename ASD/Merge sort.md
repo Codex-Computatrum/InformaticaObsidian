@@ -17,7 +17,7 @@ $i \leq q-p$ controlla se l'array $L$ è finito. Infatti la dimensione di $L$ è
 - Nel caso in cui $i>q-p$, l'$if$ sarà falso, dunque entrerà sempre nell'$else$; ovvero inserisce i rimanenti elementi d $R$.
 - Altrimenti controlla lo stesso per il sotto-vettore $R$ con $j \leq r-q$
 #### Analisi
-![[appuntiIngenito (dragged) 1.pdf]]
+![[appuntiIngenito.pdf#page=13]]
 
 ---
 ## Implementazione in C

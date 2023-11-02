@@ -1,6 +1,7 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition]
+tags:
+  - definition
 ---
 Un [[Tree|albero]] di decisione è un [[Albero binario#^ff6165|albero binario completo]] (tutti i nodi hanno entrambi i figli) che rappresenta i confronti fra gli elementi di un array.
 

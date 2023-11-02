@@ -80,7 +80,7 @@ In questo caso utilizziamo come discriminante il fatto che la prima chiamata ven
 
 Il ***return*** viene simulato assegnando il valore da restituire in una variabile (ret, ad esempio)
 
-![[appuntiIngenito (dragged) copy 5.pdf]]
+![[appuntiIngenito.pdf#page=53]]
 
 call è inizialmente `TRUE` perché sta simulando la prima chiamata, oltre al fatto che gli stack sono inizialmente tutti vuoti.
 

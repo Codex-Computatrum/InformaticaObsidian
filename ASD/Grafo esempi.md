@@ -4,7 +4,7 @@ tags:
   - example
 ---
 ## Esempio generale
-![[appuntiIngenito (dragged) copy 4.pdf]]
+![[appuntiIngenito.pdf#page=56]]
 ## Grafo con liste di adiacenza
 ![[Pasted image 20230907114707.png|400]]
 ![[Pasted image 20230907114731.png|400]]

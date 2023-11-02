@@ -5,7 +5,7 @@ tags:
   - algorithm
   - to-do/implementation
 ---
-Dato un [[grafo]] [[orientato]] [[Cycle|ciclico]], si richiede di identificare le componenti fortemente connesse e un loro [[Ordinamento Topologico|ordine topologico]] 
+Dato un [[grafo]] [[orientato]] [[Cycle|ciclico]], si richiede di identificare le componenti fortemente connesse e un loro [[Ordinamento Topologico|ordine topologico]].
 
 Ricordiamo la definizione di Componenti fortemente connesse:
 ![[Strongly connected components]]
@@ -23,7 +23,7 @@ Se ad esempio la visita in [[profondità]] partisse da c, troverebbe anche altr
 e la includerebbe nella sua , formando quindi un'unica componente, il che è sbagliato
 
 Bisogna quindi seguire tre step:
-1. Eseguire l’[[ordinamento]] topologico in profondità su G
+1. Eseguire l’[[ordinamento]] [[Ordinamento Topologico|topologico]] in profondità su G
 2. Calcolare il grafo trasposto $G^T$ di $G$
 3. Eseguire una $\textbf{DFS}$ leggermente modificata su $G^T$ e sullo [[stack]] $S$ restituito dall’ordinamento topologico
 

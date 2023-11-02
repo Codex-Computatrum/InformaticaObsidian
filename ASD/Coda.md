@@ -5,7 +5,7 @@ tags:
   - dataStructure
   - to-do/implementation
 ---
->[!todo] 
+m[!todo] 
 >- [ ] Implementazione in C
 
 Una ***coda*** è un tipo di dati astratto che viene usato per riferirsi a [[Struttura dati|strutture dati]], le cui modalità di accesso sono di tipo: **FIFO**, ovvero **Fast In First Out**. Il primo elemento elemento inserito è il primo ad essere eliminato.

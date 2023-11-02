@@ -24,7 +24,7 @@ $$\sum^{n}_{i=1}T_{insert}(A,i) = \sum^{n}_{i=1}\Theta (k^{A}_{i}) = \Theta(\sum
 	$$\sum^{n}_{i=1}1 = n \rightarrow \Theta(n)$$
 	`Esempio: 0 1 2 3 4 5 6 7 8 9 10`
 #### [[Analisi asintotica|Analisi]] dell'algoritmo ricorsivo
-![[appuntiIngenito (dragged) 2.pdf]]
+![[appuntiIngenito.pdf#page=13]]
 
 ---
 ## Implementazione in C

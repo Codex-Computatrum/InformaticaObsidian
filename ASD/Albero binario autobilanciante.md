@@ -21,7 +21,7 @@ In particolare, se ad una certa altezza ho il minimo numero di nodi, allora ho l
 
 Si osserva dunque, che se si dimostra che per gli **AVL** minimi $h = \Theta(\log(n))$ allora lo è anche per quelli non minimi (ovvero per tutti gli **AVL**).
 
-![[AVLminimiIngenito.pdf]]
+![[appuntiIngenito.pdf#page=37]]
 
 ---
 ## Inserimento di un nodo
@@ -74,7 +74,7 @@ Riparare, e quindi mantenere, la struttura di **AVL** dopo un inserimento, ha te
 >La cancellazione porta gli stessi problemi dell'inserimento e si risolvono allo stesso modo
 
 ![[Pasted image 20230831170902.png]]
-![[appuntiIngenito (dragged) copy 2.pdf]]
+![[appuntiIngenito.pdf#page=41]]
 
 ---
 ## Funzionamento algoritmi per rotazioni
@@ -119,20 +119,6 @@ Riparare, e quindi mantenere, la struttura di **AVL** dopo un inserimento, ha te
 - Ha tempo costante, in quanto tutte le funzioni che chiama sono a tempo costante
 ---
 ### Inserimento e cancellazione
-
-	InsertAVL(T,K)
-		if T != NIL then
-			if T->key < k then
-				T->dx = InsertAVL(T->dx,k)
-				T = BilanciaDx(T)
-			else if T->key > k then
-				T->sx = InsertAVL(T->sx)
-				T=BilanciaSx(T)
-			else
-				T = newNodo(k)
-				T->h=0
-		return T
-
 ![[Pasted image 20230831174124.png|400]]
 - Simile all’inserimento in un **BST** ma con la differenza che bisogna bilanciare l’albero.
 - Se inserisco a sinistra, rendo potenzialmente il sotto-albero sinistro più profondo del destro, effettuo quindi un $\textbf{LeftBalanceAVL}$.

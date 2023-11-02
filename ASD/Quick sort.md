@@ -7,7 +7,7 @@ tags:
 >[!todo] 
 >- [ ] Implementazione in C
 
-Quick sort è un [[algoritmo]] che impiega, nel caso peggiore, $\Theta(n^2)$.
+Quick sort è un [[algoritmo]] di [[ordinamento]] che impiega, nel caso peggiore, $\Theta(n^2)$.
 Mediamente però, impiega $\Theta(n\log(n))$ con costanti moltiplicative molto basse.
 
 Nel quick sort, il [[dividi et impera]] agisce in questo modo:
@@ -32,7 +32,7 @@ Essendo $i$ incrementato all’interno di un `repeat until` (quindi almeno una v
 > Per sviluppare una nozione chiara del caso medio di Quicksort, dobbiamo fare un'ipotesi su quanto frequentemente prevediamo di incontrare i vari input
 
 
-![[appuntiIngenito (dragged) 3.pdf]]
+![[appuntiIngenito.pdf#page=24-25]]
 
 ---
 ## Implementazione in C
