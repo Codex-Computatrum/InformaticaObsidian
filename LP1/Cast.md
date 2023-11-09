@@ -16,11 +16,11 @@ Nel passaggio da numeri con la virgola a numeri interi, si può perdere sia in p
 Questi casting sono in generale sconsigliati, è opportuno utilizzare gli appositi metodi della classe `Math`.
 ## Cast consentiti
 Siano `A` e `B` dei tipi riferimento (o array):
-1. Se `B` è supertipo di `A`:
+1. Se `B` è supertipo di `A`: ^2561af
     1. Si chiama _**upcast**_ ed è superfluo, perché i valori di tipo `A` sono a prescindere assegnabili al tipo `B` ([[Assegnabilità|relazioni di assegnabilità]])
 2. Se `B` è sottotipo di `A`:
     - Si chiama _downcast_
     - A run-time la JVM controlla che l’oggetto da convertire appartenga effettivamente a una sottoclasse di `B`
         - In caso contrario avremo una `ClassCastException`
 
-In generale **è preferibile** <span style="color:#ff0000"> <b> <i>evitare i downcast </i> </b> </span>, perché essi **aggirano il type checking svolto dal compilatore**. Se si deve necessariamente usare un _downcast_, esso dovrebbe essere preceduto da un controllo [[Note esercizi binding#^instanceof|instanceof]], così da assicurare la correttezza della conversione.
+In generale **è preferibile** <span style="color:#ff0000"> <b> <i>evitare i downcast </i> </b> </span>, perché essi **aggirano il type checking svolto dal compilatore**. Se si deve necessariamente usare un _downcast_, esso dovrebbe essere preceduto da un controllo [[Operatore instanceof|instanceof]], così da assicurare la correttezza della conversione.

@@ -15,7 +15,7 @@ Sia $E$ un'espressione, cioè:
 - un fatto
 - una query
 - oppure una regola
-l'applicazione di $\theta$ ad $E$, denotata con $E \theta$, **sostituisce** tutte le occorrenze della variabili $\textcolor{lime}{X_i}$ in $E$ con i corrispettivi termini $\textcolor{cyan}{t_i}$.
+l'applicazione di $\theta$ ad $E$, denotata con $E \theta$, **sostituisce** tutte le occorrenze delle variabili $\textcolor{lime}{X_i}$ in $E$ con i corrispettivi termini $\textcolor{cyan}{t_i}$.
 
 ## Esempio
 Sia $E_1 = sum(A,B,C)$ e $E_2 = sum(X,0,X)$.

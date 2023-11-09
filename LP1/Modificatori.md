@@ -5,7 +5,7 @@
 >- Attributi
 >- Metodi e costruttori
 >
->NB: le variabili locali non supportano modificatori hanno visibilità solo nel blocco in cui vengono dichiarate.
+>NB: le variabili locali non supportano modificatori e hanno visibilità solo nel blocco in cui vengono dichiarate.
 
 ![[public]]
 

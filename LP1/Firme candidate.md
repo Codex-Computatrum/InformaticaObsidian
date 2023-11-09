@@ -4,7 +4,7 @@ tags:
   - Java
 ---
 >[!attention] 
->Per *firma* di un metodo si intende il suo nome e l'elenco dei tipi e dei nomi dei suoi parametri formali
+>Per *firma* di un metodo si intende il suo nome, l'elenco dei tipi e l'elenco dei nomi dei suoi parametri formali
 
 Consideriamo una invocazione `x.f(y1,...,yn)`
 Una firma `f(T1 a,..., Tn z)` è *candidata* per la chiamata in questione se:

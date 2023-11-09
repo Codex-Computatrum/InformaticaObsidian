@@ -15,8 +15,10 @@ Per lanciare un'eccezione bisogna seguire i seguenti passaggi:
 		public static void main() throws Exception{
 		}
 	}
-```
+
+
 2. Lanciare l'eccezione all'interno di un blocco `try`.
+
 	```Java
 	class A{
 		public static void main() throws Exception{  
@@ -25,7 +27,9 @@ Per lanciare un'eccezione bisogna seguire i seguenti passaggi:
 			}  
 		}
 	}
-```
+
+
+
 3.  Creare uno o più blocchi `catch` che possano catturarla
 	```Java
 	class A{  
@@ -101,7 +105,7 @@ Error <|-- Error_SubClasses
 
 ```
 
-Le sottoclassi di `Error` e `RuntimeException` sono dette <span style="color:#ff0000">eccezioni  unchecked</span>
+Le sottoclassi di `Error` e `RuntimeException` sono dette <span style="color:#ff0000">eccezioni  unchecked</span> ^52c250
 - In particolare, la classe `Error` rappresenta eccezioni lanciate dalla JVM, in genere non vengono catturate perché il programma non sarebbe in grado di riprendersi in queste occasioni.
 - La classe `RuntimeException` rappresenta eventi eccezionali ma dovuti al programma, anche queste non vengono generalmente catturate, sarebbe buona norma risolvere i problemi che le causano.
 >[!fail] Attenzione

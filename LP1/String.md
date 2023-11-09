@@ -8,7 +8,7 @@ String s2 = "abcdef";
 
 ## String Pool
 >[!info] 
->I letterali `String` occupano molto spazio, quindi la JVM riserva un'area specifica per la memorizzazione di questi ultimi.
+>I letterali `String` occupano molto spazio, quindi la JVM riserva un'area specifica per la loro memorizzazione.
 >Quando il compilatore incontra un letterale `String`, controlla se esso è presente nel pool:
 >- Se è presente, viene interpretato come un riferimento all'oggetto `String` esistente.
 >- Altrimenti viene creato un nuovo oggetto `String` e aggiunto al pool.
