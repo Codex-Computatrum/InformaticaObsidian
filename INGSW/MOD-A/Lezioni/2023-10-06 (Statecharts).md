@@ -1,3 +1,7 @@
+---
+author: Simone Parente
+---
+
 ## Modellazione tramite stati e transizioni
 ### Stato
 Situazione in cui permane qualche _condizione invariante_ che potrà essere:
