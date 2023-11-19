@@ -1,0 +1,125 @@
+---
+author: Simone Parente
+tags:
+  - Java/maven
+---
+## Fase di *Build*
+>[!summary] Di cosa si occupa?
+>- Compila il codice.
+>- Risolve le dipendenze.
+>- Genera l'output desiderato (file eseguibili o librerie).
+
+Quasi sempre i programmi java <span style="color:#4ddb00"> <i>dipendono</i></span> da librerie esterne \[queste librerie esterne sono dei file .jar (Java ARchive, che contengono i file già compilati)].
+Progetti molto grandi richiedono un numero spropositato di librerie, che a loro volta possono dipendere da altre librerie, gestire tutte queste <span style="color:#4ddb00">dipendenze</span> può rapidamente diventare molto complesso.
+## Maven
+>[!info] 
+>Maven è uno strumento di **project management** che fornisce agli sviluppatori un framework per gestire la fase di build.
+>La struttura e i contenuti del progetto Maven sono dichiarati in un file `pom.xml`
+
+Si occupa, tra le altre cose di gestire:
+- Documentazione del codice
+- Report
+- <span style="color:#4ddb00">Dipendenze</span>
+- Releases
+- Distribuzione
+### Archetype
+>Plugin Maven che si occupa di creare la struttura del progetto seguendo un modello preciso.
+### POM
+>È un file `.xml` che contiene informazioni sul progetto e dettagli sulla configurazione.
+![[POM.png]]
+#### Coordinate
+```XML
+<groupId>com.formdev</groupId>
+<artifactId>flatlaf</artifactId>
+<version>1.0</version>
+```
+`groupid`: unico per ogni organizzazione o progetto
+`artifactid`: nome con cui il progetto è "conosciuto"
+`version`:  versione
+#### Relazioni
+>Ereditarietà, dipendenze, aggregazioni.
+
+Scarica tutte le dipendenze necessarie durante la compilazione (anche le dipendenze delle dipendenze).
+#### Maven Repository
+>La directory in cui tutti i file `.jar`, i plugin o altri artifacts si trovano e a cui maven può facilmente accedere.
+
+Può essere:
+- Locale
+	Creata sulla macchina quando viene eseguito il primo comando Maven, le dipendenze vengono cercate prima localmente e poi (in caso non venissero trovate) verranno cercate online ([central repository](https://repo.maven.apache.org/maven2/))
+- Remota
+	Può essere creata una repository remota, per essere utilizzata deve essere aggiunta al file `pom.xml` nel seguente formato:
+	
+```xml
+<repository>
+	<id> my-repo1 </id>
+	<name> nome repository </name>
+	<url> http://www.url.com </url>
+</repository>
+```
+
+- ([Central Repository](https://repo.maven.apache.org/maven2/))
+	Gestita dalla community, contiene moltissime librerie di "uso comune", è dove Maven cerca le dipendenze se queste ultime non vengono trovate nella repository locale.
+#### Dipendenze
+All'interno del `pom.xml` hanno la seguente forma
+```xml
+<dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+            <type>jar</type>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+```
+- `<type>` indica il tipo della dipendenza (default=`jar`)
+- `<scope>` indica lo scope della dipendenza (default=`compile`): `runtime, test, provided, system`
+Quando vengono eseguiti comandi (Maven) di build, le dipendenze vengono cercate in questa sequenza:
+1. All'interno della repository locale
+2. In caso non venisse trovata, verrà cercata nella [Central Repository](https://repo.maven.apache.org/maven2/)
+	Se viene trovata, vai al punto 4,
+	se sono specificate delle repository remote, vai al punto 3,
+	altrimenti vai al punto 5.
+3. All'interno delle repository remote
+   Se viene trovata, val al punto 4,
+   altrimenti, vai al punto 5.
+4. La dipendenza viene scaricata e aggiunta alla repository locale
+5. Errore
+#### Ereditarietà
+```xml
+<parent> 
+	<groupid> groupid progetto padre </groupid>
+	<artifactId> artifactId progetto padre </artifactId>
+	<version> 1.0 </version>
+</parent>`
+``` 
+Indica un progetto "padre" da cui ereditare le coordinate, dipendenze, repository, builds, ecc..
+Tutti i `pom` ereditano da un Super POM, l'equivalente della classe `Object` in Java.
+#### Aggregazione
+Un progetto che contiene diversi moduli è detto **progetto aggregatore**, quando viene eseguito un comando su un tale progetto, quel comando viene propagato a tutti i moduli sottostanti.
+#### Build Lifecycle
+Ne esistono 3 *built-in*:
+1. `default`: si occupa della "distribuzione" del progetto.
+2. `clean`: si occupa della pulzia (eliminazione dei file temporanei).
+3. `site`: si occupa della creazione del sito web della documentazione.
+Una "build lifecycle" è definita da diverse **fasi di build**.
+##### `default`
+![[defaultBuildPhase.png]]
+- `validate`: Si assicura che il progetto sia corretto e che tutte le informazioni necessarie siano disponibili. 
+- `compile`: Compila il codice sorgente del progetto. 
+- `test`: Esegue i test sul codice sorgente compilato utilizzando un framework di test adatto (verrà visto in futuro). 
+- `package`: Prendi il codice compilato ed "esportalo" nel suo formato distribuibile(ad esempio un file `.jar`.) 
+- `verify`: Esegui controlli sui risultati dei test di integrazione per assicurarti che siano soddisfatti i criteri di qualità. 
+- `install`: Installa il package nella repository locale
+- `deploy`: Nell'ambiente di build, copia il pacchetto finale nella repository remota.
+#### Plugins
+>Possono includere informazioni che indicano a quale lifecycle  associare un goal.
+
+<span style="color:#ff0000">Bisogna specificare i goals da eseguire come parte della build (e che significa?)</span>
+
+#### Impostazioni di build
+L'elemento `<build>` è concettualmente diviso in due parti:
+1. `BaseBuild`, che contiene  `defaltGoal, resources, plugins, ecc.`
+2. `BuildElement` che contiene directories e le estensioni degli elementi
+
+![[Javadoc]]
