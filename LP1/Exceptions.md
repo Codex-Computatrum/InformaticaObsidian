@@ -74,6 +74,8 @@ try{
 
 //nel caso in cui l'exception venisse catturata, verrà eseguito anche il codice dopo finally.
 ```
+
+^try-catch
 ## Vincoli sintattici
 >[!summary] In breve
 Sia `catch` che `finally` sono opzionali, ma **almeno uno dei due deve essere inserito**, l’inserimento del solo `try` causerebbe un errore di compilazione.
