@@ -18,7 +18,37 @@ Nel quick sort, il [[dividi et impera]] agisce in questo modo:
 - **Impera**: si chiama ricorsivamente QuickSort
 - **Combina**: non occorre ordinare i due sotto-array essendo già ordinati tra di loro
 
-![[Pasted image 20230828193954.png]]
+```python
+def algorithmQuickSort(A, n):
+	QuickSort(A, 0, n-1)
+```
+
+```python
+def QuickSort(A, p, r):
+	if p < r:
+		q = Partition(A, p, r)
+		QuickSort(A, p, q)
+		QuickSort(A, q+1, r)
+```
+
+```python
+def Partition(A, p, r):
+	x = A[p]
+	i = p - 1
+	j = r + 1
+	repeat
+		repeat
+			j--
+		until(A[j] <= x)
+		repeat
+			i++
+		until (A[i] >= x)
+		if i < j:
+			Swap(A, i, j)
+	until(j <= i)
+	return j
+``` 
+
 $x$ sarà il pivot (perno) intorno al quale verrà partizionato l’array $A[p\dots r]$  
 Essendo $i$ incrementato all’interno di un `repeat until` (quindi almeno una volta viene incrementato), allora partirà da $p − 1$ e non da $p$. Stesso discorso per $j$.
 

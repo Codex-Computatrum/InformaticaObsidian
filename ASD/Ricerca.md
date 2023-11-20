@@ -6,7 +6,20 @@ tags:
   - to-do/implementation
 ---
 Dato un puntatore alla radice e un dato, $Search$ ***restituisce il puntatore al nodo con quella chiave (`NULL` se la chiave non è presente)***
-![[Pasted image 20230830082947.png]]
+
+```python
+def Search(x, d):
+	if x = NULL:
+		return NULL
+	else
+		if d > x.dato:
+			return Search(x.dx, d)
+		else if d < x.dato:
+			return Search(x.sx, d)
+		else
+			return x
+```
+
 - Se il nodo attuale è `NULL`
 	- allora non ho trovato l’elemento e restituisco `NULL`.  
 - Se invece il nodo attuale non è `NULL`

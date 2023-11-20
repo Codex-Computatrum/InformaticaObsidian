@@ -12,5 +12,5 @@ La densità normale è una curva a campana simmetrica rispetto all'asse delle $x
 
 La [[funzione generatrice dei momenti]] di una variabile aleatoria gaussiana di paramatri $\mu$ e $\sigma^{2}$ si deduce come segue:$$\varPhi(t):=E[e^{tX}]$$
 >[!todo]
-> Da continuare assolutamente con la dimostrazione della funzione gen. dei momenti e il calcolo della varianza
+> Da continuare assolutamente con la dimostrazione della funzione gen. dei momenti e il calcolo della [[varianza]]
 

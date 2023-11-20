@@ -6,8 +6,23 @@ tags:
 ---
 **Breadth-first search** (**BFS**) è un [[algoritmo]] per cercare in una [[struttura dati]] [[Graph|grafo]] in [[Visita in ampiezza|ampiezza]] un nodo che soddisfi una certa proprietà.
 ## Funzionamento
-![[Pasted image 20230908122516.png|600]]
-![[Pasted image 20230908122816.png|600]]
+```python
+def BFS(G, v):
+	Init(G, c)
+	(Q, c(v)) = (Enqueue(Q, v), gr)
+	while isNotEmpty(Q):
+		(Q,v) = HeadAndDequeue(Q)
+		for u in Adj[v]:
+			if c(v) = bn:
+				(Q, c(u)) = (Enqueue(Q, u), gr)
+		c(v) = nr	
+```
+
+```python
+def Init(G, c):
+	for v in V:
+		c(v) = bn
+```
 #### Colori
 - $bn$ Bianco: non scoperto
 - $gr$ Grigio: scoperto ma non visitato

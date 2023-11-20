@@ -21,9 +21,34 @@ Quindi l’idea è quella di aggiornare la stima con $x$ quando il dato $d$ è
 
 Vorrà dire che $x$ è un maggiorante di $d$, ma non sappiamo se è il minimo dei maggioranti. Se scendo a destra, non aggiorno la stima poiché $x$ è minore, non è un maggiorante, del dato $d$
 ### Versione iterativa
-![[Pasted image 20230830161715.png]]
+
+```python
+def Successor(x, d):
+	if x = NULL:
+		return NULL
+	else
+		if d >= x.dato:
+			return Successor(x.dx, d)
+		else
+			s = Successor(x.dx, d)
+			if s = NULL:
+				return x
+			else
+				return s
+```
 ### Versione ricorsiva
-![[Pasted image 20230830161737.png]]
+
+```python
+def Successor(x, d, s):
+	if x = NULL:
+		return s
+	else
+		 if d >= x.dato:
+			 return Successor(x.dx, d, s)
+		else
+			return Successor(x.sx, d, x)
+```
+
 Viene passata la stima $s$ come parametro la quale verrà aggiornata solo se si scende a sinistra.  
 Nella prima chiamata sarà $\bot$ 
 

@@ -23,13 +23,13 @@ Se ad esempio la visita in [[profondità]] partisse da c, troverebbe anche altr
 e la includerebbe nella sua , formando quindi un'unica componente, il che è sbagliato
 
 Bisogna quindi seguire tre step:
-1. Eseguire l’[[ordinamento]] [[Ordinamento Topologico|topologico]] in profondità su G
+1. Eseguire una prima $\textbf{DFS}$ per ottenere in uno stack l'ordine inverso di visita dei nodi
 2. Calcolare il grafo trasposto $G^T$ di $G$
 3. Eseguire una $\textbf{DFS}$ leggermente modificata su $G^T$ e sullo [[stack]] $S$ restituito dall’ordinamento topologico
 
-L’ordinamento topologico in profondità, restituisce uno stack $S$ con i vertici ordinati in modo decrescente per tempo di fine visita, ovvero dall’ultimo che finisce al primo che finisce.
+La prima $\textbf{DFS}$ restituisce anche uno stack $S$ con i vertici ordinati in modo decrescente per tempo di fine visita, ovvero dall’ultimo che finisce al primo che finisce.
 
-La visita in $G^T$ viene fatta sui vertici nello stack $S$ (dall’ord. topologico di prima)
+La visita in $G^T$ viene fatta sui vertici nello stack $S$ (dalla $\textbf{DFS}$ di prima)
 ![[Pasted image 20230910163336.png]]
 - Parte da $a$ ma non ci sono archi uscenti, quindi termina la sua visita.
 - Continua con $o$ ma non ci sono archi uscenti, quindi termina la sua visita.
@@ -47,13 +47,42 @@ Se non avessimo trasposto il grafo, nella prima visita, il nodo $a$ avrebbe trov
 >[!important] 
 >$$G=<V,E>\;\;\;G^{T}=<V,E^{-1}>$$
 
-![[Pasted image 20230910163935.png|450]]
+
+```Python
+def DFS1(G):
+	Init(G)
+	StackRET = NULL
+	for v in V:
+		if c(v) == bn:
+			StackRET = DFS1_Visit(G, v, StackRET)
+	return StackRET
+```
+
+```python
+def DFS1_Visit(G, v, Stack):
+	c(v) = gr
+	for w in Adj[v]:
+		if w == bn:
+			Stack = DFS1_Visit(G, w, Stack)
+	c(v) = nr
+	Push(v, Stack)
+	return Stack
+```
+
+```python 
+def Transpose(G):
+	VGt = VG
+	for v in VG:
+		for w in Adj[v]:
+			EGt = Insert(EGt, (w,v))
+	return (VGt, EGt)
+```
+
 - I vertici rimangono gli stessi, quindi faccio una semplice copia.
 - Gli archi sono rappresentati dagli adiacenti di un vertice, in questo caso da $v$ a $w$.
 - Basterà quindi inserire nell’insieme degli archi del grafo trasposto $E_{G^{T}}$ , l’arco che va da $w$ a $v$.
 
 ### Strongly [[Connected]] Component
-![[Pasted image 20230910164147.png|450]]
 Il vettore ***scc*** contiene il vertice rappresentante della componente alla quale l’$i$-esimo vertice partecipa.
 
 Ad esempio, la componente $j, k, l, m$ ha come rappresentate $j$ solo perché compare prima nell’ordinamento topologico, ma ognuno di questi vertici sarebbe potuto esserlo.
@@ -62,11 +91,28 @@ Ad esempio, la componente $j, k, l, m$ ha come rappresentate $j$ solo perché c
 - $scc(l):j\;\;\;\;\;l$ si trova nella componente con rappresentante $j$
 - $scc(m):j\;\;\;\;\;m$ si trova nella componente con rappresentante $j$
 
+```python
+def DFS_SCC(G, S):
+	(c,scc) = Init(G)
+	while isNotEmpty(S):
+		(S,v) = TopAndPop(S)
+		if c(v) = bn:
+			(c,scc) = DFS_SCC_Visit(G,c,scc,v,v)
+	return scc
+```
 
-![[Pasted image 20230910164803.png|600]]
 - $Init$ imposta i colori dei vertici a bianco e dichiara un vettore $scc$
 - Scorre i vertici dello stack, ovvero i vertici dell’ordinamento topologico ordinati in ordine inverso sul tempo di fine visita, ed esegue una $\textbf{DFS}$ su di essi.
-![[Pasted image 20230910164902.png|600]]
+```python
+def DFS_SCC_Visit(G, c, scc, v, w)
+	(c(w), scc(w)) = (gr , v)
+	for z in Adj[w]:
+		if c(z) = bn:
+			(c,scc) = DFS_SCC_Visit(G, c, scc, v, z)
+	c(w) = nr
+	return (c, scc)
+```
+
 - Il parametro $v$ è il vertice rappresentante della componente.
 - Il parametro $w$ è il vertice attuale.
 - Lo scopo è quello di scendere in profondità impostando la componente rappresentante di ogni vertice della componente, ovvero $scc(w) \leftarrow v$ 

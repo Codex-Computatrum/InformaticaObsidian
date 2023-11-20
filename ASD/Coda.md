@@ -20,7 +20,7 @@ Solo che nel caso dello stack, le funzioni di $Insert$ e $Delete$ si chiamano ri
 | $Enqueue():S$         | Inserisce in coda e restituisce la nuova coda                             |
 | $Dequeue():S$           | Rimuove dalla coda e restituisce la nuova                                      |
 | $Head():D$           | Restituisce la testa della $Coda$                                         |
-| $Head\&Deqeueu(): (S,D)$ | Restituisce la testa e la nuova $Coda$, ed elimina la testa                        |
+| $HeadAndDequeue(): (S,D)$ | Restituisce la testa e la nuova $Coda$, ed elimina la testa                        |
 
 ## Implementazione in C
 ```C

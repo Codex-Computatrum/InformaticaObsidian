@@ -11,7 +11,20 @@ Consiste nel selezionare di volta in volta il minimo valore presente nella seque
 
 Così facendo si viene a creare una sotto-sequenza ordinata da $0$ a $i-1$, trovato il valore minimo lo si sposta all'$i$-esima posizione, e così via.
 
-![[Pasted image 20230828164108.png]]
+```python
+def SelectionSort(A, n):
+	for i = n-1 in range(1):
+		m = Max(A, i)
+		Swap(A, i, n)
+```
+
+```python
+def Max(A, i):
+	m = 0
+	for j = 1 in range(i):
+		if A[m] < A[j]:
+			m = j
+```
 
 ---
 #### [[Analisi asintotica|Analisi]]

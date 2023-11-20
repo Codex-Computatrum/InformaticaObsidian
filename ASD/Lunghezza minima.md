@@ -7,7 +7,13 @@ tags:
 Calcola il [[Path|percorso]] minimo da $v$ ad $u$. 
 Restituisce uno [[stack]] di vertici che rappresentano il percorso.
 
-![[Pasted image 20230908160339.png]]
+```python
+def MinimalPath(G, v, u):
+	(c, -, p) = DistanceBFS(G, v)
+	if c(u) = nr:
+		return BuildMinimalPath(EmptyStack, p, v, u)
+	return EmptyStack
+```
 
 - La funzione _[[Calcolo delle distanze|DistanceBFS]]_ colorerà di **nero** tutti i percorsi attraversati da $v$, questo servirà a capire se c’è un percorso da $v$ a $u$, ovvero $(v, u) \in Reach(G)$.
 - Inoltre, la funzione _DistanceBFS_ imposta anche i predecessori di ogni nodo e, per come è strutturata la funzione, seguendo a ritroso i predecessori, si ricava il ***percorso minimo***.
@@ -17,7 +23,14 @@ Di conseguenza, se si segue il percorso dei predecessori a ritroso, si ricava il
 - Se $u$ è colorato di **nero**, allora vuol dire che $v$ raggiunge $u (\text{ovvero} (v, u) ∈ Reach(G))$ ed è quindi possibile costruire il percorso
 - Se $(v, u) \notin Reach(G)$ allora restituisce uno **stack** vuoto, dato che non è possibile costruire il percorso minimo.
 
-![[Pasted image 20230908161407.png|500]]
+```python
+def BuildMinimalPath(Sπ, p, v, u):
+	(Sπ) = Push(Sπ, u)
+	if u != v:
+		Sπ = BuildMinimalPath(Sπ, p, v, p(u))
+	return Sπ
+```
+
 - $S_{\pi}\;\;$ Stack di vertici raffiguranti il percorso
 - $p\;\;\;\;$ Vettore dei predecessori
 

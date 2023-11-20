@@ -24,7 +24,7 @@ def InitQueue(G, ge):
             Q = Enqueue(Q, v)
     return Q
 
-def TopologicalOrdering_1(G):
+def TopologicalOrdering_1(G)
     c = Init(G)
     for v in V:
         if c(v) == bn:

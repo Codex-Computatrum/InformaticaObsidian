@@ -8,7 +8,33 @@ tags:
 >[!todo] 
 >- [ ] Implementazione in C
 
-![[Pasted image 20230828175727.png]]
+```python
+def HeapSort(A, n):
+	BuildHeap(A,n)
+	for i = n-1 in range(1): 
+		Swap(A, 0, i)   # il max sta in A[0] perchè è un heap
+		Heapify(A, i, 0)
+```
+
+```python
+def BuildHeap(A, n):
+	for i = (n/2)-1 in range (0)
+		Heapify(A, n, i)
+```
+
+```python
+def Heapify(A, n, i):
+	max = i
+	l = L(i)   # L(i) = 2i + 1   indice del figlio sinistro
+	r = R(i)   # R(i) = 2i + 1   indice del figlio destro
+	if (l < n) and (A[max] < A[l]):
+		max = l
+	if (r < n) and (A[max] < A[r]):
+		max = r
+	if(max != i):
+		Swap(A, max, i)
+		Heapify(A, n, max)
+```
 
 Un [[array]] è già rappresentato in memoria come un [[Tree|albero]] quindi è possibile passare da una [[Struttura dati|struttura]] all'altra.
 

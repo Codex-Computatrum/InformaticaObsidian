@@ -78,7 +78,27 @@ Riparare, e quindi mantenere, la struttura di **AVL** dopo un inserimento, ha te
 
 ---
 ## Funzionamento algoritmi per rotazioni
-![[Pasted image 20230831171417.png]]
+
+```python
+def L-R-Rotation(x):
+	y = x.sx
+	x.sx = y.dx # 1
+	y.dx = x    # 2
+	return y  
+	 
+```
+![[Pasted image 20231117124137.png|400]]
+```python
+def R-L-Rotation(x):
+	y = x.dx
+	x.dx = y.sx # 1
+	y.sx = x    # 2
+	return y
+	
+```
+
+![[Pasted image 20231117124320.png|400]]
+
 - I nodi di un **AVL**, a differenza di quelli di un **BST**, possiede un ulteriore attributo per memorizzare l’altezza.
 - In questo modo è possibile sapere se ci sono violazioni.
 
@@ -93,43 +113,132 @@ Riparare, e quindi mantenere, la struttura di **AVL** dopo un inserimento, ha te
 | SX  | SX   |
 
 ---
-- Restituisce dell'**AVL** con radice in $x$, se questa è $\bot$ allora restituisce $-1$
-![[Pasted image 20230831172645.png]]
+- Restituisce l'altezza dell'**AVL** con radice in $x$, se questa è $\bot$ allora restituisce $-1$
+```python
+def HgtAVL(x):
+	return (x = False ? -1 : x.ht)
+```
 - Essendo un semplice $if$ la funzione ha tempo costante $\Theta(1)$
 - ---
 - Aggiorna l’altezza dell’**AVL** con radice in $x$ (utilizzata dopo una rotazione)
-![[Pasted image 20230831172738.png]]
+```python
+def UpdateHgtAVL(x):
+	hl = HgtAVL(x.sx) # Prendo l'altezza del figlio sinistro
+	hr = HgtAVL(x.dx) # Prendo l'altezza del figlio destro
+	x.ht = max{hl, hr}
+	
+```
+
 - Aggiorno l’altezza dell’albero radicato in $x$ con il massimo fra le altezze dei due figli
 - Tutte e tre le istruzioni sono chiamate a funzioni a tempo costante, quindi l’intera funzione è costante $\Theta(1)$ 
 ---
-![[Pasted image 20230831172914.png|300]]
+
+```python
+def L-R-AVLRotation(x):
+	y = L-R-Rotation(x)
+	UpdateHgtAVL(x)
+	UpdateHgtAVL(y)
+	return y
+	
+```
 - La rotazione su un **AVL** ha bisogno successivamente di aggiustare le altezze. Questa funzione racchiude le tre funzioni per fare ciò.
 - Dopo la rotazione, $x$ si trova ”più in basso” di $y$ , logicamente è importante che venga aggiornata prima la sua di altezza e poi quella di $y$
 - Essendo tutte le funzioni chiamate $\Theta(1)$, il costo totale sarà costante $\Theta(1)$
 ---
-![[Pasted image 20230831173039.png|400]]
+
+```python
+def L-D-AVLRotation(x):
+	x.sx = R-L-AVLRotation(x.sx)
+	return L-R-AVLRotation(x)
+	
+```
+
 - Funzione che effettua la doppia rotazione al figlio sinistro (**Left-Double**)
 - Farà quindi prima una $\textbf{R-L Rotation}$ e poi una $\textbf{L-R rotation}$. Speculare sarà per $\textbf{R-D-AVLRotation}$
 - Anche questa è costante $\Theta(1)$
 ---
-![[Pasted image 20230831173401.png|460]]
+
+```python
+def LBalanceAVL(x):
+	if HgtAVL(x.sx) - HgtAVL(x.dx) = 2:
+		if HgtAVL(x.sx.dx) < HgtAVL(x.sx.sx):
+			x = L-R-AVLRotation(x)
+		else
+			x = L-D-AVLRotation(x)
+	else
+		UpdateHgtAVL(x)
+	return x	
+
+```
 - Bilancia l’albero radicato in $x$ (input) nel caso in $h(x.sx) = h(x.dx) + 2$, ovvero l’altezza del sotto-albero sinistro è più $2$ del destro.
 - Speculare l’algoritmo $\textbf{RBalanceAVL}$ nel caso in cui sia il sotto-albero destro ad essere più alto di $2$.
 - Ad esempio, è importante chiamare questa funzione dopo un inserimento o una cancellazione.
 - Ha tempo costante, in quanto tutte le funzioni che chiama sono a tempo costante
 ---
 ### Inserimento e cancellazione
-![[Pasted image 20230831174124.png|400]]
+
+```python
+def AVLInsert(x, d):
+	if x = False:
+		return BuildNodeAVL(d)
+	else
+		if d < x.dato:
+			x.sx = AVLInsert(x.sx, d)
+			x = LBalanceAVL(x)
+		else if d > x.dato:
+			x.dx = AVLInsert(x.dx, d)
+			x = RBalanceAVL(x)
+	return x
+	
+```
 - Simile all’inserimento in un **BST** ma con la differenza che bisogna bilanciare l’albero.
 - Se inserisco a sinistra, rendo potenzialmente il sotto-albero sinistro più profondo del destro, effettuo quindi un $\textbf{LeftBalanceAVL}$.
 - Discorso speculare se inserisco destra.
 ---
-![[Pasted image 20230831174227.png|400]]
+
+```python
+def AVLDelete(x, d):
+	if x != NULL:
+		if d < x.dato:
+			x.sx = AVLDelete(x.sx, d)
+			x = RBalanceAVL(x)
+		else if d > x.dato:
+			x.dx = AVLDelete(x.dx, d)
+			x = LBalanceAVL(x)
+		else
+			x = DeleteNodeAVL(x)
+	return x
+
+```
 - Simile alla cancellazione in un BST ma con la differenza che bisogna bilanciare l’albero.
 - Se cancello a destra, rendo potenzialmente il sotto-albero destro più basso (o meno alto) e di conseguenza rendo il sinistro più profondo, effettuo quindi un $\textbf{LeftBalanceAVL}$.
 - Discorso speculare se cancello sinistra.
 ---
-![[Pasted image 20230831174642.png]]
+
+```python
+def DeleteNodeAVL(x):
+	if x.sx = NULL:
+		x = SkipRight(x)
+	else if x.dx = NULL:
+		x = SkipLeft(x)
+	else
+		x.dato = GetDeleteMinAVL(x.dx, x)
+		x = LBalanceAVL(x)
+	return x
+```
+
+```python
+def GetDeleteMinAVL(x, p):
+	if x.sx = NULL:
+		d = x.dato
+		y = SkipRight(x)
+	else
+		d = GetDeleteMinAVL(x.sx, x)
+		y = RBalanceAVL(x)
+	SwapChild(p, x, y)
+	return d
+			
+```
 
 ---
 >[!todo] 

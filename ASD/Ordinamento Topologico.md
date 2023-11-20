@@ -55,15 +55,47 @@ Quando un nodo ha $0$ archi entranti, non è vincolato da nessun altro nodo, pu
 Nell’esempio sotto, i numeri all’interno dei nodi rappresentano il numero di archi entranti.
 ![[Pasted image 20230910161600.png]]
 L’algoritmo sfrutta la [[visita in ampiezza]].
-![[Pasted image 20230910161629.png|450]]
+
+```python
+def TopologicalOrdering(G):
+	ge = EnteringDegree(G)
+	Q = InitQueue(G, ge)
+	while isNotEmpty(Q):
+		(Q, v) = HeadAndDequeue(Q)
+		for w in Adj[v]:
+			ge(w) = ge(w) - 1
+			if ge(w) = 0:
+				Q = Enqueue(Q, w)
+		π = Append(π, v)
+	return π	
+```
+
 - In coda entrano solo i nodi senza archi entranti.
 - Estraggo il nodo $v$ in coda e diminuisco il grado entrante di tutti i suoi adiacenti.
 - Se uno di questi, una volta decrementato, ha grado pari a $0$, allora lo incodo anche.
 - Finito con gli adiacenti, aggiunge $v$ alla lista $\pi$
-![[Pasted image 20230910161752.png|450]]
+
+```python
+def EnteringDegree(G):
+	for v in V:
+		ge(v) = 0
+	for v in V:
+		for w in Adj[w]:
+			ge(w) = ge(w) + 1
+	return ge
+```
+
 - Imposta prima tutti i gradi a $0$.
 - Successivamente se un nodo $w$ è adiacente di un altro nodo $v$, allora $w$ ha l’arco entrante $(v, w)$ quindi il grado di $w$ aumenta di $1$
-![[Pasted image 20230910161905.png|450]]
+
+```python
+def InitQueue(G, ge):
+	for v in V:
+		if ge(v) = 0:
+			Q = Enqueue(Q, v)
+	return Q
+```
+
 - Inserisce in coda solo i nodi che non hanno archi entranti.
 ---
 ## Algoritmo (profondità)
@@ -71,4 +103,22 @@ È possibile calcolare un ordinamento topologico anche usando una $\textbf{DFS}
 In questo caso non viene restituita una lista ma uno stack.  
 La funzione inserisce nello stack a partire dal nodo più vincolato, quindi dall’ultimo che avremo nell’ordinamento.
 Inserendolo in uno stack, quando lo si andrà leggere, lo si leggerà in maniera ordinata.
-![[Pasted image 20230910162215.png|600]]
+
+```python
+def TopologicalOrdering(G):
+	c = Init(G)
+	for v in V:
+		if c(v) = bn:
+			S = DFSTopologicalOrdering(G, S, v, c)
+	return S
+```
+
+```python
+def DFSTopologicalOrdering(G, S, v, c):
+	c(v) = gr
+	for w in Adj[v]:
+		if c(w) = bn:
+			S = DFSTopologicalOrdering(G, S, w, c)
+	(c(v), S) = (nr, Push(S,v))
+	return S
+```

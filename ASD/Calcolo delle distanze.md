@@ -6,8 +6,26 @@ tags:
   - to-do/implementation
 ---
 ## Funzionamento
-![[Pasted image 20230908145019.png|600]]
-![[Pasted image 20230908145032.png|500]]
+```python
+def DistanceBFS(G, v)
+	(c, d, p) = Init(G)
+	(Q, c(v), d(v)) = (SingletonQueue(v), gr, 0)
+	while isNotEmpty(Q):
+		(Q,v) = HeadAndDequeue(Q)
+		for u in Adj[v]:
+			if c(u) = bn:
+				(Q, c(u), d(u), p(u)) = (Enqueue(Q,u), gr, d(v) + 1, v)
+		c(v) = nr
+	return (c, d, p)
+```
+
+```python
+def Init(G):
+	for v in V:
+		(c(v), d(v), p(v)) = (bn, ∞, NULL)
+	return (c, d, p)
+```
+
 - Imposta il colore di tutti i nodi del grafo a **bianco**
 -  Imposta le distanze a **infinito** 
 -  Imposta i predecessori a `NULL` ($\bot\;\; bottom$)

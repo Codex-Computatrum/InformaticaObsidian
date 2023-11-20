@@ -6,7 +6,22 @@ author: Lorenzo Tecchia
 ---
 Qualsiasi [[algoritmo]] ricorsivo può essere trasformato in iterativo e viceversa.  
 La [[ricorsione]] permette di risolvere problemi difficili in modo semplice rispetto all’iterazione, però è svantaggiosa in termini di [[memoria]], dato che ogni chiamata alloca memoria per tenere traccia delle variabili locali, il valore di ritorno, e così via.
-![[Pasted image 20230911152220.png]]
+
+```python
+def RecursiveMin(x):
+	if x.sx = NULL:
+		return x.dato
+	else
+		return RecursiveMin(x.sx)
+```
+
+```python
+def IterativeMin(x):
+	while x.sx != NULL:
+		x = x.sx
+	return x.dato
+```
+
 Questa funzione è **tail recursive** (ricorsiva in coda), cioè la chiamata ricorsiva è eseguita come ultima istruzione. Inoltre modifico $x$ senza riutilizzare il suo vecchio valore, quindi si spreca solo memoria.
 ($x$ viene modificata in riga $5$, dato che la chiamata ricorsiva sostituisce $x$ con $x.sx$)
 
@@ -15,11 +30,36 @@ Scorrimento in [[Order-pre|pre-ordine]] e [[Order-post|post-ordine]] su una [[Li
 - $L$ lista
 - $F$ funzione che effettua operazioni sull'accumulatore
 - $a$ accumulatore: variabile che sarà restituita come risultato della funzione
-![[Pasted image 20230911153613.png]]
+
+```python
+def PreFold(L, F, a):
+	if L = NULL
+		return a
+	else
+		a = F(L.dato, a)
+	return PreFold(L.next, F, a)
+```
+
+```python
+def IterativePreFold(L, F, a):
+	while L != NULL:
+		a = F(L.dato, a)
+		L = L.next
+	return a
+```
+
 La funzione ricorsiva è **tail recursive**, inoltre $L$ ed a vengono modificati ma non utilizzati dopo la chiamata ricorsiva, $F$ invece viene modificato ma con lo stesso valore (è come se non venisse mai cambiato).
 Quindi non c’è bisogno dello [[stack]].
 
-![[Pasted image 20230911153706.png|400]]
+```python
+def PostFold(L, F, a):
+	if L = NULL:
+		return a
+	else
+		a = PostFold(L.next, F, a)
+		return F(L.dato, a)
+```
+
 Nella versione in Post-Order, non essendo tail recursive, non si può applicare lo stesso ragionamento
 
 Se si hanno delle variabili locali, quindi anche i parametri della funzione, che sono utilizzati prima della chiamata ricorsiva e utilizzati dopo, allora serve salvarli.

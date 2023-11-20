@@ -136,19 +136,125 @@ Il figlio destro del fratello del **doppio nero**, è **rosso**
 ### Algoritmi di inserimento e cancellazione
 >[!tip] `NULLRB` è il puntatore al nodo foglia di un albero **red-black**, che è unico per evitare sprechi di memoria.
 #### Algoritmo di inserimento
-![[Pasted image 20230902175636.png]]
-![[Pasted image 20230902175655.png]]
+```python
+def RBInser(x, d):
+	if x = NULL:
+		return BuildNodeRB(d)
+	else
+		if d < x.dato:
+			x.sx = RBInsert(x.sx, d)
+			x = LInsBalanceRB(x)
+		else if d > x.dato:
+			x.dx = AVLInsert(x.dx, d)
+			x = RInsBalanceRB(x)
+	return x
+```
+
+```python
+def LInsBalanceRB(x):
+	if x.sx != NULL:
+		switch LInsViolationRB(x):
+			case 1: x = LInsBalanceRB1(x)
+			case 2: x = LInsBalanceRB2(x)
+			case 3: x = LInsBalanceRB3(x)
+	return x
+			
+```
+
 >[!important] Esiste anche il duale $RInsBalanceRB$
 
-![[Pasted image 20230902175738.png]]
+```python
+def LInsViolationRB(x):
+	v = 0, l =x.sx, r = x.dx
+	if l.cl = R:
+		if r.cl = R:
+			if l.sx.cl = R or l.dx.cl = R:
+				v = 1
+		else
+			if l.dx.cl = R:
+				v = 2
+			else if l.sx.cl = R:
+				v = 3
+	return v
+```
 #### Algoritmo di cancellazione
-![[Pasted image 20230902175827.png]]
-![[Pasted image 20230902175841.png]]
-![[Pasted image 20230902175907.png|400]]
-![[Pasted image 20230902175939.png|600]]
+
+```python
+def DeleteRB(x):
+	if x != NULL:
+		if d < x.dato:
+			x.sx = DeleteRB(x.sx, d)
+			x = LDelBalanceRB(x)
+		else if d > x.dato:
+			x.dx = DeleteRB(x.dx, d)
+			x = RDelBalanceRB(x)
+		else
+			x = DeleteNodeRB(x)
+	return x		
+```
+
+```python
+def DeleteNodeRB(x):
+	if d < x.dato:
+		x = SkipRightRB(x)
+	else if d > x.dato:
+		x = SkipLeftRB(x)
+	else
+		x.dato = GetAndDeleteMinRB(x.dx, x)
+		x = RDelBalanceRB(x)
+	return x
+```
+
+```python
+def GetAndDeleteMinRB(x, p):
+	if x.sx != NULL:
+		d = x.dato
+		y = SkipRightRB(x)
+	else
+		d = GetAndDeleteMinRB(x.sx, x)
+		y = LDelBalanceRB(x)
+	SwapChild(p, x, y)
+	return d
+```
+
+```python
+def SkipRightRB(x):
+	if x.cl = B:
+		PropagateBlackRB(x.dx)
+	return SkipRight(x)
+```
+
 - Se il colore di x è rosso, diventa nero  
 - Se il colore di x è nero, diventa doppio nero
-![[Pasted image 20230902180020.png]]
+
+```python
+def LDelBalanceRB(x):
+	if x.sx != NULL:
+		switch LDelViolationRB(x):
+			case 1: x = LDelBalanceRB1(x)
+			case 2: x = LDelBalanceRB2(x)
+			case 3: x = LDelBalanceRB3(x)
+			case 4: x = LDelBalanceRB4(x)
+	return x
+```
+
+```python
+def LDelViolationRB(x):
+	v = 0, l = x.sx, r = x.dx
+	if l.cl = BB:
+		if r.cl = R:
+			v = 1
+		else
+			if r.dx.cl = R:
+				v = 4
+			else if r.sx.cl = R:
+				v = 3
+			else
+				v = 2
+	return v
+	
+```
+
 ---
 ### Problemi che risolve un albero red-black
 Un [[albero binario]] di ricerca di altezza $h$, è in grado di eseguire operazioni elementari sugli insiemi ($insert, delete, max, min, search$, ...) nel tempo $O(h)$.

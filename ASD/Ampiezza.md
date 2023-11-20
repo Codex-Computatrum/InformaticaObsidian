@@ -16,7 +16,22 @@ Per la [[visita in ampiezza]] c'è bisogno di una [[struttura dati]] accessori: 
 - Estraggo il nodo in testa, lo utilizzo, poi accodo i figli nel caso li abbia.
 	- Verrà inizialmente accodata la radice fuori dal $repeat \dots until$ 
 ### Implementazione dell'[[algoritmo]]
-![[Pasted image 20230829172608.png]]
+
+```python 
+def BFV(x, F, a):
+	if x != NULL:
+		Q = Enqueue(EmptyQueue, x)
+		repeat
+			x = HeadAndDequeue(Q)
+			a = F(x.dato, a)
+			if x.sx != NULL:
+				Q = Enqueue(Q, x.sx)
+			if x.dx != NULL:
+				Q = Enqueue(Q, x.dx)
+		until(isEmpty(Q))
+	return a
+```
+
 - $Q$ è la coda, struttura d'appoggio
 - $Enqueue$ inserisce la radice $x$ in $EmptyQueue$ 
 - $EmptyQueue$ è una generica coda vuota
