@@ -33,11 +33,11 @@ Come gestire gli errori?
 
 ----
 $$\text{Codice che funziona} \neq \text{Clean code}$$
-## Bad Smells e Refactoring
+## Code Smells e Refactoring ^codesmells
 Bad smell (anti-pattern): qualcosa su cui approfondire
 (da sapere 5-6-7 refactoring principali usati spesso)
 [Refactoring](https://www.refactoring.guru)
-### Tipi di bad smell
+### Tipi di code smell
 #### Bloaters
 Metodi o classi che nel corso dell'evoluzione del software sono diventati troppo grandi ed è diventato difficile lavorarci. Esempi: metodi lunghi, classi grandi, metodi con troppi parametri.
 #### Object Orientation Abusers
