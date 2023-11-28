@@ -230,4 +230,97 @@ esac
 
 
 
+### Sed e Awk 
+
+- *sed* : editor non interattivo di file (non richiede interazione con l' utente)
+- *awk* : utilizzato per l' elaborazione di modelli orientato ai campi 
+
+condividono una sintassi simile:
+	- fanno uso di espressioni regolari
+	- leggono l' input, dallo stdin (opzione predefinita)
+	- risultati in stdout
+	- le loro capacita combinate danno agli script parte della potenza di Perl (favorevole alle espressioni regolari)
+
+
+#### Sed
+
+è possibile compiere le seguenti operazioni:
+	- sostituzione
+	- cancellazione, aggiunta e rimpiazzo di linee.
+
+
+sed legge i file specificati oppure da stdin se non specificato. 
+modifica l' input come specificato da lista di comandi e tale input è quindi scritto sullo standard output.
+
+
+sintassi del comando sed:
+
+sed \[OPZIONI] 'comando' file
+
+le "OPZIONI" sono opzionali, servono a personalizzare il comportamento del sed.
+
+Alcune opzioni: 
+- **'-n'** : disabilita l' output automatico, cosi solo i dati specificatamente richieste sono stampate.
+- **'-i'**: modifica il file in modo permanente, vengono apportate modifiche direttamente nel file.
+- **'-e \<script>'**: permette di specificare uno o piu comandi sed da eseguire. 
+- **'-r'**: Abilita l' uso di più espressioni regolari estese.
+
+
+Alcuni comandi:
+
+- **'a'**\\: append di testo al di sotto della riga corrente
+- **'c\'**\: modifica il testo della linea corrente 
+- **'i\\testo'**: inserisci testo sopra la linea corrente.
+- **'a\\testo'**: inserisci testo dopo la linea corrente.
+- **'\[indirizzo]\\p'**: stampa testo .
+- **'r file'**: legge un file.
+- **'w file'**: scrive la linea corrente in "file".
+- **'y/abc/ABC'**: sostituisce tutti i caratteri a con A, b con B e c con C nella linea corrente.
+- **'q'**: esce da 'sed' dopo aver elaborato la linea corrente.
+- **'s/vecchio/nuovo'**: cerca e modifica testo, sostituisce in ogni riga la prima occorrenza vecchia con la stringa nuova.
+- **'p'**: stampa la linea corrente.
+- **'d'**: cancella la linea corrente.
+- **'\modello\\d'**: cancella tutte le occorrenze che corrispondono al modello 
+
+### Awk 
+
+è un linguaggio di scripting e ha una sintassi simil c 
+Sintassi:
+
+awk \[OPZIONI] pattern { action} file(s)
+
+
+- le "OPZIONI" possono anche non essere inserite, servono a personalizzare il comportamento del awk.
+
+- pattern {action} è il comando che va eseguito
+
+- è possibile mettere delle condizioni (pattern) per l' esecuzione delle azioni.
+le azioni cono contrassegnate con le parentesi graffe, è possibile separare i blocchi di codice.
+- Con l' inserimento di BEGIN indico un azione che va eseguita all' inizio dello script.
+- Con l' inserimento di END indico un azione che va eseguita alla fine dello script.
+
+- file(s) sono i file dove lo script viene eseguito
+
+Lista opzioni:
+
+- **'-F'**: indico un separatore di campi tra i dati.
+- **'-v'**: definisce una variabile 'awk' con quel valore.
+- **'-f file'**: consente di specificare un file contenente uno script awk al posto di inserirlo dalla riga di comando.
+
+variabili predefinite: 
+
+- **'\$0'**: rappresenta l' intera riga corrente
+- **'\$1', '\$2','\$3'...**: rappresenta i campi di una riga corrente 
+- **'NR'**: numero di righe elaborate.
+- **'NF'**: numero di campi nella riga corrente.
+- **'FS'**: separatore di campi predefinito.
+- **'OFS'**: separatore di campi di output. 
+- **'RS'**: separatore di righe predefinito.
+
+
+
+
+
+
+
 
