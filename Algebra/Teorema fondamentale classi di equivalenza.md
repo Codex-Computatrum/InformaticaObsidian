@@ -10,8 +10,8 @@ Sia $A \neq \emptyset$.
 	$\rho_F : \forall x,y \in A, x \rho_F y \iff \exists x \in F : \{x,y\} \subseteq x$ è una relazione di equivalenza in $A$ e risulta $\frac{A}{\rho_F} = F$
 ### Dimostrazione 1.
 $\frac{A}{\rho} = \{ [a]_\rho : a \in A \}$ è una [[Partizione di insiemi|partizione]] di $A \iff$
-1. $\forall [a] \in \frac{A}{\rho} \; ([a] \neq \emptyset )$ Per la [[Prima Proprietà|prima proprietà delle classi di equivalenza]].
-2. $\forall [a], [b] \in  \frac{A}{\rho} ([a] \neq [b] \implies [a] \cap [b] = \emptyset)$ per la [[Terza Proprietà|terza proprietà delle classi di equivalenza]].
+1. $\forall [a] \in \frac{A}{\rho} \; ([a] \neq \emptyset )$ Per la [[Prima proprietà relazioni di equivalenza|prima proprietà delle classi di equivalenza]].
+2. $\forall [a], [b] \in  \frac{A}{\rho} ([a] \neq [b] \implies [a] \cap [b] = \emptyset)$ per la [[Terza proprietà relazioni di equivalenza|terza proprietà delle classi di equivalenza]].
 3. $\bigcup [a] = A \; \; \text{con} \; \; a \in A$ | Bisogna dimostrare che $\textcolor{lightblue}{\bigcup [a] \subseteq A \land A \subseteq \bigcup [a]}$
 	- $\textcolor{lightblue}{\forall a \in A, [a] \subseteq A \implies \bigcup [a] \subseteq A}$
 	- $\forall a \in A, a \in [a] \subseteq \bigcup [a] \; \; \text{dove} \; \; a \in A \implies \forall a \in A, a \in \bigcup [a]$
