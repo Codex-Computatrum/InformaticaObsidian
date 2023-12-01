@@ -4,13 +4,13 @@ tags:
   - definition/property
   - recap
 ---
-![[Prima proprietà relazioni di equivalenza]]
+![[Prima Proprietà]]
 
 ---
 
-![[Seconda proprietà relazioni di equivalenza]]
+![[Seconda Proprietà]]
 
 ---
 
-![[Terza proprietà relazioni di equivalenza]]
+![[Terza Proprietà]]
 
