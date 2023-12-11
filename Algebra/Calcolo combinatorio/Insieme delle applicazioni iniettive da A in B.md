@@ -1,12 +1,12 @@
 ---
 author: Simone Parente
 tags:
-  - definition
   - notReviewed
+  - algebra/combinatoria
 ---
-L'insieme delle applicazioni iniettive da $A$ in $B$, scritto $_{in}Map(A,B)$ può avere come [[Cardinalità di un insieme|cardinalità]]:
-1. $|B|^{|A|}$, se $|A| \leq |B|$
-2. $0$ altrimenti
+L'insieme delle applicazioni iniettive da $A$ in $B$, scritto $_{in}Map(A,B)$ può avere come [[Cardinalità di un insieme|cardinalità]]: ^883eaf
+1. $|B|^{|A|}$, se $|A| \leq |B|$ ^fe29d5
+2. $0$ altrimenti ^daf4ec
 ### Dimostrazione
 $$a_1 \mapsto |B| \text{ possibili scelte}$$
 $$a_2 \mapsto |B|-1 \text{ possibili scelte}$$
