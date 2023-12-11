@@ -12,7 +12,7 @@ Ad esempio, se sappiamo che la probabilità di ottenere testa lanciando una cer
 ## Proposizione 2
 Tale proposizione fornisce la probabilità dell’**unione** di due eventi in termini della loro probabilità singole e di quella dell’**intersezione** (si noti che questa rappresenta una estensione del [[Assioma Terzo|terzo assioma]] che funziona anche con eventi non mutuamente esclusivi).
 
-Se $E$ e $F$ sono due eventi qualsiasi, allora:$$\mathbb{p}(E \cup F) = \mathbb{P}(E)+\mathbb{P}(F) - \mathbb{P}(E \cap F)$$
+Se $E$ e $F$ sono due eventi qualsiasi, allora:$$\mathbb{P}(E \cup F) = \mathbb{P}(E)+\mathbb{P}(F) - \mathbb{P}(E \cap F)$$
 
 >[!note] 
 > Ci riferiamo al ***Principio di Inclusione-Esclusione(IN-EX)***
