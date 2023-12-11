@@ -1,5 +1,8 @@
 ---
-tags: [definition, probability]
+tags:
+  - definition
+  - probability
+  - distribution
 author: Lorenzo Tecchia
 ---
 La **funzione di distribuzione** (o di ripartizione) $F$ di una [[variabile aleatoria]] $X$, è definita, per ogni numero reale $x$, tramite $$F(x):= \mathbb{P}(X \leq x)$$.
