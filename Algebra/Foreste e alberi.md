@@ -6,7 +6,7 @@ tags:
 ---
 Un grafo è una <span style="color:#00ff00">foresta</span> $\iff$ non esistono [[Circuito|circuiti]].
 Un <span style="color:#00ff00">albero</span> è sempre una <span style="color:#00ff00">foresta</span>.
-Una <span style="color:#00ff00">foresta connessa</span> è un <span style="color:#00ff00">albero</span>.
+Una <span style="color:#00ff00">foresta connessa</span> è un <span style="color:#00ff00">albero</span>. ^8fcaab
 ### Teorema
 - Un grafo finito è una <span style="color:#00ff00">foresta</span> $\iff \forall (a,b) \in G,\text{ con a }\neq b$, esiste <span style="color:#00ff00"><strong>al più</strong></span> un cammino.
 - Un grafo finito è un <span style="color:#00ff00">albero</span>  $\iff \forall (a,b) \in G, \text{ con } a \neq b,$esiste <span style="color:#00ff00"> <strong> esattamente </strong> </span> un cammino.
