@@ -4,7 +4,6 @@ tags:
   - algebra/polinomi
   - notReviewed
 ---
-
 >[!warning] Attenzione
 >I polinomi non sono funzioni, possono essere considerati tali solo nei [[campo|campi]] infiniti.
 

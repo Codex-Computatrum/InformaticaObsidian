@@ -6,9 +6,14 @@ tags:
 ---
 Siano $a,b,m \in \mathbb{Z}$
 $$a \equiv_m b \iff m|(a-b) \iff \exists c \in \mathbb{Z} : a-b=cm$$
+Questa relazione è:
+- [[Riflessiva]]: $\forall a \in \mathbb{Z} (a \equiv_m a)$, infatti $m|a-a=0$
+- [[Simmetrica]]: $\forall a,b \in \mathbb{Z} (a \equiv_m b \implies b \equiv_m a)$
+- [[Transitiva]]: $\forall a,b,c \in \mathbb{Z} (a \equiv_m b \land b \equiv_m c) \implies a \equiv_m c$
+- 
 ###### _Esempio 1_
 $m =5, \ a=7, \ b=10 \implies 7\equiv_5 10 \iff \frac{5}{7-10} = \frac{5}{-3}$
-La congruenza non vale perché $5$ non divide $-3$
+La congruenza non vale perché $5$ non divide $-3$.
 
 ---
 ###### _Esempio 2_
