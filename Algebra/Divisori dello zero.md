@@ -1,17 +1,29 @@
 ---
-author: Simone Parente, Mario Penna
+author: Simone Parente
 tags:
   - definition/property
   - example
 ---
-Un divisore dello zero è un elemento di un [[Anello|anello]] del tipo $(A,\cdot, \star)$ tale che:
-$$a \in A, \exists b \in A : a \star b = 0 \; \lor \; b \star a = 0$$
-#### Esempio
-Sia $(\mathbb{Z}, +, \cdot)$ l'anello che ha come insieme i numeri interi, la somma come prima operazione e la moltiplicazione come seconda operazione.
-Con $D(1)$ indichiamo l'insieme dei [[Multipli e divisori|divisori]] di 1, con $M(1$) l'insieme dei dei [[Multipli e divisori|multipli]] di 1.
-$$D(1) = \{ +1, -1 \}$$
-$$M(1)= \{1z: z \in \mathbb{Z} \}$$
-$$D(0) = \mathbb{Z}$$
-$$M(0) = {0}$$
-[[Multipli e divisori#^caf605|a]]|[[Multipli e divisori#^caf605|b]]$\iff \exists b \in \mathbb{Z} : a \cdot b$ dove $b=0$
+>[!failure] Attenzione
+>I [[Dominio di integrità|domini di integrità]], ad esempio $(\mathbb{R}, +, \cdot)$, non ammettono divisori dello zero, ciò vuol dire che l'operazione $\cdot$, effettuata tra due elementi $a,b \in \mathbb{R} \setminus \{0\}$ non potrà mai dare $0$ come risultato.
+
+Generalizzando
+>[!summary] Definizione
+>Sia $(S,\cdot, \star)$ un [[Anello Commutativo Unitario|anello commutativo unitario]], un divisore dello zero è un elemento $x$ non nullo tale che $\exists x,z \in S \setminus \{0\}: x \star z = z \star x = 0$
+
+>[!example] Esempio
+>Siamo nell'anello commutativo unitario $(\mathbb{Z}_8,+,\cdot)$.
+>$\mathbb{Z}_8=\{0,1,2,3,4,5,6,7\}$, la tabella moltiplicativa è la seguente:
+>
+| $\cdot$ | $0$ | $1$ | $2$                  | $3$ | $4$                  | $5$ | $6$                  | $7$ |
+| ------- | --- | --- | -------------------- | --- | -------------------- | --- | -------------------- | --- |
+| $0$     | $0$ | $0$ | $0$                  | $0$ | $0$                  | $0$ | $0$                  | $0$ |
+| $1$     | $0$ | $1$ | $2$                  | $3$ | $4$                  | $5$ | $6$                  | $7$ |
+| $2$     | $0$ | $2$ | $4$                  | $6$ | $\textcolor{red}{0}$ | $2$ | $4$                  | $6$ |
+| $3$     | $0$ | $3$ | $6$                  | $1$ | $4$                  | $7$ | $2$                  | $5$ |
+| $4$     | $0$ | $4$ | $\textcolor{red}{0}$ | $4$  | $\textcolor{red}{0}$ | $4$   | $\textcolor{red}{0}$ | $4$    |
+| $5$     | $0$ | $5$ | $2$                     | $7$    | $4$                     | $4$    | $1$                     | $3$    |
+| $6$     | $0$ | $6$ | $4$                     | $2$    | $\textcolor{red}{0}$                     | $1$    | $4$                     | $2$    |
+| $7$     | $0$ | $7$ | $6$                     | $5$    | $4$                     | $3$    | $2$                     | $1$    |
+>Di conseguenza $2,4,6$ sono dei divisori dello 0.
 
