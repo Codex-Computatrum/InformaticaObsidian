@@ -10,6 +10,8 @@ tags:
 >- Un divisore dello zero è tale se è un divisore sinistro <u>o</u> un divisore destro dello zero.
 >- Un elemento $a$ di un anello $S$ è [[Elementi cancellabili|cancellabile]] $\iff$ non è un divisore dello zero.
 
+^attenzione
+
 Generalizzando
 >[!summary] Definizione
 >Sia $(S,\cdot, \star)$ un [[Anello Commutativo Unitario|anello commutativo unitario]], un divisore dello zero è un elemento $x$ non nullo tale che $\exists x,z \in S \setminus \{0\}: x \star z = z \star x = 0$
