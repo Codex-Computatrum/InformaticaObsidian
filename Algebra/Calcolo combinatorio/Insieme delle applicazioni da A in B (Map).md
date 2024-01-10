@@ -5,7 +5,7 @@ tags:
   - algebra/combinatoria
 ---
 
-Siano $A \text{ e } B$ insiemi, l'insieme $Map(A,B)$,  è l'insieme delle [[Funzione|funzioni]] $f$ di dominio $A$ e codominio $B$, in altre parole
+Siano $A \text{ e } B$ insiemi, l'insieme $Map(A,B)$,  è l'insieme delle [[Algebra/Funzione|funzioni]] $f$ di dominio $A$ e codominio $B$, in altre parole
 $$Map(A,B)=\{f:A \rightarrow B\}$$
 ### Cardinalità
 $$|Map(A,B)|= |B|^{|A|}$$
