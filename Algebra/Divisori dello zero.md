@@ -6,10 +6,9 @@ tags:
 ---
 >[!failure] Attenzione
 >- I [[Dominio di integrità|domini di integrità]], ad esempio $(\mathbb{R}, +, \cdot)$, non ammettono divisori dello zero, ciò vuol dire che l'operazione $\cdot$, effettuata tra due elementi $a,b \in \mathbb{R} \setminus \{0\}$ non potrà mai dare $0$ come risultato.
->- La definizione seguente è data su un anello <u>commutativo</u> unitario, per anelli <u>non commutativi</u>.
->- Un divisore dello zero è tale se è un divisore sinistro <u>o</u> un divisore destro dello zero.
->- Un elemento $a$ di un anello $S$ è [[Elementi cancellabili|cancellabile]] $\iff$ non è un divisore dello zero.
-
+>- La definizione seguente è data su un anello <u>commutativo</u> unitario, per anelli <u>non commutativi</u>:
+>	- Un divisore dello zero è tale se è un divisore sinistro <u>o</u> un divisore destro dello zero.
+>	- Un elemento $a$ di un anello $S$ è [[Elementi cancellabili|cancellabile]] $\iff$ non è un divisore dello zero.
 ^attenzione
 
 Generalizzando

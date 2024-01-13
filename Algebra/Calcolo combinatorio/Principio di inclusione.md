@@ -3,8 +3,6 @@ author: Simone Parente
 tags:
   - algebra/combinatoria
 ---
-
-
 Sia $S$ un insieme finito di insiemi finiti, posto $n=|S|$ si ha:
 $$|\cup S| = \sum^{n}_{i=1}((-1)^{i+1}\sum_{T \in P_i(S)}|\cap T|)\text{, con } P_i=\{x \subseteq S : |x|=i\}$$
 ## Esempio

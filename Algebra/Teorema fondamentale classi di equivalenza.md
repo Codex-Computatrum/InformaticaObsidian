@@ -5,7 +5,7 @@ tags:
   - example
 ---
 Sia $A \neq \emptyset$.
-1. Se $\rho$ è una [[Classe di Equivalenza]] definita su $A$, allora l'insieme quoziente $\frac{A}{\rho}$ è una partizione di $A$.
+1. Se $\rho$ è una [[Classe di equivalenza e Insieme quoziente|classe di equivalenza]] definita su $A$, allora l'insieme quoziente $\frac{A}{\rho}$ è una partizione di $A$.
 2. Se $\rho$ è una [[Partizione di insiemi|partizione]] di A, allora la relazione $\rho_F$ definita come:
 	$\rho_F : \forall x,y \in A, x \rho_F y \iff \exists x \in F : \{x,y\} \subseteq x$ è una relazione di equivalenza in $A$ e risulta $\frac{A}{\rho_F} = F$
 ### Dimostrazione 1.

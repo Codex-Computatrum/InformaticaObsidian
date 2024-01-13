@@ -5,4 +5,4 @@ tags:
   - notReviewed
 ---
 Sia $G=(V,L)$ un grafo, $G$ è completo quando $L=P_2(V)$.
-Se un grafo ha $n$ vertici ($|V|=n$), allora $|P_2(V)|=\binom{n}{2}$, quindi normalmente $|L| \leq \binom{n}{2}$, se il grafo è completo vale l'uguaglianza <span style="color:#ff0000">(da provare)</span>.
+Se un grafo ha $n$ vertici ($|V|=n$), allora $|P_2(V)|=\binom{n}{2}$, quindi normalmente $|L| \leq \binom{n}{2}$, se il grafo è completo vale l'uguaglianza.

@@ -5,6 +5,9 @@ tags:
   - theorem
   - to-do
 ---
+>[!danger] Attenzione
+>Un elemento massimale **in un reticolo** è necessariamente massimo. Di conseguenza i reticoli finiti sono limitati, cioè hanno minimo e massimo, ma questo non è sempre vero per reticoli infiniti.
+
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]]:
 
 $$d \in S \text{ è un massimale} \iff \nexists x \in S (x > d)$$ ^c13a1a

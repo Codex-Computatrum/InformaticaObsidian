@@ -16,7 +16,6 @@ Se per ipotesi so che $f$ è iniettiva e che $|A|=|B|$, per il [[Teorema sull'in
 È ovvio per definizione di biettività.
 #### Dimostrazione $2. \implies 1.$
 Per ipotesi $f$ è suriettiva $\implies$ $f$ ha una [[Sezione e retrazione|sezione]] $g:B \to A$ che è per definizione iniettiva, ma avendo dimostrato che $1. \implies 3.$, so che $g$ è biettiva. Allora $f$ è una [[Sezione e retrazione|retrazione]] dell'applicazione biettiva $g$, e l'unica retrazione di una funzione biettiva è la sua funzione inversa, che è a sua volta biettiva, ciò dimostra che $f$ è iniettiva.
-
 ### Osservazioni
 Diremo quindi che $A$ e $B$ sono [[Insiemi equipotenti|equipotenti]] se e solo se esiste una applicazione biettiva $A \to B$, di conseguenza $|A|=|B|$.
 Si dice che $|A|\leq|B|$ se e solo se esiste un'applicazione iniettiva $A \to B$.

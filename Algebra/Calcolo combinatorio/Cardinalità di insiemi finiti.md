@@ -6,7 +6,7 @@ tags:
 ## Cardinalità del prodotto cartesiano di due insiemi finiti
 Siano $A$ e $B$ insiemi finiti, $|A \times B| = |A| \cdot |B|$
 ### Dimostrazione
-$\forall x \in A$ esistono $|B|$ elementi in $A \times B$ del tipo $(x,y)$, cioè che hanno $x$ come prima coordinata.
+$\forall x \in A, y \in B$ esistono $|B|$ elementi in $A \times B$ del tipo $(x,y)$, cioè che hanno $x$ come prima coordinata.
 ## Cardinalità dell'unione di due insiemi finiti
 Siano $A$ e $B$ insiemi finiti, $|A \cup B| = |A| + |B| - |A \cap B|$, se i due insiemi non sono disgiunti.
 ### Dimostrazione

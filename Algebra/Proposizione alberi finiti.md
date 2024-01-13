@@ -4,7 +4,6 @@ tags:
   - algebra/grafi/alberi
   - notReviewed
 ---
-
 Sia $T$ un albero e sia $T$ finito $\implies |V|=|L|+1$.
 ### Dimostrazione per induzione <span style="color:#ff0000">sbagliata</span>
 Se $|L|=0 \implies |V|=1$, e questo verifica il caso base.
