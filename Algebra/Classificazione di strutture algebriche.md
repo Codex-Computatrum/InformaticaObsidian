@@ -9,3 +9,5 @@ tags:
 ![[Gruppo]]
 ![[Gruppo abeliano]]
 ![[Anello]]
+![[Dominio di integrità]]
+![[Campo]]

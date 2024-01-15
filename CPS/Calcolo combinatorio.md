@@ -1,6 +1,8 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, basics, to-do]
+tags:
+  - basics
+  - to-do
 ---
 >[!todo] 
 > - [ ] Replicare immagine con diagramma UML

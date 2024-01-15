@@ -6,6 +6,9 @@ tags:
   - example
   - to-do
 ---
+>[!danger] Attenzione
+>Un elemento minimale **in un reticolo** è necessariamente minimo. Di conseguenza i reticoli finiti sono limitati, cioè hanno minimo e massimo, ma questo non è sempre vero per reticoli infiniti.
+
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]]:
 $$c \in S \text{ è un minimale} \iff \nexists x \in S (x <c)$$ ^12dc8b
 

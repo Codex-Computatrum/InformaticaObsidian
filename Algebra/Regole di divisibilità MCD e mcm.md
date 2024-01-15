@@ -10,7 +10,7 @@ tags:
 - più semplice determinare la divisibilità per 5, dato che questa si ritrova solo quando un numero termina con 0 o con 5;
 - un numero è divisibile per 7 quando la differenza tra il numero senza l’ultima cifra e il doppio di quest’ultima è zero o un multiplo di sette.
     64664865846 non è divisibile per 7
-    86165135
+    997252760 è divisibile per 7
 - infine, un numero è divisibile per 11 quando la differenza delle cifre pari e delle cifre dispari da come risultato 0, 11 o un multiplo di 11.
-    864516525
-    556849562
+    864516525 $(26-15=11)$ è divisibile per 11
+    556849562 $(26-24=2)$ non è divisibile per 11

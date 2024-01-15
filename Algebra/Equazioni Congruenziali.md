@@ -12,8 +12,8 @@ Sia $(\mathbb{Z},+,\cdot)$ un anello commutativo unitario e l'equazione $ax \equ
 	- esiste più di una soluzione
 	- non esiste nessuna soluzione
 #### Casi Particolari
-	![[Congruenza#^492ca3]]
-	![[Congruenza#^9bc247]]
+![[Congruenza#^492ca3]]
+![[Congruenza#^9bc247]]
 ---
 #### Spiegazione
 Siano $m \in \mathbb{N}^*, a \in A, c \in C : A=[a]_m, C=[c]_m$, ottengo  $[a]_x=c$, prendo $u \in \mathbb{Z}, \; \; [u]_m$ è soluzione dell'equazione se e solo se $[a]_m \cdot [u]_m = [c]_m \iff [au]_m = [c]_m \iff au \equiv_m c$

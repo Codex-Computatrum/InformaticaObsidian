@@ -4,7 +4,7 @@ tags: [definition, example]
 ---
 Sia $\mathcal{F}$ una famiglia di sottoinsiemi di $\Omega$ . Si dice che $\mathcal{F}$ è una **sigma [[algebra]]** (o $\sigma$ algebra) se e solo se:
 - $\Sigma_{1}\;\;\;\; \Omega \in \mathcal{F}$
-- $\Sigma_{2}\;\;\;\; A \in \mathcal{F}, \;\;\; A^{c}in \mathcal{F}$
+- $\Sigma_{2}\;\;\;\; A \in \mathcal{F}, \;\;\; A^{c}\in \mathcal{F}$
 - $\Sigma_{1}\;\;\;\; (A_n)_{n \in \mathbb{N}} \subseteq \mathcal{F}, \;\;\;\; \cup_{n \in \mathbb{N}}A_{n} \in \mathcal{F}$(_proprietà di stabilità rispetto all'unione numerabile_)
 
 >[!important] L'intersezione su una sigma algebra è un operazione chiusa

@@ -3,12 +3,11 @@ author: Simone Parente
 tags:
   - definition/property/structure
 ---
-
 Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]].
 
 $$(S, \leq) \text{ è un reticolo} \iff \forall x,y \in S (\exists \inf\{x,y\} \land \exists \sup\{x,y\})$$ ^703fff
 
-Cioè se ogni sottoinsieme di $S$ con [[Cardinalità di un insieme|cardinalità 2]] ammette [[Estremo superiore|estremo superiore]] e [[Estremo inferiore|estremo inferiore]]. ^3d12bf
+>Cioè se ogni sottoinsieme di $S$ con [[Cardinalità di un insieme|cardinalità 2]] ammette [[Estremo superiore|estremo superiore]] e [[Estremo inferiore|estremo inferiore]]. ^3d12bf
 ### Esempio
 $(P(S),\subseteq)$ è un reticolo?
 Per essere un reticolo deve valere che $\forall X,Y \in P(S) (\exists F=\inf\{X,Y\} \land \exists K=\sup\{X,Y\})$.
