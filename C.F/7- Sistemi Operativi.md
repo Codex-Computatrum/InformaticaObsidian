@@ -64,11 +64,11 @@ Netinfo (Db ad oggetti)
 	- Entry statiche di rete. 
 	- definizione di tutti gli utenti. 
 Gestione netinfo
-/applicazion/utility os x 10.4
-/applicazion/utility/utility directory os > 10.4
+/application/utility os x 10.4
+/application/utility/utility directory os > 10.4
 
 
-Configurazioen server 
+Configurazione server 
 ![[Pasted image 20231218171025.png]]
 #### Cifratura 
 

@@ -48,7 +48,7 @@ Esistono delle viste specializzate
 - Formati supportati 
 ![[Pasted image 20231213095440.png]]
 
-- ingest modules: Sono plug-in responsabili di analizzare i dati presenti all' interno del file immagine 
+- **ingest modules**: Sono plug-in responsabili di analizzare i dati presenti all' interno del file immagine 
 	- hashing
 		- identificazione del file type (bad extension).
 		- user activity 
@@ -66,7 +66,7 @@ Esistono delle viste specializzate
 	- i risultati sono presenti nella sezione result.
 	  
 	  
-- Hash lookup 
+- **Hash lookup** 
 1. calcola l' hash MD5 per ogni file. 
 2. li memorizza nel case DB.
 3. ricerca gli hash calcolati all' interno della lista "known hash"
@@ -82,13 +82,13 @@ Esistono delle viste specializzate
 		- notable (known bad).
 
 
-- ingest modules : file type 
+- **ingest modules : file type** 
 	- Determina la tipologia di file analizzando la signature 
 		- modo più accurato di definire un tipo di file. 
 	- il file type viene conservato nel case DB
 		- molti moduli dipendono da queste info. 
 
-	  - basato su libreria Tika (open source)
+	  - basato su libreria **Tika** (open source)
 		  - catalogazione MIME type 
 			  - application/zip. 
 			  - audio/mpeg.
@@ -96,21 +96,19 @@ Esistono delle viste specializzate
 			  - application/octet-stream.
 
 
-- ingest modules : file extension mismatch 
-
+- **ingest modules : file extension mismatch** 
 	- per ogni file confronta l' estensione con la propria categoria 
 		- se non sono corrette viene etichettato. 
+	- dipende dal modulo file type 
+		l' obbiettivo è trovare il file che l' utente ha provato a nascondere. 
 
-- dipende dal modulo file type 
-	l' obbiettivo è trovare il file che l' utente ha provato a nascondere. 
-
-- ingest modules: exif parser 
+- **ingest modules: exif parser**
 	- estrae i metadati exif dal file jpeg , memorizzandoli nella sezione result
 		- identifica la fotocamera. 
 		- timestamp dello scatto. 
 		- geolocalizzazione del luogo di scatto. 
 
-- ingest modules: embedded file extractor 
+- **ingest modules: embedded file extractor** 
 	- estrae i file incapsulati in altri file 
 		- archivi file.
 		- file grafici da documenti. 
@@ -118,7 +116,7 @@ Esistono delle viste specializzate
 		- nella sezione tree view. 
 	- vengono etichettati se protetti da pass. 
 
-- ingest modules : email parser 
+- **ingest modules : email parser** 
 	- ricerca e analizza archivi di posta 
 		- mbox, pst e eml file. 
 	- i risultati sono visualizzabili nella sezione e categoria email messages 
@@ -126,7 +124,7 @@ Esistono delle viste specializzate
 		- sono raggruppati in threads.
 	- è possibile analizzarli dettagliatamente attraverso al vista comunications.
 
-- ingest modules : interesting files
+- **ingest modules : interesting files**
 	- etichetta file e cartelle che si pensa essere interessanti 
 		- viene modificato il rinvenimento di tali oggetti 
 			- iphone backup. 
@@ -135,7 +133,7 @@ Esistono delle viste specializzate
 			- cloude storage client. 
 
 
-- ingest modules : encryption detection 
+- **ingest modules : encryption detection** 
 	- etichetta file e volumi che sono / potrebbero essere cifrati 
 		- documenti office e pdf e access DB protetti da password.
 		- possibili file o volumi con cifratura basato su 
@@ -143,18 +141,18 @@ Esistono delle viste specializzate
 			- dimensione: multiplo di 512 byte. 
 			- tipo di file: sconosciuto. 
 
-- ingest modules : plaso
+- **ingest modules : plaso**
 	- Tool open source che esegue il parsing di file log e altri tipi di file per estrarre il timestamp 
 		- ne estrae di più possibili per elaborare la timeline. 
 		- come operazione è molto lunga. 
 
-- ingest modules : Virtual machine extractor 
+- **ingest modules : Virtual machine extractor** 
 	- analizza le virtual machine presenti all'interno del reperto
 	  1. ricerca file VMDK e VHD.
 	  2. crea una copia locale. 
 	  3. vengono inseriti in datasources. 
 
-- ingest modules : data souce integrity 
+- **ingest modules : data source integrity** 
 	- calcola l' hash del reperto 
 		- assicura l' integrità delle evidence. 
 	1. recupera l' hash dai metadati del disk image oppure da quelli inseriti dal c.f. 
@@ -162,7 +160,7 @@ Esistono delle viste specializzate
 	3. invia un alert se la validazione fallisce. 
 
 
-- ingest modules  : recent activity 
+- **ingest modules  : recent activity** 
 	- estrae le attività recenti dell' utente 
 		- analisi dei web browser. 
 		- analisi dei registri 
@@ -175,22 +173,21 @@ Esistono delle viste specializzate
 	![[Pasted image 20231213102528.png]]
 	![[Pasted image 20231213102544.png]]
 
-- ingest modules: keyword search 
+- **ingest modules: keyword search** 
 	- genera/aggiorna un text index 
 		- ricerca testuale. 
 	1. si estrae ogni word da ogni file. 
 	2. se la word non esiste viene aggiornata. 
 	3. associa ogni word all' id del file. 
-- uso di apache solr
+- uso di **apache solr**
 	- indice memorizzato all' interno del case folder. 
 	- contiene. 
 		- file name. 
 		- testo estratto dal contenuto file. 
 		- testo estratto dagli artefatti. 
 
-- ingest modules keyword search 
-	
-	- uso di apache tika per estrarre il contenuto dei file e dei metadati 
+- **ingest modules keyword search** 
+	- uso di apache **tika** per estrarre il contenuto dei file e dei metadati 
 		- per il file non riconosciuti o corrotti : string extractor 
 			- ricerca per byte. 
 		-  uso di un proprio HTML text extractor 
@@ -200,8 +197,7 @@ Esistono delle viste specializzate
 			- unicode. 
 
 
-- ingest modules: correlation engine 
-
+- **ingest modules: correlation engine** 
 	- ricerca dei file del caso all'interno del central repository
 		- correlare il caso corrente con i casi passati. 
 			- evidenzia i file/item che erano stati etichettati come notable nei casi precedenti. 
@@ -217,7 +213,7 @@ Esistono delle viste specializzate
 		- notable status. 
 
 
- - ingest modules: photo rec carver 
+ - **ingest modules: photo rec carver** 
 	- recupero dei file cancellati mediante photo rec 
 		- open source tool. 
 		- data carving. 
@@ -225,7 +221,7 @@ Esistono delle viste specializzate
 	- i risultati sono nella vista ad albero $carvedFile. 
 
 
-- ingest modules: android analyzer 
+- **ingest modules: android analyzer** 
 	- analizza i dispositivi android 
 		- database di android e app di terze parti. 
 		- acquisizione fatta mediante altri strumenti. 
@@ -240,7 +236,7 @@ Esistono delle viste specializzate
 
 #### Viste specializzate
 
-- Time Graphic interface
+- **Time Graphic interface**
 	- consente di visualizzare graficamente le attività del sistema ordinate temporalmente 
 		- file time estratti dal file system. 
 		- web activity estratti dal recent activity. 
@@ -253,7 +249,7 @@ Esistono delle viste specializzate
 		- cosa è accaduto prima e dopo certi eventi?
 
 
-- Image gallery 
+- **Image gallery** 
 	- Visualizza velocemente un insieme di immagini e video 
 		- materiale pedopornografico. 
 		- revenge porn. 
@@ -263,8 +259,7 @@ Esistono delle viste specializzate
 			- risultati positivi sull' hash. 
 			- numero di immagini/video.
 
-- Comunication interface 
-
+- **Comunication interface** 
 	- Visualizza i dati delle comunicazioni in modo differente 
 		- email parser. 
 		- android analyzer.
@@ -272,12 +267,11 @@ Esistono delle viste specializzate
 		- vengono visualizzate tutte le attività associate. 
 		- visualizza le relazioni con altri account. 
 
-- Geolocation 
+- **Geolocation** 
 	- Riepiloga tutti gli artefatti in cui sono state estratte le info sulle posizioni 
 		- exif parser.
 
-- Tagging 
-
+- **Tagging** 
 	- Crea un riferimento ad un file/item di interesse 
 		- consente di commentarlo. 
 		- consente di etichettare solo una parte di una immagine. 
@@ -288,14 +282,14 @@ Esistono delle viste specializzate
 		- ritrovare facilmente il file di interesse. 
 		- evidenziarlo ed esportarlo nel report. 
 
-- Reporting:
+- **Reporting**:
 	 -  Portable case
 		 - versione più piccola del caso originale 
 			 - solo i file etichettati.
 			- solo i file presenti nella categoria interesting item. 
 		- ha un proprio database SQLite.
 		- i file sono esportati nel case folder.
-- Extensible 
+- **Extensible** 
 	- Autopsy è costituito da moduli plug-in
 		- datasource processor. 
 		- ingest module. 
@@ -307,16 +301,14 @@ Esistono delle viste specializzate
 
 - utilizzano i linguaggi java e python. 
 
-- Java module. 
-
+- **Java module.** 
 	- Sono file con estensione .nbm. 
 		- possono contenere più moduli. 
 		- netbeans consente di auto aggiornarli e scaricarli. 
 	- Tools->plugins. 
 
 
-- python module 
-
+- **Python module** 
 	- sono cartelle che contengono file con estensione .py. 
 		- copia manuale delle cartelle nella directory. 
 		- possono essere solo ingest module e report module. 

@@ -13,8 +13,8 @@ Formato semplice è un container dello stream
 
 - Problematiche: 
 	- Non conserva metadati dell'evidence: modello, seriale dimensione, etc.
-	- Non conserva hash calcolati;
-	- Non esegue compressione;
+	- Non conserva hash calcolati.
+	- Non esegue compressione.
 	- Non può contenere più di un file/stream.
 	  
 - Smart (EWF)
@@ -50,7 +50,7 @@ Formato semplice è un container dello stream
 	- si inseriscono le informazione di elaborazione. 
 	- il nome e destinazione del file immagine.
 	- la scelta dell' HASH , il calcolo del dispositivo target dopo l' acquisizione e il calcolo del hash del file immagine. 
-	- durante l' elaborazione vengono visualizzate le statistiche sull' elaborazione e il riepilogo delle impostazioni , al termine viene visualizzata una spunta verde. 
+	- durante l'elaborazione vengono visualizzate le statistiche sull' elaborazione e il riepilogo delle impostazioni , al termine viene visualizzata una spunta verde. 
 	  
 - è uno strumento per elaborare copie forensi.
 - permette di scegliere tra i seguenti hash: MD5,SHA-1,SHA-256.
@@ -70,7 +70,7 @@ Formato semplice è un container dello stream
 		- fenico device. 
 
 Physical Drive :
--   Source drive selection: dispositivo a acquisire
+- Source drive selection: dispositivo a acquisire
 	- Si sceglie il formato immagine. 
 	- Si inseriscono le informazioni del caso. 
 	- Definizione del file immagine
@@ -78,11 +78,11 @@ Physical Drive :
 		- dimensione dei segmenti dei file immagine. 
 		- livello di compressione del file immagine. 
 		- cifratura del file immagine. 
-	- Add overflow location: calcolo e verifica dell' hash del file immagine col dispositivo target e si decide se aggiungere ulteriore spazio di archiviazione per il file immagine (install version). 
+	- **Add overflow location**: calcolo e verifica dell' hash del file immagine col dispositivo target e si decide se aggiungere ulteriore spazio di archiviazione per il file immagine (install version). 
 	- è possibile visionare il tempo rimanente l' elaborazione della copia forense. 
 	- è possibile generare un file CSV di tutti i file e cartelle presenti.
 	
-	- durante l' elaborazione:
+	- durante l'elaborazione:
 		- dispositivo target. 
 		- file immagine. 
 		- indicazioni dello stato del processo. 
@@ -128,22 +128,3 @@ dump memoria volatile
 
 
 
-# Nella  fase di verifica 
-
-### Forensic Toolkit  (FTK)
-### Autopsy 
-
-## i Volumi 
-
-### Dos Partition 
-
-### Apple Partition Map 
-
-### GUID Partition Table 
-#### Gpt Header
-
-
-## File System 
-
-### FAT file system 
-### NT File System 

@@ -15,7 +15,7 @@ le autorità giudiziarie ricevono una notizia di reato da parte di un altra pers
 			- le autorità che hanno disposto un sequestro provvederanno a sigillare il materiale e a custodirlo. 
 #### Accertamento tecnico (359 cpp)
 
-- il [[1- Figure#Pubblico Ministero P.M.|P.M.]]  può richiedere un accertamento tecnico, comportano specifiche conoscenze che esulano dalle competenze dall'organo inquirente.
+- il [[1- Figure#Pubblico Ministero P.M.|P.M.]] può richiedere un accertamento tecnico, comportano specifiche conoscenze che esulano dalle competenze dall'organo inquirente.
 - il PM può avvalersi/nominare un [[1- Figure#Consulente tecnico|consulente tecnico]].
 
 #### Accertamento tecnico irripetibile (art 360 cpp)
@@ -80,7 +80,7 @@ le autorità giudiziarie ricevono una notizia di reato da parte di un altra pers
 - l'[[1- Figure#Indagato|indagato]] diventa [[1- Figure#Imputato|imputato]]. 
 - il [[1- Figure#Giudice per le Indagini Preliminari GIP|GIP]] viene sostituito dal [[1- Figure#Giudice dell' udienza Preliminare GUP|GUP]]. 
 
-- l'[[1- Figure#Imputato|imputato]]  può richiedere al giudice di:
+- l'[[1- Figure#Imputato|imputato]] può richiedere al giudice di:
 	- essere prosciolto .
 	- rinunciare alla fase dibattimentale.
 
@@ -96,7 +96,7 @@ le autorità giudiziarie ricevono una notizia di reato da parte di un altra pers
 
 - proscioglimento: 
 	- Sentenza di non doversi procedere: manca una delle condizioni di procedibilità o sussista una causa estintiva del reato.
-	- Assoluzione: il fatto non sussiste , l' imputato non lo ha commesso, il fatto non costituisce reato o è commesso da una persona non imputabile o punibile per altre ragioni, inoltre il giudice adotta sentenza di assoluzione quando sono insufficienti per la prova di colpevolezza dell'imputato 
+	- Assoluzione: il fatto non sussiste , l' imputato non lo ha commesso, il fatto non costituisce reato o è commesso da una persona non imputabile o punibile per altre ragioni, inoltre il giudice adotta sentenza di assoluzione quando sono insufficienti per la prova di colpevolezza dell'imputato. 
 	- Condanna: pronunciata quando l'imputato risulta colpevole del reato.
 	  
 

@@ -51,7 +51,7 @@
 è la persona indagata nel confronti della quale è stata esercitata l'azione penale (rinvio a giudizio). 
 - l' imputato resta tale in ogni stato e grado del processo, fino a sentenza definitiva.
 - la sua assenza in udienza non ne pregiudica il suo corso, che viene celebrato ugualmente.
-- ha l' obbligo di farsi assistere da un [[1- Figure#Difensore|difensore]] 
+- ha l'obbligo di farsi assistere da un [[1- Figure#Difensore|difensore]] 
 - Può difendersi producendo memorie e possono essere interrogati esclusivamente alla presenza del difensore. 
 - può avvalersi di [[1- Figure#Consulente tecnico|consulenti tecnici.]]  
 
@@ -65,7 +65,9 @@
   
 - si deve fare una differenza fra esposto, denuncia e querela:
 	- **Esposto**: segnalazione all' autorità giudiziaria di un fatto allo scopo di valutare se ricorrere ad un ipotesi di reato. 
-	- **Denuncia**: è un atto con la quale si informa l' autorità Giudiziaria di una notizia di reato perseguibile d'ufficio. 
+	
+	- **Denuncia**: è un atto con la quale si informa l'autorità Giudiziaria di una notizia di reato perseguibile d'ufficio. 
+	  
 	- **Querela**: è una dichiarazione della persona offesa con la quale si esprime la volontà di punire il colpevole di un reato subito, non perseguibile d'ufficio. può essere ritirata se non tratta di reati sessuali ai danni di minori. 
 	
 
@@ -79,7 +81,7 @@
 - è nominato sia dalla [[1- Figure#Parte offesa|parte offesa]] che dalla [[1- Figure#Indagato|parte indagata]].
   
 - la sua presenza oltre ad essere un diritto , è condizione prima di legittimità e regolarità dello stesso procedimento penale
-	- se non nominato da una delle 2 parti, ne viene nominato uno d' ufficio.
+	- se non nominato da una delle 2 parti, ne viene nominato uno d'ufficio.
 	
 - può ottenere un accesso agli atti delle indagini preliminari 
 	- parziale a sostegno di una singola misura preventiva per poter gestire una eventuale opposizione.
@@ -91,8 +93,8 @@
 ## Giudice per le Indagini Preliminari GIP
 
 - ha la funzione di garanzia dell' indagato nella fase delle indagini preliminari, decide se accogliere o meno le richieste del [[1- Figure#Pubblico Ministero P.M.|P.M]] su:
-	- applicare misure cautelari 
-	- autorizzare e convalidare l' uso di intercettazioni come mezzi di ricerca della prova 
+	- applicare misure cautelari. 
+	- autorizzare e convalidare l' uso di intercettazioni come mezzi di ricerca della prova. 
 
 - garanzia dell'azione penale 
 	- accoglie o no la richiesta di archiviazione.

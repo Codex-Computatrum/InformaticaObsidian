@@ -4,7 +4,7 @@
 	- illecito che richiede conoscenze di informatica per la sua realizzazione. 
 	- illecito che comporta il coinvolgimento di un qualunque tipo di elaboratore. 
 	- illecito nel quale il computer interviene come strumento o come oggetto. 
- essendo troppo ampie non riescono a definire bene il concetto 
+- essendo troppo ampie non riescono a definire bene il concetto. 
 - a livello internazionale si è rinunciato a dare una vera e propria definizione.
 - si è preferito definire delle etichette di comportamenti collegati ai reati informatici. 
 
@@ -40,7 +40,7 @@ Vengono elaborate 2 liste di abusi
 	- collocazione in prossimità di figure di reato già esistenti, che sarebbero applicabili se il fatto non fosse commesso sfruttando la tecnologia informatica. 
 #### art. 392 c.p.
 	# Esercizio arbitrario delle proprie ragioni con violenza sulle cose 
-- chiunque al fine di esercitare un preteso diritto, si porge in modo violento. ulte fino a 516 euro. 
+- chiunque al fine di esercitare un preteso diritto, si porge in modo violento. Multe fino a 516 euro. 
 - diventa penale se la violenza porta al danneggiamento o alla trasfomazione della cosa o ne è multata la destinazione. 
 	- su sistemi informatici, un certo programma viene alterato modificato, cancellato in tutto o in parte o viene turbato il funzionamento.
 	
@@ -50,6 +50,7 @@ Vengono elaborate 2 liste di abusi
 - Chiunque danneggi direttamente o distrugge impianti di pubblica entità è punito, salvo reato aggravato, ad una reclusione da uno a 4 anni. 
 
 ## legge n.48 del 18/03/2008
+
 - il reato ha la stessa validità su sistemi informatici di ente pubblico, ovvero file o programmi con dati in esso contenuti. 
 - nel caso si derivi una distruzione o un danneggiamento del sistema stesso, ovvero l' interruzione anche parziale del funzionamento dell' impianto o del sistema, la pena è la reclusione da 3 a 8 anni. 
 #### art. 491 - bis c.p.
@@ -67,6 +68,7 @@ Vengono elaborate 2 liste di abusi
 	2. il colpevole usa la violenza su cose o persone, ovvero se palesemente armato. 
 	
 	3. se dal fatto deriva la distruzione o il danneggiamento del sistema o l' interruzione totale o parziale del suo funzionamento, la distruzione o danneggiamento dei dati, informazioni o dei programmi in esso contenuti.  
+	   
 - se i fatti dei comma primo e secondo riguardino sistemi informatici di interesse militare o relativi all' ordine all' ordine pubblico, della sanità o della protezione civile. la pena è rispettivamente della reclusione da uno a cinque anni e da 3 a 8 anni.
 
 - nel caso previsto dal primo comma il delitto è punibile a querela della persona offesa : negli altri casi si procede d' ufficio. 
@@ -129,7 +131,7 @@ Vengono elaborate 2 liste di abusi
 - le disposizioni contenute nella seguente sezione relative alle comunicazioni e conversazioni telegrafiche, telefoniche, informatiche o telematiche, si applicano a qualunque altra trasmissione a distanza di suoni immagini o altri dati.
 
 #### art. 635 - bis c.p.
-	# danneggiamento di ssitemi informatici e telematici 
+	# danneggiamento di sistemi informatici e telematici 
 - chiunque distrugge deteriora o rende in tutto o in parte inservibili sistemi informatici o telematici altrui , è punito salvo che il fatto costituisca più grave reato da una reclusione da 6 mesi a 3 anni. 
   
 - se si ricorre a una o più circostanze del secondo comma dell' articolo 635, la pena è la reclusione da 1 a 4 anni. 

@@ -58,7 +58,7 @@ La Computer forensics è l' insieme di metodologie scientificamente provate fina
 		- Spegnimento tramite S.O.
 			- Vengono eseguite su disco diverse operazioni (Aggiornamenti).
 
-- Accensione 
+- **Accensione** 
 	- vanno valutate se le informazioni che perderemo sono meno importanti dell' urgenza dell' accertamento
 		- ultimo accesso al sistema.
 		- esecuzione su disco di diverse operazioni.
@@ -105,7 +105,7 @@ La Computer forensics è l' insieme di metodologie scientificamente provate fina
 
 - l' algoritmo restituisce una stringa di lunghezza fissa in esadecimali a partire da un flusso di dati di dimensione qualsiasi 
 	- la stringa è univoca per ogni file e ne è l' identificatore. 
-	- l' algoritmo non è invertibile, quindi non è possibile ricostruire il dato originale a partire dall' output. 
+	- l'algoritmo non è invertibile, quindi non è possibile ricostruire il dato originale a partire dall' output. 
 
 
 va ricordata la differenza tra accertamenti ripetibili [[2- Procedimento penale e civile#Accertamento tecnico (359 cpp)|(359c.p.p)]] e irripetibili [[2- Procedimento penale e civile#Accertamento tecnico irripetibile (art 360 cpp)|(360c.p.p)]], il secondo tipo va compiuto: 
@@ -139,6 +139,7 @@ va ricordata la differenza tra accertamenti ripetibili [[2- Procedimento penale 
 - i dati della copia forense varierebbe alla minima alterazione della copia forense.
 
 ## Analisi 
+
 - Va eseguita su una copia. 
 - Riproducibilità. 
 - Stesso risultato ottenibile da diverse operazioni e strumenti di analisi. 
@@ -157,12 +158,12 @@ va ricordata la differenza tra accertamenti ripetibili [[2- Procedimento penale 
 
 
 - indirizzamento dei settori 
-	- phisical address (LBA) : calcolato in base al primo settore del disco. 
+	- Phisical address (LBA) : calcolato in base al primo settore del disco. 
 	- Logical disk Volume address: indirizzo del settore calcolato in base al primo settore del volume. 
 	- Logical volume partition address: l' indirizzo è calcolato in base al primo settore della partizione. 
 
 
-- DOS partition 
+- **DOS partition** 
 	- è il sistema di partizione più comune. 
 	- MBR (Master boot record): primo settore 
 		- boot code. 
@@ -195,18 +196,18 @@ va ricordata la differenza tra accertamenti ripetibili [[2- Procedimento penale 
 -  Apple partition Map 
 	- Apple partition (APM)
 		- impiegato soprattutto dai vecchi sistemi basati su processori non Intel.
-		- nessun limite massimo di partizioni 
-		- gestisce volumi fino a 2TB
+		- nessun limite massimo di partizioni. 
+		- gestisce volumi fino a 2TB.
 	  - partition map : secondo settore (512 byte)
-		  - ogni entry descrive una partizione 
-		  - la prima entry descrive la partition map 
+		  - ogni entry descrive una partizione. 
+		  - la prima entry descrive la partition map. 
 
 - Guid partition table 
-	- Sistema di partizionamento utilizzato da Efi 
-		- massimo 128 partizioni 
-		- Volumi piu grandi di 2tb 
+	- Sistema di partizionamento utilizzato da Efi. 
+		- massimo 128 partizioni.
+		- Volumi piu grandi di 2tb. 
 	- 5 aree/sezioni 
-		- protective MBR: Dos partition table (1^ settore) 
+		- protective MBR: Dos partition table (1^ settore). 
 		- GPT Header: definisce il layout delle aree.
 		- Partition table: ogni entry descrive la partizione. 
 		- Partition area: locazione riservata alla partizione. 
