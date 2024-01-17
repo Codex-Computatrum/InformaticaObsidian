@@ -45,7 +45,7 @@
 		- posizionata nella data area (cluster)
 		- file name category. 
 			- nome file (8 chars) + estensione (3 chars).
-			- > long file name directory.
+			- \> long file name directory.
 
 	- info temporali (non essential)
 		- data creazione (win).

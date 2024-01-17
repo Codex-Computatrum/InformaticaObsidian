@@ -20,7 +20,7 @@ Physical Drive :
 		- dimensione dei segmenti dei file immagine. 
 		- livello di compressione del file immagine. 
 		- cifratura del file immagine. 
-	- **Add overflow location**: calcolo e verifica dell' hash del file immagine col dispositivo target e si decide se aggiungere ulteriore spazio di archiviazione per il file immagine (install version). 
+	- **Add overflow location**: calcolo e verifica dell' [[Funzione hash|hash]] del file immagine col dispositivo target e si decide se aggiungere ulteriore spazio di archiviazione per il file immagine (install version). 
 	- è possibile visionare il tempo rimanente l' elaborazione della copia forense. 
 	- è possibile generare un file CSV di tutti i file e cartelle presenti.
 	

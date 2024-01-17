@@ -38,6 +38,9 @@ Esistono delle viste specializzate
 
 ![[Pasted image 20231212124718.png]]
 
+![[FTK imager]]
+
+
 ![[Autopsy]]
 
 

@@ -21,8 +21,8 @@ le autorità giudiziarie ricevono una notizia di reato da parte di un altra pers
 
 - Se compiuti comportano l' alterazione della prova e la ripetibilità della procedura non è più garantibile.
 - il [[Pubblico Ministero P.M.|P.M.]] esegue questa procedura avvisando preventivamente 
-	- l' indagato e il suo difensore.
-	- la parte offesa e il suo difensore. 
+	- l'[[Indagato]] e il suo [[Difensore]].
+	- la [[Parte offesa]] e il suo difensore. 
  in modo da dare la possibilità a questi ultimi di assistere a tutta l' operazione del rispetto delle procedure. 
   - le parti possono nominare un proprio [[Consulente tecnico|consulente tecnico]]. 
 

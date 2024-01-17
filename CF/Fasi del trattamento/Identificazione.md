@@ -9,7 +9,7 @@
 	- server. 
 	- stampanti, fax, router. 
 	
-[legge 48 del 18/03/2008 art. 247 cpp (1bis)]
+[[legge n.48 del 18-03-2008|legge n48 del 18/03/2008 art. 247 cpp (1bis)]]
 
 ##### Preview
 ![[Pasted image 20231206114900.png]]

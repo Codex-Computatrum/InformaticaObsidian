@@ -22,18 +22,19 @@ il comando è il seguente:
 
 $$\text{dd if=/dev/sda of=/mnt/dest/dd\_image/sda.dd bs=2048 conv=noerror, sync}$$
 Dove:
-- IF = input file \[sorgente /sda].
-- OF = output file \[file immagine sda.dd].
-- BS= block size in byte, di default 512 \[in questo caso 2048 byte].
+- **IF** = input file \[sorgente /sda].
+- **OF** = output file \[file immagine sda.dd].
+- **BS**= block size in byte, di default 512 \[in questo caso 2048 byte].
 
-- CONV= in  base ai parametri 
+- **CONV**= in  base ai parametri 
 	- noerror= continua ad elaborare in caso di errore.
 	- sync= sostituisce i blocchi non letti con NULS (sincronizza la dimensione della destinazione con la sorgente).
 
 
 - Comandi avanzati 
-	- SKIP= \[n] salta la lettura del n blocchi di memoria partendo dall' inizio.
-	- COUNT= \[n] l' elaborazione termina dopo aver letto n blocchi di memoria. 
+	- **SKIP**= \[n] salta la lettura del n blocchi di memoria partendo dall' inizio.
+	- **COUNT**= \[n] l' elaborazione termina dopo aver letto n blocchi di memoria. 
+	- Di solito servono per acquisire una singola partizione o evitare  
 
 
 esempio di acquisizione di una sola partizione 
@@ -59,4 +60,4 @@ $$\text{cat /mnt/dest/dd\_image/sda\_dd.hash}$$
 $$\text{dd if=/dev/sda bs2048 | tee /mnt/dest/dd\_{image/}sda.dd |}$$
 $$ md5sum < /mnt/dest/dd\_{image/} sda.hash$$
 
--  TEE = biforca/duplica lo stream (una si usa per il file immagine, l' altra vien trasmesso al comando successivo md5sum).
+-  **TEE** = biforca/duplica lo stream (una si usa per il file immagine, l' altra vien trasmesso al comando successivo md5sum).

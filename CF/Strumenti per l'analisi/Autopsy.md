@@ -27,9 +27,9 @@
 		- cartella di windows. 
 		- spazio non allocato. 
 	- esecuzione parallela di più file immagine. 
-	- i risultati sono presenti nella sezione result.
-	  
-	  
+	- i risultati sono presenti nella sezione result.  
+
+
 - **Hash lookup** 
 1. calcola l' hash MD5 per ogni file. 
 2. li memorizza nel case DB.
@@ -86,7 +86,7 @@
 	- i risultati sono visualizzabili nella sezione e categoria email messages 
 		- gli allegati sono trattati come figli del messaggio. 
 		- sono raggruppati in threads.
-	- è possibile analizzarli dettagliatamente attraverso al vista comunications.
+	- è possibile analizzarli dettagliatamente attraverso la vista comunications.
 
 - **ingest modules : interesting files**
 	- etichetta file e cartelle che si pensa essere interessanti 

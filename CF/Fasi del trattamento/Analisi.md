@@ -49,8 +49,10 @@
 		- EBR (extended boot record)
 			- la parte riservata al boot code è inutilizzata. 
 			- la parte riservata alle altre 2 entry nella partition table è vuota. 
-	
-	
+			  
+![[Pasted image 20240117122442.png]]
+
+
 ![[Pasted image 20231213124651.png]]
 
 -  Apple partition Map 
