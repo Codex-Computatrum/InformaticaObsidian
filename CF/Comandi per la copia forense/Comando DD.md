@@ -41,7 +41,7 @@ esempio di acquisizione di una sola partizione
 
 $$\text{dd if=/dev/sda of=/mnt/dest/dd\_image/sda\_{p2.dd} skip=2099199 count=6289408}$$
 
-	$$\text{dd if=/dev/sda of=/mnt/dest/dd\_image/sda\_{p2.dd} bs=1024 skip=3000000 count=1000000}$$
+$$\text{dd if=/dev/sda of=/mnt/dest/dd\_image/sda\_{p2.dd} bs=1024 skip=3000000 count=1000000}$$
 
 
 
@@ -58,6 +58,6 @@ $$\text{cat /mnt/dest/dd\_image/sda\_dd.hash}$$
 
 - Durante l' elaborazione di una copia. 
 $$\text{dd if=/dev/sda bs2048 | tee /mnt/dest/dd\_{image/}sda.dd |}$$
-$$ md5sum < /mnt/dest/dd\_{image/} sda.hash$$
+$$ md5sum > /mnt/dest/dd\_{image/} sda.hash$$
 
 -  **TEE** = biforca/duplica lo stream (una si usa per il file immagine, l' altra vien trasmesso al comando successivo md5sum).

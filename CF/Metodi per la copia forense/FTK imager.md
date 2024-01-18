@@ -53,7 +53,7 @@ Custom Content image
 	- si visualizzano i file che sono stati selezionati. 
 	- wild card option 
 		- ? = qualunque carattere.
-		- * = qualunque serie di caratteri. 
+		- \* = qualunque serie di caratteri. 
 		- | (pipe) = separatore di directory e file. 
 		- le distinzioni tra maiuscole e minuscole. 
 		- si può estendere la ricerca ricorsivamente alle sottocartelle. 
