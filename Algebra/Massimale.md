@@ -1,9 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
-  - theorem
-  - to-do
+  - algebra/reticoli
 ---
 >[!danger] Attenzione
 >Un elemento massimale **in un reticolo** è necessariamente massimo. Di conseguenza i reticoli finiti sono limitati, cioè hanno minimo e massimo, ma questo non è sempre vero per reticoli infiniti.

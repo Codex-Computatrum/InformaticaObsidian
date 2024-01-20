@@ -1,7 +1,7 @@
 ---
 author: Simone Parente
 tags:
-  - definition/property
+  - algebra/reticoli
 ---
 Due [[Reticolo|reticoli]], siano rispettivamente $(S, \leq)$ e $(T, \overline{\leq})$ sono tra loro <span style="color:#4ddb00">isomorfi</span> $$\iff \exists f:S \rightarrow T \text{ biettiva} ((\forall x,y, \in S, f(x \lor y) = f(x) \lor f(y) \land f(x \land y = f(x) \land f(y))$$
 Cioè se:

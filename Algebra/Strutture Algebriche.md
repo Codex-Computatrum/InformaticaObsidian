@@ -1,7 +1,7 @@
 ---
 author: Mario Penna
 tags:
-  - definition/property
+  - algebra/strutture/definizione
 ---
 ## Differenze tra strutture algebriche
 

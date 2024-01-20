@@ -1,8 +1,8 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
   - example
+  - algebra/strutture/proprietà
 ---
 >[!failure] Attenzione
 >Un elemento è cancellabile a sinistra(o rispettivamente, a destra, cancellabile) $\iff$ non è un [[Divisori dello zero|divisore dello zero]] a sinistra (o rispettivamente, a destra, cancellabile).

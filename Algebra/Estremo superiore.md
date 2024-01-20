@@ -1,7 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
+  - algebra/reticoli
 ---
 Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]] e sia $X \subseteq S$
 $b \in S \text{ è estremo superiore} \iff b$  è il [[Minimo|minimo]] dei [[Maggiorante|maggioranti]] di X

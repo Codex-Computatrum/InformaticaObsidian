@@ -1,8 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition
-  - basics
+  - algebra/insiemi
 ---
 La cardinalità di un insieme $S$, definita solitamente come $card(S)$ oppure $|S|$ è il numero di elementi facente parti di quell'insieme.
 ## Esempio

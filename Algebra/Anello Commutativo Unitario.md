@@ -1,7 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property/structure
+  - algebra/strutture/definizione
 ---
 Dato l'anello $(A, +, \cdot)$, esso è commutativo unitario quando $(A,\cdot)$ è un [[Gruppo abeliano|gruppo abeliano]].
 

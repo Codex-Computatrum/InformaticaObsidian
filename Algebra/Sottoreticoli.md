@@ -2,6 +2,7 @@
 author: Simone Parente
 tags:
   - definition/property
+  - algebra/reticoli
 ---
 
 Sia $(S, \leq)$ un [[Reticolo|reticolo]] e $H \subseteq S$ $(H \neq \emptyset)$.

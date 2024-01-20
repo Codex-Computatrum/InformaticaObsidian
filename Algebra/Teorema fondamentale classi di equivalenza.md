@@ -1,8 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - theorem
-  - example
+  - algebra/classi
 ---
 Sia $A \neq \emptyset$.
 1. Se $\rho$ è una [[Classe di equivalenza e Insieme quoziente|classe di equivalenza]] definita su $A$, allora l'insieme quoziente $\frac{A}{\rho}$ è una partizione di $A$.

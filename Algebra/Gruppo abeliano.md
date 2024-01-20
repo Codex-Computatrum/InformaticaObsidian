@@ -1,6 +1,6 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property/structure
+  - algebra/strutture/definizione
 ---
 Un gruppo abeliano è un [[Gruppo|gruppo]] **la cui operazione è anche [[Commutatività|commutativa]]**.

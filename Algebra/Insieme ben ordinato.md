@@ -1,3 +1,10 @@
+---
+author: Simone Parente
+tags:
+  - algebra/insiemi
+  - algebra/reticoli
+---
+
 Sia $S$ un insieme, $S$ è <span style="color:#00ff00">ben ordinato</span> se è definita una [[Relazioni d'ordine|relazione d'ordine]] sull'insieme che abbia la seguente proprietà:
 >Ogni sottoinsieme non vuoto di $S$ ammette [[Minimo|minimo]]
 >$$\forall X \in P(S) \setminus \{\emptyset\}, (\exists n \in X \; \forall y  \in X) (n\leq y)$$

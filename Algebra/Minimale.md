@@ -1,10 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
-  - theorem
-  - example
-  - to-do
+  - algebra/reticoli
 ---
 >[!danger] Attenzione
 >Un elemento minimale **in un reticolo** è necessariamente minimo. Di conseguenza i reticoli finiti sono limitati, cioè hanno minimo e massimo, ma questo non è sempre vero per reticoli infiniti.

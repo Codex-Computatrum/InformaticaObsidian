@@ -1,6 +1,6 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
+  - algebra/relazioni/definizione
 ---
 $$\forall a, b, c \in S : \; \; a \star (b \star c)  = (a \star b) \star c$$

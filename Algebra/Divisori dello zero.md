@@ -1,8 +1,7 @@
 ---
 author: Simone Parente
 tags:
-  - definition/property
-  - example
+  - algebra/strutture/proprietà
 ---
 >[!failure] Attenzione
 >- I [[Dominio di integrità|domini di integrità]], ad esempio $(\mathbb{R}, +, \cdot)$, non ammettono divisori dello zero, ciò vuol dire che l'operazione $\cdot$, effettuata tra due elementi $a,b \in \mathbb{R} \setminus \{0\}$ non potrà mai dare $0$ come risultato.

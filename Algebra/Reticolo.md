@@ -1,7 +1,7 @@
 ---
 author: Simone Parente
 tags:
-  - definition/property/structure
+  - algebra/reticoli
 ---
 Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]].
 

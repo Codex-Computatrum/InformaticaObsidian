@@ -1,9 +1,9 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition
-  - basics
-  - example
+  - algebra/insiemi
+  - algebra/relazioni
+  - algebra/reticoli
 ---
 Un insieme si definisce ordinato se al suo interno è definita una [[Relazioni d'ordine|relazione d'ordine]].
 ### Esempio

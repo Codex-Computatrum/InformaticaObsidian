@@ -1,8 +1,8 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
   - example
+  - algebra/strutture/proprietà
 ---
 Data la struttura algebrica $(S, \star): a \in S$ è invertibile $\leftrightarrow \exists b \in S : a \star b = b \star a = \epsilon$, dove $\epsilon=1_S$.
 ## Proprietà

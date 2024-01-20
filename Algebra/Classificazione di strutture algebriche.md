@@ -2,7 +2,7 @@
 author: Simone Parente, Mario Penna
 tags:
   - example
-  - definition/property/structure
+  - algebra/strutture/definizione
 ---
 ![[Semigruppo]]
 ![[Monoide]]
@@ -11,3 +11,5 @@ tags:
 ![[Anello]]
 ![[Dominio di integrità]]
 ![[Campo]]
+
+![[Classificazione strutture algebriche.pdf]]

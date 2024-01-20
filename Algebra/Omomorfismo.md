@@ -2,6 +2,7 @@
 author: Simone Parente
 tags:
   - algebra/basics
+  - algebra/funzioni
 ---
 Un omomorfismo è una [[Algebra/Funzione|funzione]] tra due [[Struttura algebrica|strutture algebriche]] dello stesso tipo che conserva le operazioni in esse definite.
 ### Esempio su gruppi

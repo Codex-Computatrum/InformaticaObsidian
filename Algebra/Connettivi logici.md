@@ -1,8 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition
-  - basics
+  - algebra/basics
 ---
 I connettivi logici sono parole o simboli che collegano tra loro due o più proposizioni. I connettivi logici più comuni sono:
 - **E** ($\land$) - La proposizione composta è vera se tutte le proposizioni collegate sono vere.

@@ -1,7 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition
+  - algebra/classi
 ---
 Sia $A$ un insieme e $\rho$ una relazione di equivalenza definita su $A$
 $$[a]_\rho = \{ x \in A (x \rho a) \}$$

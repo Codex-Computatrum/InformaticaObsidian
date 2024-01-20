@@ -1,7 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
+  - algebra/relazioni/definizione
 ---
 Supponiamo che $\rho$ sia una qualsiasi relazione binaria definita su $A$:
 - $\rho$ è **antiriflessiva** $\iff (\forall a \in A)(a \cancel{\rho} a), (a,a) \notin \rho$

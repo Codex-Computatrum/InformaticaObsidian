@@ -1,7 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/structure
+  - algebra/strutture/definizione
 ---
 Per strutture algebriche si intendono degli **insiemi dotati di una o più operazioni**.
 ## Funzione

@@ -1,6 +1,6 @@
 ---
 author: Simone Parente
 tags:
-  - definition/property
+  - algebra/operazioni/proprietà
 ---
 $$a = a \cdot(a+b)= a+(a\cdot b)$$

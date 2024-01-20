@@ -1,7 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - recap
+  - algebra/reticoli
 ---
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]] (per $a=$[[Minimo|minimo]] e $b=$[[Massimo|massimo]] tutti gli elementi devono essere [[Elemento Confrontabile|confrontabili]] con $a$ e $b$):
 ![[Minimo#^fad11a]]

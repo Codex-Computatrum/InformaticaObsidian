@@ -1,8 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition
-  - example
+  - algebra/basics
 ---
 Una combinazione lineare equivale alla somma di tutti gli elementi moltiplicati per dei valori variabili.
 ### Esempio

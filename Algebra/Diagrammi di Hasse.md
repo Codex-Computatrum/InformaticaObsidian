@@ -1,8 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition
-  - example
+  - algebra/reticoli
 ---
 I diagrammi di Hasse sono rappresentazioni grafiche utilizzate per visualizzare e analizzare relazioni d'ordine in un [[Insieme Ordinato|insieme ordinato]] finito.
 

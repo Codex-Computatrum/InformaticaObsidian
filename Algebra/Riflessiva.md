@@ -1,7 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
+  - algebra/relazioni/proprietà
 ---
 Supponiamo che $\rho$ sia una qualsiasi relazione binaria definita su $A$:
  - $\rho$ è **riflessiva** $\iff (\forall a \in A)(a \rho a)$

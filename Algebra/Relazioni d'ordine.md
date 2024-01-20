@@ -1,8 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
-  - recap
+  - algebra/relazioni/definizione
 ---
 Sia $\rho$ una [[Corrispondenza|relazione]] definita su A.
 

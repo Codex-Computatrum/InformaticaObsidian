@@ -1,8 +1,7 @@
 ---
 author: Simone Parente
 tags:
-  - algebra/basics
-  - todo
+  - algebra/strutture/proprietà
 ---
 >[!tip] Per ricordarla facilmente
 >*Idempotenza* è una parola composta che indica la proprietà di essere uguale a se stessi o che può essere ripetuto senza cambiare il risultato.

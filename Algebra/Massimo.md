@@ -1,10 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
-  - theorem
-  - example
-  - to-do
+  - algebra/reticoli
 ---
 Sia $(S, \leq)$ un [[Insieme ordinato|insieme ordinato]] e  $a \in S$ e [[Elemento Confrontabile|confrontabile]] con tutti gli elementi di $S$:
 

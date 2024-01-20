@@ -1,8 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - theorem
-  - example
+  - algebra/reticoli/teorema
 ---
 Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]], un [[Minimo|minimo]] (o un [[Massimo|massimo]]) è sempre un [[Minimale|minimale]] (o un [[Massimale|massimale]]), ed è sempre l'unico [[Minimale|minimale]] (o [[Massimale|massimale]]).
 $$a = \min(S) \implies a \text{ unico minimale}$$

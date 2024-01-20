@@ -1,8 +1,8 @@
 ---
 author: Simone Parente
 tags:
-  - definition/structure
-  - definition/property
+  - algebra/reticoli
+  - algebra/strutture/definizione
 ---
 
 Sia $(S, \leq)$ un [[Insieme Ordinato|insieme ordinato]], in particolare un [[Reticolo|reticolo]].

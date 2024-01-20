@@ -1,7 +1,8 @@
 ---
 author: Simone Parente
 tags:
-  - definition/property
+  - algebra/strutture/proprietà
+  - algebra/reticoli/proprietà
 ---
 
 Sia $(S, \leq)$ un reticolo e $(S, \lor,\land)$ la [[Struttura algebrica associata a un reticolo|struttura associata]], allora valgono:

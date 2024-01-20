@@ -1,8 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
-  - recap
+  - algebra/classi
 ---
 ![[Prima proprietà relazioni di equivalenza]]
 

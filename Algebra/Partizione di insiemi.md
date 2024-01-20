@@ -1,8 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition
-  - basics
+  - algebra/insiemi
 ---
 Sia $A$ un insieme e sia $F \subseteq P(A)$, $F$ si dice <span style="color:#ffbe0a">partizione</span> di $A$ se e solo se:
 1. $(\forall x \in F)(x \neq \emptyset)$

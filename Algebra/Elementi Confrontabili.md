@@ -1,8 +1,8 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition/property
   - example
+  - algebra/reticoli
 ---
 Sia $(A, \rho)$ un [[insieme ordinato]]:
 

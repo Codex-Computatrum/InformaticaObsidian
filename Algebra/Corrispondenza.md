@@ -1,8 +1,7 @@
 ---
 author: Simone Parente, Mario Penna
 tags:
-  - definition
-  - example
+  - algebra/basics
 ---
 Per corrispondenza si intende una relazione tra due insiemi, dove a ogni elemento dell'insieme di partenza (dominio), corrisponde **==almeno==** un elemento dell'insieme di arrivo (codominio).
 Siano $A, B$ due insiemi e sia $g\subseteq A\times B$, $(A \times B, g)$,ci troviamo davanti a una **corrispondenza** tra $A$ e $B$ con grafico $g$.
