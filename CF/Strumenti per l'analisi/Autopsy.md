@@ -1,9 +1,3 @@
-
-
-
-
-
-
 - Database in cui vengono memorizzate le info di casi precedentemente analizzati 
 	  Central repository 
 	- conoscere se un file è già stato ricevuto. 
