@@ -13,4 +13,4 @@ tags:
 >- essa eredita almeno un metodo `abstract` per cui non fornisce realizzazione
 >- essa dichiara di implementare [[Interfaces|interfacce]] ma non fornisce una realizzazione di tutti i metodi dell'[[Interfaces|interfaccia]].
 
-È in un certo senso *opposto* a [[final]], una classe `abstract` esiste solo per essere specializzata, mentre una classe [[final]] non può essere specializzato.
+È in un certo senso *opposto* a [[Final]], una classe `abstract` esiste solo per essere specializzata, mentre una classe [[Final]] non può essere specializzato.

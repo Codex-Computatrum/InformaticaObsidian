@@ -24,7 +24,7 @@ Se esiste un override in una sottoclasse e il tipo effettivo dell'object è quel
 ---
 ## Visibilità dei metodi
 >[!info] 
->Siano `A` e B delle classi precedentemente dichiarate, e sia `B` sottoclasse di `A`.
+>Siano `A` e `B` delle classi precedentemente dichiarate, e sia `B` sottoclasse di `A`.
 ```java
 public class Main {  
 	public static void main(String[] args) {  

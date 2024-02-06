@@ -1,11 +1,6 @@
-### Todo
-- [x] Funzioni di ordine superiore ML
-- [ ] Funtori
-- [ ] 
-
 Esercizi da voto 21 in giù in genere
 1. Disegnare memory layout di un codice C o Java
-2. Funzioni in [[Esercizi Prolog|Prolog]] o [[Esercizi ML|ML]]
+2. Funzioni in [[EserciziP|Prolog]] o [[EserciziML|ML]]
 3. [[Exceptions|Come si lancia un'exception, ciclo di vita exception, come si dichiara.]]
 4. [[Note esercizi binding#^instanceof|Operatore instanceof]]
 5. Quali sono le conversioni possibili.

@@ -12,7 +12,7 @@ tags:
 >[!summary] 
 >Godono delle seguenti proprietà:
 >1. Privilegi di visibilità rispetto alla classe che le contiene e alle altre classi contenute in essa
->2. Restrizioni di visibilità rispetto alle classi esterne a quella contenitrice (possono essere [[private]])
+>2. Restrizioni di visibilità rispetto alle classi esterne a quella contenitrice (possono essere [[Private]])
 >3. Riferimento implicito ad un oggetto nella classe contenitrice.
 
 - Possono avere qualsiasi tipo di visibilità.

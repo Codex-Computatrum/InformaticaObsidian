@@ -1,3 +1,7 @@
+---
+author: Simone Parente
+tags: [SML]
+---
 ## Datatype
 ```SML
 datatype albero = vuoto | nodo of int * albero * albero;
