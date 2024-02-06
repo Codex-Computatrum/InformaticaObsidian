@@ -1,0 +1,61 @@
+#### Libri di testo
+Computer Networking, A Top-Down Approach - Kurose, Ross
+Computer Networks -  Tanenbaum, Wetherall
+#### Esame
+Solo orale
+## Introduzione
+Rete di calcolatori: il processo di connessione di computer tra loro in modo tale da rendere possibile lo scambio di informazioni.
+
+I "dispositivi network" e i "link" permettono agli host di connettersi alla rete.
+Gli host sono i dispositivi su cui girano le applicazioni.
+I termini sono simili a quelli usati nella teoria dei grafi:
+- I dispositivi connessi alla rete sono chiamati **nodi**, le connessioni sono chiamate **links**(in italiano sarebbero gli archi).
+- Una sequenza di nodi e archi è detta **percorso** o _path_.
+- Gli elementi terminali della rete sono i server, equivalenti a delle foglie.
+### Comunicazione
+Abbiamo 5 attori:
+- Messaggio, che contiene i dati.
+- Sorgente, l'entità che invia il messaggio.
+- Destinazione, l'entità che riceve il messaggio.
+- Medium, il canale attraverso cui passa il messaggio.
+- Protocollo, un insieme di regole che condividono sorgente e destinazione.
+#### Tipi di trasmissione di dati
+1. Simplex: monodirezionale.
+2. Half-duplex: bidirezionale, a turno.
+3. Full-duplex: bidirezionale, in tempo reale.
+Il "ratio" di trasmissione è il massimo numero di informazioni che un canale può trasmettere ed indicato in bit/sec o byte/sec
+- La banda è la massima quantità di informazioni che unpath può trasmettere (bit/sec o byte/sec
+- Il throughput è la quantità effettiva di informazioni che un path o link trasmette (bit/sec o byte/sec)
+#### Tipi di connessione
+- Punto a punto: esiste un link dedicato tra due dispositivi (wireless o cablato)
+- Multipoint: più di due dispositivi condividono un singolo link
+#### Topologia
+Il modo in cui sono localizzati i nodi e i link, esempi:
+- Ad anello
+- In linea
+- Albero
+- Bus
+- Fortemente connesso
+- A stella
+##### Bus
+Connette tutti i dispositivi con un singolo link chiamato _backbone_
+Esiste un singolo link (backbone) a cui si connettono tutti i dispositivi. Nel caso in cui questo link principale dovesse smettere di funzionare, potenzialmente tutti i dispositivi verrebbero disconnessi.
+##### Anello
+Ogni nodo è connesso tramite 2 link ad altri 2 nodi, il segnale si propaga da un computer all'altro, fino a raggiungere la destinazione. Ha performance migliori del [[Bus|bus]].
+Queste reti hanno n link duplex.
+##### Stella
+Tutti gli host sono connessi a un controller centrale (hub, switch o router), che re-indirizza i messaggi.
+##### Albero
+È praticamente una rete composta da un bus "esterno" e una rete a stella "interna" <span style="color:#ff0000">inserire immagine</span>. 
+##### Mesh
+Si divide in:
+- Full mesh: tutti i nodi sono connessi, avranno $\frac{n(n-1)}{2}$ duplex links.
+- Partial mesh: i nodi sono connessi con "qualcun altro"
+##### Soluzioni ibride
+È possibile fare un mix delle tipologie viste fino ad ora in modo da creare una rete ibrida
+#### Categorie di reti
+- LAN: Local Area Network
+- MAN: Metropolitan Area Network
+- WAN: Wide Area Network
+##### Complessità delle reti WAN
+In base alla dimensione della rete, la complessità della stessa potrebbe aumentare, le reti WAN che connettono nazioni o continenti possono essere estremamente complesse e eterogenee.

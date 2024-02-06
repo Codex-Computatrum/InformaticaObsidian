@@ -1,0 +1,116 @@
+---
+author: Simone Parente
+Lezione: "19"
+---
+# Link layer
+Esistono due tipi di link: *punto a punto* e *broadcast*.
+
+## Punto a punto
+>Esistono un unico mittente e un unico destinatario.
+
+L'accesso al canale è semplificato, non c'è bisogno di fare particolari controlli per la gestione degli accessi.
+>[!example] Esempio
+>Una connessione ethernet tra due computer.
+## Broadcast
+>Esistono diversi mittenti e diversi destinatari che si trovano sullo stesso canale.
+
+L'accesso ai broadcast devono essere coordinati in qualche modo, perché comunicazioni multiple sullo stesso link potrebbero interferire tra loro.
+>[!example] Esempio
+>Bus ethernet, ethernet half-duplex o LAN wireless
+
+#### Collisioni
+Se ci troviamo in una situazione in cui diversi nodi provano a trasmettere informazioni simultaneamente, tutti questi frame inviati dai nodi  vengono "overlappati" e diventano quindi incomprensibili, questi frame vengono ricevuti da tutti i nodi del channel e "dismissed" come errori, a questo punto tutti i frame trasmessi vengono persi ed è stato perso tempo per trasmettere dati incomprensibili (e quindi inutili).
+#### Multi access protocols
+Questi protocolli vengono utilizzati per regolare le trasmissioni di tipo broadcast, in questo modo:
+- le collisioni vengono "gestite"
+- Ogni nodo ha una "chance?" di trasmettere, non vi è una monoolizzazione del canale
+- Le connessioni già "stabilite" non vengono interrotte
+
+Un esempio di canale broadcast è la rete wifi unina, utilizzata da migliaia di utenti allo stesso tempo.
+
+L'obiettivo principale di questi protocolli è di evitare collissioni, vengono utilizzate le seguenti strategie:
+1. Il canale viene "partizionato" per ogni nodo
+2. L'accesso al canale è reso randomico
+3. I nodi aspettano il proprio turno per trasmettere informazioni
+
+##### Desiderata
+Slide 5
+Caratteristiche:
+- Massimizzare l'utilizzo del canale (continua)
+- Decentralizzazione, un unico nodo "master" potrebbe causare problemi già visti in precedenza (inserire collegamento)
+- Leggerezza e semplicità
+##### Channel partitioning protocols 
+###### TDMA
+> Time Division Multiple Access
+
+Per ogni "frame" di tempo, ognuno dei nodi dovrà "scrivere", il canale verrà quindi diviso in slot temporali contenenti $N$ slot (dove N è il numero dei nodi).
+Simile all'algoritmo di scheduling [Round Robin](https://it.wikipedia.org/wiki/Schedulazione_round_robin)
+
+###### FDMA
+> Frequency division multiple access
+
+Prevede la suddivisione della banda disponibile in un certo numero di sottobande uguali, ognuna centrata intorno ad una frequenza che identifica il canale. Ciascuna sottobanda è concessa ad un solo utente che ne detiene il controllo per tutta la durata della connessione
+
+<span style="color:#ffbe0a">Inserire immagini</span>
+
+###### CDMA
+Assegna un codice diverso a ogni nodo, utilizzato per codificare e decodificare i dati inviati, ciò permette (se ben implementato) di evitare interferenze anche in caso di trasmissione simultanea. Viene utilizzato principalmente sui canali wireless
+
+#### Random Access protocols
+>Nei protocolli ad accesso casuale ogni nodo trasmette al "full rate" del canale, nel caso dovesse esserci una collissione, i nodi aspettano un tempo casuale per ritrasmettere nuovamente il messaggio.
+
+La selezione del delay è fatta indipendentemente, è possibile che due nodi ricevano un delay simile, se avviene una collisione, vengono scelti due delay, questo processo viene iterato fin quando non si ottiene un delay "adatto".
+
+###### Slotted ALOHA
+Tutti i nodi che partecipano al broadcast provano a inviare un messaggio, nel caso dovesse succedere che due o più nodi provano a trasmettere insieme un messaggio, si "lancia una moneta",  <span style="color:#ffbe0a">da finire</span>
+
+###### CSMA
+> Carrier sense multiple access
+
+Una delle debolezze di ALOHA è che una trasmissione può avvenire anche se il canale è già occupato, causando una collissione.
+Una possibile soluzione è monitorare lo stato del canale, e inviare solo se il canale è libero.
+Esistono due tipi di protocolli CSMA, uno standard (CSMA) e uno con previsione delle collisioni (CSMA/CD)$_{\text{Collision Detection}}$.
+
+Carrier sensing: i nodi controllano che il canale sia libero prima di inviare dati. 
+Collision detection: i nodi controllano che il canale sia libero (e controllano durante la trasmissione che non ci siano collisioni), nel caso in cui si rilevasse una collisione, il nodo che vuole inviare dati aspetterà un tempo casuale prima di riprovare.
+
+Le collisioni avvengono a causa del ritardo di propagazione nella trasmissione dei segnali.
+- PURE CSMA
+		Se il canale è occupato, aspetta
+		Se il canale è libero, invia un frame
+	Le collisioni non vengono rilevate.
+- CSMA/CD
+		Se il canale è occupato, aspetta
+		Se il canale è libero, invia un frame
+		Durante la trasmissione, controlla che non ci siano collisioni
+			Se viene rilevata una collisione, attendi un tempo casuale prima di riprovare.
+
+#### Taking Turns
+##### Polling protocol
+>Esisto un nodo "master" che seleziona in modo simile al round robin, un nodo che può inviare dati, itera questo processo fino a quando la trasmissione termina
+- Centralizzato
+- Polling delay
+- Non ci sono collisioni
+##### Token-passing protocol
+>Non c'è un nodo master, i nodi si scambiano un frame speciale, detto "token", questo token è ciò che permette al nodo di trasmettere dati, appena terminata la trasmissione, il nodo passa il token.
+- Decentralizzato
+- Un nodo potrebbe monopolizzare il link (nel caso in cui un nodo non dovesse "passare" il token)
+- Nessuna collisione
+
+
+## Indirizzi MAC
+>Medium Access Control
+
+Ogni dispositivo è identificato da un MAC address, ogni rete ha uno specifico indirizzo, e ogni "manufacturer" ha il proprio MAC
+
+Questi indirizzi sono composti da 6 byte, rappresentati in genere in notazione esadecimale, sono **locali**.
+Il principale ruolo di questo mac address è di "filtrare" i messaggi
+
+## Switches
+>Sono l'equivalente a livello dei link dei router.
+> - Non prevedono l'implementazione di algoritmi di routing
+> - Vengono utilizzati gli indirizzi MAC
+
+Il ruolo principale dei link è di ricevere frames e inviarli tramite i link "uscenti", lo switch è totalmente trasparente all'host e i router nella sottorete, e fa dei buffer sulle interfaces???.
+Esistono delle "forwarding tables" che associano gli indirizzi MAC alle interfaces, aggiornate dinamicamente quando nuovi dispositivi vengono scoperti.
+### Address Resolution Protocol

@@ -1,0 +1,1 @@
+The concept of dependability encompass the concepts of: [[Availability|availability]], [[Reliability|reliability]], [[Safety|safety]], [[Security|security]].

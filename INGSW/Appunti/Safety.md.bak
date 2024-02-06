@@ -1,0 +1,1 @@
+The ability of the system to operate without catastrophic failure
