@@ -28,12 +28,17 @@ fun rimuoviDuplicati [] = []
     else
       x :: rimuoviDuplicati xs;
 
+(* Funzione Somma Elementi *)
+fun sommaElementi [] = 0
+  | sommaElementi (x::xs) = x + sommaElementi xs
+;
+
 (* Lista *)
-val L = [1, 2, 3, 4, 5];
+val L = [1, 2, 3, 4, 5, 5];
 
 (* Risultati *)
 lenght L;
 inverti L;
 max L;
-
 rimuoviDuplicati L;
+sommaElementi L;
