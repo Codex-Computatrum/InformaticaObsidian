@@ -174,7 +174,7 @@ $f(a, b) = a \; simbolo \; b$
 
 `foldl` (f sta per left) aggrega i valori della lista da sinistra verso destra, a differenza degli altri due
 
-```
+```sml
 fun print_and_sum (a, b) = (
 	print("(" ^ Int.toString(a) ^ ", " ^ Int.toString(b) ^ " ) -> "
 				 ^ Int.toString(a+b) ^ "\\n");
