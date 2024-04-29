@@ -1,5 +1,3 @@
-# 📚 Appunti Super Fichi del Terzo Anno Tipo
-
 ## 📑 *Informazioni utili*
 
 - Gli appunti sono stati scritti con [Obsidian](https://obsidian.md).
@@ -18,4 +16,7 @@
 ## ✅ To-do
 - [ ] Standard di creazione Tag
 - [ ] Sito di pubblicazione degli appunti
+
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=BalliAsghar/Mailsy&type=Date)](https://star-history.com/#BalliAsghar/Mailsy&Date)
 
