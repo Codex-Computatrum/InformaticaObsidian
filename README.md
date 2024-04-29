@@ -18,5 +18,5 @@
 - [ ] Sito di pubblicazione degli appunti
 
 ## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=BalliAsghar/Mailsy&type=Date)](https://star-history.com/#BalliAsghar/Mailsy&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Codex-Computatrum/InformaticaObsidian&type=Date)](https://star-history.com/#Codex-Computatrum/InformaticaObsidian&Date)
 
