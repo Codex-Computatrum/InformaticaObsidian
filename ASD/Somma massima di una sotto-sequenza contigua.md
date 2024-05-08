@@ -27,6 +27,7 @@ Abbiamo quindi decomposto il problema in:
 Si noti che poiché il valore di una sotto-sequenza vuota è $0$, possiamo dire con certezza che $V \geq 0$ per qualsiasi sotto-sequenza.
 
 Un possibile algoritmo è il seguente:
+
 ```python
 def maxSUM(A, n):
 	V = 0
@@ -40,6 +41,8 @@ def maxSUM(A, n):
 			V = sum
 	return V
 ```
+^MaxSum1
+
 Ci si aspetta che questo algoritmo abbia almeno un $\Theta(n^{2})$ vista la similitudine con la soluzione $2$ di `contaCoppie`. 
 >[!note]
 > Più precisamente se il blocco in analisi risulta essere costante allora $T(n) = \Theta(n^{2})$
@@ -86,6 +89,7 @@ precedente algoritmo
 Fintanto che l'indice resta `i` resta sempre lo stesso si vuole aggiornare il precedente valore di `SUM`, mentre quando varia allora `SUM` va azzerato poiché ci si trova in una nuova sotto-sequenza.
 
 Questa idea può essere formalizzata nel seguente algoritmo:
+
 ```python
 def maxSum(A, n):
 	V = 0 # (Teta di 1)
@@ -97,6 +101,8 @@ def maxSum(A, n):
 				 V = sum # Le righe 5-8 hanno contributo Theta(n^2)
 	return V # (Theta di 1) 
 ```
+^MaxSum2
+
 Questo algoritmo impiega tempo $T(n) = \Theta(n^{2})$ ed è quindi un miglioramento significativo dal punto di vista asintotico della soluzione $1$
 
 ---
@@ -132,6 +138,7 @@ Dopo queste analisi è abbastanza intuitivo che il codice seguente avrà comples
 2. Se $\mathbb{SUM}(i, k) < 0$ allora parto direttamente da $j + 1$ e vado avanti
 
 Dunque, i salti sono giustificati dalla proprietà $2$ e il fatto di non dover esaminare le sequenze intermedie della proprietà $1$. Ma allora l'algoritmo finale sarà il seguente:
+
 ```python
 def maxSUM(A, n):
 	V = 0 # (i = 1)
@@ -148,6 +155,8 @@ def maxSUM(A, n):
 		j = j +1
 	return sum
 ```
+^MaxSum3
+
 Si noti che tutte le soluzioni di questo problema possono essere adattate affinché memorizzi anche gli indici per cui la sotto-sequenza è quella massima; infatti, basta salvare gli indici di quando vado ad aggiornare $V$.
 
 Risulta che questo algoritmo abbia $T(n) = \Theta(n)$, è ottimale poiché supponendo di avere un input con valori positivi, è evidente che `maxSum` è la somma di tutti i positivi, devo scorrere la sequenza sia per controllare che siano positivi, sia per calcolarne la somma.

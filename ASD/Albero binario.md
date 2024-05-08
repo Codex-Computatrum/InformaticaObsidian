@@ -19,7 +19,7 @@ Un'[[Tree|albero]] si dice **binario** se ogni nodo ha al massimo due figli.
 ### Scorrimento
 È possibile scorrere un **albero binario** principalmente in due modi:
 - In **[[Ampiezza]]** (Breadth First Visit)
-- In **[[Profondità]]** (Depth First Visit):
+- In **[[Depth First Search|Profondità]]** (Depth First Visit):
 	- **[[Order-pre|pre-order]]**: viene visato prima il padre, poi il sinistro, poi il destro
 	- **[[Order-in|in-order]]**: viene visitato prima il figlio sinistro, poi il padre, poi il destro
 	- **[[Order-post|post-order]]**: viene visato prima il figlio sinistro, poi il destro, poi il padre
@@ -35,8 +35,10 @@ Un'[[Tree|albero]] si dice **binario** se ogni nodo ha al massimo due figli.
 ---
 ### Albero binario completo
 Un albero binario si dice anche **completo** se: 
-- è pieno, ossia tutti i nodi hanno entrambi i figli.
-- ogni sua foglia ha la stessa profondità. 
+- Tutte le foglie sono al livello h o al livello h - 1
+- Tutti i nodi interni hanno grado 2 tranne al più 1
+
+^albero-binario-completo
 
 >[!note]
 > Un nodo si dice foglia quando non ha figli _alternativamente quando il suo grado è uguale a 1_

@@ -3,12 +3,13 @@ author: Lorenzo Tecchia
 tags: [example, algorithm]
 ---
 Vogliamo descrivere un algoritmo che accetta come input un intero $n \geq 1$ e produce in output il numero di coppie ordinate $(i,j)$ tali che $i,j \in \mathbb{N}$ e $1 \leq i \leq j \leq \mathbb{N}$
-> [!example]
+> [!example]-
 > Input $\rightarrow n = 4$ 
 > 	$(1,1), (1,2), (1,3), (1,4),(2,2),(2,3) \dots$
 > Output $\rightarrow  10$
 
 Una possibile soluzione potrebbe essere la seguente:
+
 ```python
 def contaCoppie(N):
 	ris = 0
@@ -18,8 +19,9 @@ def contaCoppie(N):
 				ris = ris + 1
 	return ris
 ```
+^Conta-Coppie1
 
->[!note] La correttezza di questo algoritmo è ovvia, intuitivamente è la soluzione peggiore per poter risolvere il problema, generiamo anche coppie inutili.
+>[!note] La correttezza di questo [[algoritmo]] è ovvia, intuitivamente è la soluzione peggiore per poter risolvere il problema, generiamo anche coppie inutili.
 > Parliamo, appunto di ***soluzione naive***.
 
 Risulta naturale notare delle imprecisioni nel conteggio delle operazioni elementari in alcune linee (ad esempio alla riga $7$ oltre alla scrittura c’è anche una lettura), ma come sarà evidente, ciò non influisce sull’analisi (si potrebbe provare a rieseguire i seguenti calcoli con altri valori).
@@ -27,12 +29,13 @@ Risulta naturale notare delle imprecisioni nel conteggio delle operazioni elemen
 L’analisi precedente non basta a descrivere il comportamento dell’algoritmo (alcune linee sono ripetute più volte). Ne consegue che il calcolo totale del contributo di ogni linea sarà il prodotto tra il numero di operazioni elementari e il numero di ripetizioni della linea (ad esempio per la linea $2$ e $7$ il risultato sarà $1 \cdot 1 = 1$).
 
 La riga $3$ si ripete $n + 1 \cdot \left(\sum\limits^{i=1}_{n+1}\right)\text{volte}$
+
 >[!note]
 > L'ultimo confronto è quello usato per uscire dal ciclo, quindi il contributo totale della linea è $2\cdot(n+1)$
 
 La riga $4$ invece, $n+1$ volte per ogni volta che si ripete il precedente quindi: $\sum\limits^{i=1}_{n}(\sum\limits^{j=1}_{n+1}1)$. Il totale, quindi sarà $2 \cdot (n+1)$
 
-La riga $5$ si ripete $\sum\limits_{i=1}^{n}\left(\sum\limits_{j=1}^{n+1}1\right)= n^{2}, \text{dunque} 3n^2$
+La riga $5$ si ripete $\sum\limits_{i=1}^{n}\left(\sum\limits_{j=1}^{n+1}1\right)= n^{2}, \;\;\text{dunque}\;\; 3n^2$
 
 La riga $6$ sicuramente si ripete un numero di volte compreso tra $0$ e $n^2$, quindi il valore della linea di codice è $0 \leq x \leq n^{2}$.
 
@@ -40,10 +43,11 @@ La riga $6$ sicuramente si ripete un numero di volte compreso tra $0$ e $n^2$, q
 Ora non ci resta che analizzare la complessità totale:$$\begin{align}T_1(n) &= 1 + 2(n+1) + 2n(n+1)+3n^{2}+x+1 \\
 &= 1 +2n+2+2n^{2}+2n+3n^{2}+x+1 \\ &= 5n^{2}+4n+4+x
 \end{align}$$
-È importante notare che il valore di $x$ non influisce sul risultato dell'analisi poiché l'espressione sarà sempre del tipo $an^{2}+bn + c$, dunque è una funzione parabolica. Avrà quindi tempo di esecuzione **quadratico** sulla dimensione dell'input.
+È importante notare che il valore di $x$ non influisce sul risultato dell'analisi poiché l'espressione sarà sempre del tipo $an^{2}+bn + c$, dunque è una [[funzione]] parabolica. Avrà quindi tempo di esecuzione **quadratico** sulla dimensione dell'input.
 
 ### Soluzione 2
 Visto che una coppia vale come contributo al risultato solo quando il secondo elemento è maggiore del primo è evidente che possiamo migliorare il precedente algoritmo nel seguente modo:
+
 ```python
 def contaCoppie(n):
 	ris = 0
@@ -51,6 +55,7 @@ def contaCoppie(n):
 		for j = i in range(n):
 			ris = ris + 1
 ```
+^Conta-Coppie2
 
 Analizziamo la complessità
 
@@ -69,6 +74,7 @@ Ciò però non implica che impieghino lo stesso tempo, ma sul lungo periodo, il 
 
 ### Soluzione 3
 Dalle precedenti analisi abbiamo notato che, fissato $i$, eseguiamo l'istruzione di incremento del risultato tante volte quanto il valore totale (che abbiamo calcolato) da aggiungere a `RIS`. Risulta pertanto logico aggiungere direttamente il risultato totale, scrivendo il seguente algoritmo:
+
 ```python
 def contaCoppie(n):
 	ris = 0 # (-> 1)
@@ -76,6 +82,8 @@ def contaCoppie(n):
 		ris = ris + (n - i + 1) # (sum from i to n of 5 = 5n)
 	return ris # (-> 1)
 ```
+^Conta-Coppie3
+
 Di conseguenza avremo che:$$T_{3}(n) = 7n + 4$$
 Questo tipo di funzione cresce linearmente e quindi è nettamente migliore rispetto ai precedenti algoritmi poiché, per la stessa crescita di $\mathbb{N}$, questa soluzione cresce più lentamente.
 
@@ -84,11 +92,14 @@ Il problema permette di ridurre ulteriormente il tempo di esecuzione.
 Infatti sappiamo che per $i=1$, il risultato è $n -1 +1$.
 Per $i=1$ il risultato è $n-2+1$ e così via, fino ad arrivare ad $n$ a cui dobbiamo sommare a $1$ ai precedenti risultati. Pertanto:$$RIS = \sum\limits_{i=1}^{n}i = \frac{n(n+1)}{2}$$
 Pertanto il nostro algoritmo si riduce a:
+
 ```python
 def contaCoppie(n):
 	ris = (n(n+1)) / 2
 	return ris
 ```
+^Conta-Coppie4
+
 Ne deduciamo che il problema di partenza è risolvibile a tempo costante, più precisamente in $T_{4}(n) = 6$ . Ciò significa che **qualsiasi istanza** è risolta con lo stesso tempo.
 Era possibile arrivare a questo soluzione anche geometricamente, infatti le coppie possono essere considerate come le celle di una matrice quadrata.
 Le celle totali (ovvero tutte le coppie possibili) sono $\mathbb{N} \times \mathbb{N}$, ma quelle di nostro interesse sono tutte quelle sopra la ***diagonale principale***(diagonale compresa).

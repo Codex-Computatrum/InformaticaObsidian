@@ -57,9 +57,9 @@ $n_{0}$ sarà il punto da cui la funzione $h(n)$ sarà sempre decrescente (è ir
 Prendiamo ora la retta costante pari al valore di $h(n_{0})$, ed ora possiamo osservare che da $n_0$ in poi il rapporto è tale che $c_{1}=k \leq h(n) \leq h(n_{0}) = c_{2}$
 ![[Pasted image 20231116164426.png|250]]
 >[!note]
->Le precedenti costanti sono state trovate avendo support che il rapporto $\frac{f(n)}{g(n)}$ esista e che la funzione (dopo lo studio della derivata prima di tale rapporto) sia decrescente per un intervallo $[n_{0}, +\infty)$
+> Le precedenti costanti sono state trovate avendo supposto che il rapporto $\frac{f(n)}{g(n)}$ esista e che la funzione (dopo lo studio della derivata prima di tale rapporto) sia decrescente per un intervallo $[n_{0}, +\infty)$
 ##### Caso 2 h(n) dal basso
-Supposto che lo studio della derivata prima abbia portato alla conferma dell'esistenza di un intervallo per cui la funzione è sempre crescente abbiamo già trovato le nostre costanti.
+Supposto che lo studio della derivata prima abbia portato alla conferma dell'esistenza di un intervallo per cui la [[funzione]] è sempre crescente abbiamo già trovato le nostre costanti.
 infatti per $c_{2}$ è ovvio che basti prendere l'asintoto $k$ mentre per $c_{1}$ bisogna scegliere un $n_{0}$ da $[n_{0}, + \infty$ la funzione sia sempre crescente
 ![[Pasted image 20231116165310.png|250]]
 >[!note]
@@ -73,7 +73,7 @@ Se la situazione è quella della rappresentazione nella [[Analisi asintotica#^ca
 >[!important]
 > Questo tipo di funzioni sono molto rare e pertanto nei nostri studi ci imbatteremmo solo nei primi due casi
 
->[!example] # Esempio
+>[!example]- # Esempio
 > Importante notare che: $$\lim_{n \rightarrow \infty} \frac{f(n)}{g(n)} = \infty \iff \lim_{n \rightarrow \infty} \frac{g(n)}{f(n)} =\infty \iff \lim_{n \rightarrow \infty} = k > 0 \iff \lim_{n \rightarrow \infty} \frac{g(n)}{f(n)} = \frac{1}{k} > 0$$
 > Questo dimostra che studiare il limite del rapporto o il limite del suo reciproco ci porta alla stessa conclusione.
 > 1. Siano $f(n) = n$ e $g(n) = 4n -10$
@@ -109,8 +109,34 @@ Infatti il $\lim_{n \rightarrow 0} \frac{f(n)}{g(n)} = \infty$ perché, al limi
 ### Simmetrica
 ![[Pasted image 20230905183705.png|500]]
 ### Transitiva
-![[Pasted image 20230905183731.png]]
->[!example] Esempio proprietà transitiva
+$f(n)=\Theta(g(n)) \wedge g(n)=\Theta(h(n)) \Rightarrow f(n)=\Theta(p(n))$
+Questa proprietà si applica a tutte le notazioni. In questo caso vedremo solo il $\Theta$
+$$
+\begin{array}{lll}
+\exists c_1, c_2 \in \mathbb{R}^{+} & : \forall n \geq n_0, \quad c_1 g(n) \leq f(n) \leq c_2 g(n) & f(n)=\Theta(g(n)) \\
+\exists n_0 \in \mathbb{N} & & \\
+\exists c_1^{\prime}, c_2^{\prime} \in \mathbb{R}^{+} & : \forall n \geq n_0, \quad c_1^{\prime} h(n) \leq g(n) \leq c_2^{\prime} h(n) & g(n)=\Theta(h(n)) \\
+\exists n_0 \in \mathbb{N} & : \forall n
+\end{array}$$
+Moltiplico $\quad c_1^{\prime} h(n) \leq g(n) \quad$ per $c_1$
+$$
+c_1 c_1^{\prime} h(n) \leq c_1 g(n)
+$$
+
+Moltiplico $\quad g(n) \leq c_2^{\prime} h(n) \quad$ per $c_2$
+$$
+c_2 g(n) \leq c_2 c_2^{\prime} h(n)
+$$
+$$
+c_1 c_1^{\prime} h(n) \leq c_1 g(n) \leq f(n) \leq c_2 g(n) \leq c_2 c_2^{\prime} h(n)
+$$
+
+Scelgo $\quad c_1^{\prime \prime}=c_1 c_1^{\prime}$ e $c_2^{\prime \prime}=c_2 c_1^{\prime} \quad$ quindi
+$$
+c_1^{\prime \prime} h(n) \leq f(n) \leq c_2^{\prime \prime} h(n) \quad f(n)=\Theta(h(n))
+$$
+
+>[!example]- Esempio proprietà transitiva
 > Questa proprietà risulta essere utile quando bisogna confrontare $2$ funzioni molto *distanti* tra loro e quindi difficili da confrontare. 
 > Grazie alla transitività è possibile scegliere una funzione nel mezzo e confrontarla con entrambe (se risulta vera per una e falsa per l'altra allora non si arriva a nulla).
 > Consideriamo ad es. $f(n) = n^{2}-3n + 4$ e $h(n) = 2n^{2}+7n -10$
@@ -163,13 +189,13 @@ Quindi l'implicazione è dimostrata sotto la supposizione che $\forall h(n), \;\
 >[!warning] 
 > Oltre ai valori delle costanti $c_{1}$ e $c_{2}$ bisogna anche andare a prendere un valore $n_{0}$ anch'esso $> 0$ per il quale vale la "costrizione" asintotica della notazione $\Theta$.
 
->[!tip] 
+>[!tip]-
 > Le due costanti $c_{1}$ e $c_{2}$ non rappresentano per forza due valori univoci, possono corrispondere anche a valori estremali con i quali possiamo andare a definire gli intervalli nei quali andare a prendere le costanti.
 
 3. Analizzare separatamente i due lati della disequazione, per ottenere le costanti.
 	- Se devo dimostrare che esiste un numero $x \leq a$  e conosco una relazione per cui un numero $b$ sia minore di $a$ in questo modo: $b < a$; allora posso estendere la mia relazione con $x$ sapendo che poi la seguente varrà in ogni caso: $x \leq b < a$.
 
->[!tip] 
+>[!tip]-
 > È spesso molto utile andare a maggiorare o minorare i termini della funzione all'interno della disequazione, per rendere più manipolabili i termini della stessa.
 
 Nel caso dell'esempio $$c_{1}\;n \log_{2}(n) \leq 2n\log_{2}(n)+n-n < 2n\log_{2}(n)+n-\log_{2}(n)$$
@@ -184,7 +210,7 @@ Nel caso dell'esempio $$c_{1}\;n \log_{2}(n) \leq 2n\log_{2}(n)+n-n < 2n\log_{2}
 5. Risultato:$$2\;n\log_{2}(n)\leq 2n\log_{2}(n)+n-\log_{2}(n) \leq 3\;\log_{2}(n)\;\;\;\forall n \geq 4$$
 
 ## Esempio positività
->[!example] 
+>[!example]-
 > Trovare le costanti o confutare :$$\log^{2n}(n) + n -log(n)=\Theta(\log(n^{n}))$$
 
 Spesso non è semplice riuscire a trovare adeguate e/o semplici maggiorazioni per tutte le equazioni. Quindi si ricorre ad un metodo diverso, in generale più **meccanico**

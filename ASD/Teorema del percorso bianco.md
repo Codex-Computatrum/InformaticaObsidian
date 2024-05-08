@@ -4,6 +4,7 @@ tags:
   - theorem
   - definition
   - operation/graph
+  - graph
 ---
 $\forall v,w \in V$
 Al tempo $d(v)$, ovvero quando $v$ viene scoperto, $w$ è discendente di $v$ se e solo se $w$ può essere raggiunto da $v$ solo da un ***percorso bianco***.

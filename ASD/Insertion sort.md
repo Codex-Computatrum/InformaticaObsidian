@@ -10,10 +10,10 @@ tags:
 Insertion-Sort è un [[algoritmo]]  di [[ordinamento]] abbastanza efficiente per l'ordinamento di array di piccole dimensioni.
 L'idea dell'algoritmo è quella di dividere la sequenza in una parte ordinata e una no.
 
-All'inizio possiamo supporre che la sequenza ordinata sia composta solo dal primo elemento, ed il reato degli elementi contengono la sequenza disordinata.
+All'inizio possiamo supporre che la sequenza ordinata sia composta solo dal primo elemento, ed il resto degli elementi contengono la sequenza disordinata.
 Insertion-Sort prende il primo elemento della parte disordinata (nel nostro caso $j$) e lo inserisce nella giusta posizione nella parte disordinata.
 
-Quindi se $a_{j-1} \leq a_{j}$ allora mantiene la stessa posizione. In caso contrario $a_{j-1}$ andrà in posizione $j$ e dovrà confrontare $a_{j}$ con $a_{j-2}$; anche in questo caso se $a_{j-2} \leq a_{j}$ andrà nella posizione precedentemente liberata ($j-1$), altrimenti è $a_{j-2}$ a spostarsi nella posizione $j-1$.
+Quindi se $a_{j-1} \leq a_{j}$ allora mantiene la stessa posizione. In caso contrario $a_{j-1}$ andrà in posizione $j$ e dovrà confrontare $a_{j}$ con $a_{j-2}$; anche in questo caso se $a_{j-2} \leq a_{j}$ andrà nella posizione precedentemente liberata ($j-1$), altrimenti è $a_{j-2}$ a spostarsi nella posizione $j-1$
 
 ![[Pasted image 20231120160145.png|400]]
 
@@ -22,18 +22,23 @@ Ripetendo questo processo posso arrivare a confrontare $a_{j}$ con $a_1$:
 - In caso contrario andrà in posizione $1$ ed $a_{1}$ in posizione $2$ (questi spostamenti hanno ovviamente un costo loro).
 
 ###### Algoritmo Ricorsivo
+
 ```python
 def InsertionSort(A, n):
 	if n > 1:
 		InsertionSort(A, n-1)
 		Insert(A, n-1)
 ```
+^InsertionSortRecursive
+
 ###### Algoritmo Iterativo
+
 ```python
 def InsertionSort(A, n):
 	for i = 1 in range(n-1):
 		Insert(A, i)
 ```
+^InsertionSort-Iterative
 
 ```python
 def Insert(A, i):
@@ -44,6 +49,7 @@ def Insert(A, i):
 		j--
 	A[j+1] = x
 ```
+^Insert
 
 A prescindere dalla condizione di terminazione del ciclo `while`(riga $6$), la riga $9$ è sempre la stessa infatti:
 ![[Pasted image 20231120160415.png]]
@@ -52,11 +58,11 @@ A prescindere dalla condizione di terminazione del ciclo `while`(riga $6$), la r
 ## Analisi
 Studiamo solo il ciclo `while` in quanto unico a determinare il comportamento asintotico dell'algoritmo.
 
-Questo ciclo può essere diverso per istanze con stessa dimensione a causa del confronto $\text{elem} \geq A|i|$ (questo è il motivo della preferenza del ciclo for)
+Questo ciclo può essere diverso per istanze con stessa dimensione a causa del confronto $\text{elem} \geq A[i]$ (questo è il motivo della preferenza del ciclo for)
 
 Ne consegue che no possiamo associare un valore a $T(n)$ poiché non è detto che abbia lo stesso tempo di ogni istanza di $n$ elementi.
 
->[!example] 
+>[!example]-
 > Per $(4,3,2,1)$ non verrà mai eseguito il corpo del ciclo, mentre per $(3,4,2,1)$ le istruzioni nel corpo saranno eseguire $6$ volte.
 
 Questa irregolarità costringe a fare i seguenti ragionamenti:
@@ -84,7 +90,8 @@ T(N)=2 N+2(N-1)+2(N-1)+4 \sum_{j=2}^N t_j+3 \sum_{j=2}^N\left(t_j-1\right)+\sum_
 ### Caso peggiore
 Se la seconda condizione del `while` è sempre verificata è chiaro che $i=0$(poiché all'inizio $i=j-1$) si verifica dopo $j$ iterazioni (uscendo quindi dal `while`)
 Pertanto non è possibile eseguire più di $j$ iterazioni (questo corrisponde al nostro caso peggiore).
-Bisogna ora verificare che esista un input tale per cui $\forall j, t_{j}=j$. Questo input esiste ed è la ***sequenza decrescente***:$$
+Bisogna ora verificare che esista un input tale per cui $\forall j,\; t_{j}=j$. 
+Questo input esiste ed è la ***sequenza decrescente***:$$
 \begin{aligned}
 & T_{\max }(N)=9 N-7+4 \sum_{j=2}^N(j-1)=9 N-7+4\left(\sum_{j=1}^N j=1\right)+4 \sum_{j=1}^{N-1}(j-1)= \\
 & =9 N-7+4\left(\sum_{j=1}^{N-1} j-1+N\right)+4 \sum_{j=1}^{N-1}(j-1)=9 N-7-4+4 N+8 \sum_{j=1}^{N-1} j-4 \sum_{j=1}^{N-1} 1= \\
@@ -94,9 +101,10 @@ Bisogna ora verificare che esista un input tale per cui $\forall j, t_{j}=j$. Qu
 ---
 ### Caso migliore
 Con sequenze ordinate accade che $\forall j\;:\;2 \leq j \leq n$ risulta che $t_{j} = 1$.
->[!example]
+>[!example]-
 > Per $(3,7,8,10)$ la seconda condizione del `while` risulterà falsa per ciascun $j \rightarrow$ ci saranno quindi $4$ esecuzioni:$$
 T_{\min }(N)=9 N-7+4 \sum_{j=2}^N 1+4 \sum_{j=2}^N 0=9 N-7+4(N-1)=13 N-11=\Theta(N)$$ 
+
 ---
 ### Caso medio
 Ora resta capire con quanta frequenza avvenga il caso migliore e il caso peggiore, poiché non è in genere detto che il comportamento dell'algoritmo sia quadratico (per ora sappiamo che ci sono degli input che impiegano tempo quadratico e degli input che sono lineari).

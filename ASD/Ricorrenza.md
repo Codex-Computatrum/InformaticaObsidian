@@ -5,7 +5,7 @@ tags:
 ---
 Una ***ricorrenza*** è una equazione o disequazione che descrive una funzione in termini dei suoi valori su input più piccoli.
 
->[!tip] 
+>[!tip]-
 > Per risolvere al pieno equazioni di ricorrenza ricorre in ogni caso, utilizzare un mix dei metodi proposti qui sotto.
 
 >[!important]
@@ -14,7 +14,7 @@ Una ***ricorrenza*** è una equazione o disequazione che descrive una funzione i
 >[!note] Albero di ricorrenza
 > Un albero dove i nodi rappresentano le chiamate ricorsive e ad ogni nodo è associato il numero di ricorrenza e il contributo locale di tale nodo(abbiamo in questo modo anche il contributo di ogni livello dell'albero)
 
->[!example] # Esempio fattoriale
+>[!example]- # Esempio fattoriale
 > Prendiamo come esempio la funzione del fattoriale
 > $$n= \begin{cases}1 & \text { se } n=1 \\ n \cdot(n-1) ! & \text { altrimenti }\end{cases}$$
 > Che sarà in termini di equazioni di ricorrenza:$$T_F(n)= \begin{cases}\Theta(1) & \text { se } n=1 \\ T_F(n-1)+\Theta(1) & \text { altrimenti }\end{cases}$$
@@ -42,7 +42,8 @@ z(n) \\
 - $f_{i}(n)$ è l'input che prende ogni chiamata ricorsiva (non è detto che sia la stessa per ogni chiamante), ed ovviamente, affinché risulti corretto l'algoritmo deve risultare $f_{i}(n) < n$
 È importante notare che per calcolare il numero di nodi di un livello basta moltiplicare tra loro le espressione dei livelli precedenti, ad esempio:
 ![[Pasted image 20231117145247.png]]
->[!example] # Primo esempio sulle equazioni di ricorrenza
+
+>[!example]- # Primo esempio sulle equazioni di ricorrenza
 > Sia $z(n) = 2$ (si hanno $2$ chiamate ricorsive per ogni chiamata $\rightarrow$ questo si traduce in un albero binario) e siano:
 > - $f_{i}(n) = \frac{n}{4}$(suddivisione input)
 > - $g(n) = n^{2}$(tempo di esecuzione della altre istruzioni)
@@ -68,7 +69,7 @@ Dunque:
  | Livello $3$ | $2^{3}\left(\frac{n}{4^{3}}\right)^{3}$     |
  |   $\dots$   | $\dots$                                     |
 
- >[!example] # Primo esempio sulle equazioni di ricorrenza
+ >[!example]- # Primo esempio sulle equazioni di ricorrenza
  > Per quanto riguarda l'altezza dell'albero bisogna ragionare sul  contributo delle foglie, che sappiamo essere $1 \rightarrow$ Tale contributo può essere relazionato alla dimensione dell'input di un livello $i$ (nel nostro caso $\frac{n}{4^{i}}$). Per calcolare l'altezza dell'albero:$$\begin{align}
 \frac{n}{4^i}=1 \Longrightarrow n=4^i \Longrightarrow \log _4 n=i \log _4 4 \stackrel{\log _a}{\Longrightarrow} \stackrel{x=\frac{\log _n x}{\log _n a}}{\Longrightarrow} \frac{\log _2 n}{\log _2 4}=i \Longrightarrow \frac{\log n}{2 \log 2}=i\\ \Longrightarrow i=\frac{\log n}{2}\end{align}$$
  > Visto che l'altezza dell'albero è $h = \frac{1}{2}\log(n)$, il numero delle foglie sarà il numero dei figli elevato all'altezza dell'albero. 
@@ -90,7 +91,7 @@ T(n)=\sqrt{n}+c n^2 \Theta\left(n^2\right)$$
 
 ---
 
->[!example] # Secondo esempio sulle equazioni di ricorrenza
+>[!example]- # Secondo esempio sulle equazioni di ricorrenza
 > $$T(n)\left\{\begin{array}{l}
 1 \text { se } n \leq 2 \\
 3 T(\sqrt{n})+1 \text { se n }>2
@@ -106,7 +107,7 @@ T(n)=\sqrt{n}+c n^2 \Theta\left(n^2\right)$$
 | $2$     | $n^{\frac{1}{2^{2}}}$ | $1$                      | $3^{2}$                |
 | $3$     | $n^{\frac{1}{2^{3}}}$ | $1$                      | $3^{3}$                | 
 
->[!example] # Secondo esempio sulle equazioni di ricorrenza
+>[!example]- # Secondo esempio sulle equazioni di ricorrenza
 > Dunque, il contributo per il livello $i$ è $3^{i}$, mentre il suo input è $\frac{1}{2^{i}}$.
 > Andiamo quindi a calcolare l'altezza dell'albero confrontandolo con il massimo input per cui è verificato il caso base (quindi sarà il contributo del caso base per la dimensione del massimo input $1 \cdot 2$):
 > $$(n)^{\frac{1}{2^i}}=2 \Longrightarrow \log (n)^{\frac{1}{2^i}} \Longrightarrow \frac{1}{2^i} \log n=1 \Longrightarrow \log n=2^i \Longrightarrow \log (\log n)=i$$
@@ -119,7 +120,7 @@ T(n)=(\log n)^{\log 3}+\sum_{i=0}^{\log (\log n)-1} 3^i=(\log n)^{\log 3}+\frac{
 
 ---
 
->[!example] # Terzo esempio sulle equazioni di ricorrenza
+>[!example]- # Terzo esempio sulle equazioni di ricorrenza
 > Prendiamo la seguente equazione di ricorrenza che ha $f_{1}= \frac{n}{2}$ e $f_{2}=\frac{n}{3}$:
 > $$T(n)=\left\{\begin{array}{l}
 1 \text { se } n \leq 1 \\
@@ -135,7 +136,7 @@ T\left(\frac{n}{2}\right)+T\left(\frac{n}{3}\right)+n \text { se } n>1
 | Livello $2$ | $\frac{n}{4}+ \frac{n}{6} + \frac{n}{6} \frac{+n}{9} = \frac{25}{36}n$ |
 | Livello $3$ | $\frac{n}{8} + \frac{3}{12}n + \frac{3}{18}n + \frac{n}{28} = \frac{5^{3}}{6^{3}}n$                                                                       |
 
->[!example] # Terzo esempio sulle equazioni di ricorrenza
+>[!example]- # Terzo esempio sulle equazioni di ricorrenza
 > Come si può notare anche dalla forma approssimata dell'albero, è evidente che ci saranno dei rami (sequenze discendenti di nodi) di questo arrivano che arrivano prima alle foglie e percorsi che arrivano dopo. Nello specifico il ramo più a sinistra decresce più lentamente del ramo più a destra $\rightarrow$ Al livello $3$ infatti avremo input di $\frac{n}{8}$ per primo e $\frac{n}{27}$ per secondo.
 > Dall'associazione del contributo totale di ogni livello (sommando il contributo di ogni nodo) possiamo trarre che per un livello $i$ avremo $\left(\frac{5}{6}\right)^{i}n$ come termine genrale
 > A questo punto non possiamo procedere come negli esempi precedenti $\rightarrow$ È importante notare che la relazione calcolata precedentemente vale solo per i livelli **pieni**, ovvero quei livelli che hanno il numero massimo di nodi possibile.
@@ -157,7 +158,7 @@ T^{i i}(n) \sum_{i=0}^{\log n}\left(\frac{5}{6}\right)^i n=n \sum_{i=0}^{\log n}
 
 ---
 
->[!example] # Quarto esempio sulle equazioni di ricorrenza
+>[!example]- # Quarto esempio sulle equazioni di ricorrenza
 > $$
 T(n)=\left\{\begin{array}{l}
 1 \text { se } n \leq 1 \\
@@ -175,7 +176,7 @@ T\left(\frac{n}{2}\right)+T\left(\frac{n}{3}\right)+n \text { se } n>1
 | $\dots$ | $\dots$                         |
 | $i$     | $\left(\frac{4}{3}\right)^{i}n$ | 
 
->[!example] # Quarto esempio sulle equazioni di ricorrenza
+>[!example]- # Quarto esempio sulle equazioni di ricorrenza
 > Anche se questo albero di ricorrenza ha una diversa struttura rispetto l'esempio precedente, i problemi sono gli stessi, e quindi anche il modo per risolverli:
 > L'altezza dell'albero pieno che farà da limite inferiore asintotico sarà quello con percorso più breve, dunque
 > $$n=3^h \rightarrow h=\log _3 n$$
@@ -190,28 +191,48 @@ T\left(\frac{n}{2}\right)+T\left(\frac{n}{3}\right)+n \text { se } n>1
 > Per quanto siano molto vicine queste funzioni hanno **esponente diverso**$\rightarrow$ Per tanto la relazione:
 > $$T^{\prime}(n) \leq T(n) \leq T^{\prime \prime}(n)$$
 > Possiamo soltanto dire che $T(n)=\Omega\left(n^{\log \left(\frac{4}{3}+1\right)}\right)$ e $T(n)=O\left(n^{\log \left(\frac{4}{3}+1\right)}\right)$(nulla di più).
-## Risoluzioni
+# Validare equazioni di ricorrenza
+[[Quick sort]]
+Dimostriamo che $T_{M}(n) = O(n)$ così da confermare $T_{M}(n) = \Theta(n \log(n))$; bisogna verificare (utilizzando l'induzione) che 
 ### Sostituzione
-Nel ***metodo di sostituzione***, ipotizziamo un limite e poi usiamo l'induzione matematica per dimostrare che la nostra ipotesi sia corretta
-#### Esempio
-### Albero delle ricorrenze
-Il ***metodo dell'albero delle ricorrenze o albero di [[ricorsione]]*** converte la ricorrenza in un albero i cui nodi rappresentano i costi ai vari livelli della ricorsione; per risolvere la ricorrenza, adotteremo delle tecniche che limitano le sommatorie.
->[!tip] 
-> Di solito, in questo caso, è buona norma andare a disegnare l'albero delle ricorrenze fino ad un livello che ci permetta di interpretare l'andamento
+Nel ***metodo di sostituzione***, ipotizziamo un limite e poi usiamo l'induzione matematica per dimostrare che la nostra ipotesi sia corretta $$
+\exists c, n_0>0: \forall n \geq n_0, T_M(n) \leq c(n \log n)$$
+Il caso induttivo sarà evidentemente valido per $n\geq 2$, essendo il caso $n=1$ non verificato; visto che $\log(1) = 0$ risulta che $T_{M}\leq 0$(ciò è assurdo), e di conseguenza il caso base è $n=2$.
+Grazie al fatto che $1 \leq q \leq n-1$ possiamo scrivere $T_{M}(q) \leq c(q\log(q))$ (questa sarà la nostre ipotesi induttiva); per transitività risulta:$$
+T_M(n)=\Theta(n)+\frac{2}{n} \sum_{q=1}^{n-1} T_M(q) \leq \Theta(n)+\frac{2}{n} \sum_{q=1}^{n-1} c(q \log q)$$
+Assumiamo per il momento che sia vera la seguente proprietà (che andremo a dimostrare successivamente):$$\sum_{q=1}^{n-1}(q \log q) \leq \frac{n^2 \log n}{2}-\frac{n^2}{8}$$
+Da ciò segue:$$T_M(n) \leq \Theta(n)+\frac{2 c}{n} \sum_{q=1}^{n-1}(q \log q) \leq \Theta(n)+\frac{2 c}{n}\left(\frac{n^2 \log n}{2}-\frac{n^2}{8}\right)=\Theta(n)+c(n \log n)-\frac{c n}{4}$$
+A questo punto se dimostriamo che $\Theta(n) - \frac{cn}{4} \leq 0$ allora risulterà (dopo la verifica del caso base) che $T_{M}(n) \leq c(n\log(n))$
+Sappiamo che $\Theta(n)$ è assimilabile ad un $kn$, allora risulta che $kn \leq \frac{cn}{4}$
 
-Quando si risolve un'equazione di ricorrenza con albero delle ricorrenza, vanno tenute a mente le seguenti informazioni:
-1. Numero del livello
-2. Input
-3. Contributo ad ogni livello
-4. Numero di rami
-5. Totale
-Ad ogni passo quindi:
-- Sostituiamo l'input 
-- Verifichiamo il contributo dei nodi
-- Calcoliamo il numero di rami ad ogni chiamata ricorsiva
-- Calcoliamo il totale moltiplicando il contributo dei nodi per il numero di rami
+La costante $k$ è fissata della relazione $Theta$, ma la costante $c$ può essere scelta arbitrariamente. Basta scegliere pertanto $c \geq 4k$ per concludere che:$$T_M(n)=O(n \log n) \text { per } n \geq 2$$
+### Validazione per il caso base $b=2$
+$$
+T_M(2)=\Theta(1)+\frac{2}{2} \sum_{q=1}^2 T_M q=\Theta(1)+T_M(1)=\underbrace{\Theta(1)}_{\begin{array}{c}
+\text { costo di } \\
+\text { partiziona }
+\end{array}}+\underbrace{\Theta(1)}_{\begin{array}{c}
+\text { cel'equazione dise } \\
+\text { cricorrenza }
+\end{array}}=k+a$$
+Per $c \geq k +a$ anche il caso base è verificato.
 
-### Metodo dell'esperto
-Il ***metodo dell'esperto*** fornisce i limiti per ricorrenze nella forma $$T(n)=a\;T(n/b)+f(n)$$
-dove $a\geq 1, b > 1$ e $f(n)$ è una funzione data.
-#### Esempio
+Se scelgo un $c= max\{k+a, 4k\}$ vale sia il caso base che quello induttivo e quindi risulta dimostrata nella nostra tesi $T_{M}(n) = O(n\log(n))$, da cui per il teorema secondo il quale un algoritmo di ordinamento non può essere meno di $n\log(n)$, segue:$$T_{M}(n) = \Theta(n\log(n))$$
+### Maggiorazione di una sommatoria
+$$\sum_{q=1}^{n-1}(q \log q) \leq \frac{n^2 \log n}{2}-\frac{n^2}{8}$$
+
+Dimostriamo la precedente assunzione, il modo più semplice per maggiorare $\sum\limits_{q=1}^{n-1}$ è sfruttare il fatto che $q < n$(ricavato da $1 \leq q \leq n-1$) e quindi $\log(n) \Longrightarrow q \log(q ) \leq q \log(n)$, dunque:$$\sum_{q=1}^{n-1}(q \log q) \leq \sum_{q=1}^{n-1}(q \log n)=\log n \sum_{q=1}^{n-1} q=\log n \cdot \frac{n(n-1)}{2}=\frac{n^2 \log n}{2}=\frac{n \log n}{2}$$
+Tuttavia $frac{n\log\n}{2} \leq \frac{n^{2}{8}}\rightarrow$ Significa che la nostra maggioranza è stata eccessiva. Quello che possiamo fare è spezzare la sommatoria in due parti così da fare approssimazioni più precise:$$
+\begin{aligned}
+& \sum_{q=1}^{n-1}=\underbrace{\sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1}(q \log q)}_{q \leq\left\lceil\frac{n}{2}\right\rceil}+\underbrace{\sum_{q=\left\lceil\frac{n}{2}\right\rceil}^{n-1}(q \log q)}_{\text {approssimiamo }} \leq \sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1}\left(q \log \frac{n}{2}\right)+\sum_{q=\left\lceil\frac{n}{2}\right\rceil}^{n-1}(q \log q)= \\
+& =\log \frac{n}{2} \sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1} q+\log n \sum_{q=\left\lceil\frac{n}{2}\right\rceil}^{n-1} q=(\log n-1) \sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1} q+\log n \sum_{q=\left\lceil\frac{n}{2}\right\rceil}^{n-1} q= \\
+& =\underbrace{\log n \sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1} q+\log n \sum_{q=\left\lceil\frac{n}{2}\right\rceil}^{n-1} q}_{\text{uniamo le due sommatorie}}-\sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1} q=\log n \sum_{q=1}^{n-1} q-\sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1} q \\
+\end{aligned}$$
+Ora $\log(n)\sum\limits_{q=1}^{n-1}(q)$ l'abbiamo già risolta; visto che stiamo maggiorando non c'è problema a sottrarre qualcosa di più piccolo e quindi sfruttiamo il fatto che $\lceil \frac{n}{2} \rceil \geq \frac{n}{2}$
+$$
+\begin{aligned}
+\sum_{q=1}^{n-1} \leq\left(\frac{n^2 \log n}{2}-\frac{n \log n}{2}\right)-\sum_{q=1}^{\frac{n}{2}-1} q & =\frac{n^2 \log n}{2}-\frac{n \log n}{2}-\frac{\frac{n}{2}\left(\frac{n}{2}+1\right)}{2}= \\
+& =\frac{n^2 \log n}{2}-\frac{n \log n}{2}-\frac{n^2}{8}+\frac{n}{4} \leq \frac{n^2 \log n}{2}-\frac{n^2}{8}
+\end{aligned}$$
+
+Poiché $\frac{n\log(n)}{2} \geq \frac{n}{4}$ e quindi $\frac{n}{4} - \frac{n\log(n)}{2} \leq 0$, togliendo un valore negativo la maggioranza resta valida.

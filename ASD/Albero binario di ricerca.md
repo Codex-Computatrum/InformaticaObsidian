@@ -4,6 +4,11 @@ tags:
   - definition
   - dataStructure/abr
   - to-do/implementation
+aliases:
+  - bst
+  - BST
+  - abr
+  - ABR
 ---
 >[!todo] 
 >- [ ] Implementazione in C

@@ -31,6 +31,7 @@ def BFV(x, F, a):
 		until(isEmpty(Q))
 	return a
 ```
+^BFV
 
 - $Q$ è la coda, struttura d'appoggio
 - $Enqueue$ inserisce la radice $x$ in $EmptyQueue$ 

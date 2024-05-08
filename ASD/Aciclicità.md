@@ -7,33 +7,36 @@ tags:
   - to-do/implementation
 ---
 [[Algoritmo]] che determina se un [[grafo]] è ***aciclico*** (non ha [[Cycle|cicli]])
-
+	
 ```python
 def Acyclic(G):
-	c = Init(G)
+	color = Init(G)
 	for v in V:
-		if c(v) == bn:
-			acyclic = DFSAcyclicc(G, v)
+		if color(v) == bn:
+			acyclic = DFSAcyclic(G, v, color)
 			if !acyclic:
 				return False
 	return True
 ```
+^acyclic
 
 ```python
-def DFSAciclic(G,v):
-	c(v) = gr
+def DFSAciclic(G, v, color):
+	color(v) = gr
 	for w in Adj[v]:
-		if c(w) = bn:
-			acyclic = DFSAciclic(G,v)
+		if color(w) = bn:
+			acyclic = DFSAciclic(G,v, c)
 			if !aciclic:
 				c(v) = nr
 				return False
-		else if c(v) = gr:
+		else if c(w) = gr:
 			return False
-	c(v) = nr
+	color(v) = nr
 	return True				
 			
 ```
+^dfs-acyclic
+
 ### La struttura è identica ad una $\textbf{DFS}$.
 - Inizializza il colore di tutti i vertici a **bianco**.  
 - Controlla ogni vertice non scoperto (**bianco**) del grafo, se solo uno di questi trova un **ciclo**, il grafo non è **aciclico** e restituisce `FALSE`.

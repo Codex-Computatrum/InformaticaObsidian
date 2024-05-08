@@ -2,6 +2,7 @@
 tags:
   - definition
   - dataStructure
+  - graph
 ---
 Ci sono due modi per rappresentare un [[Graph|grafo]] in un computer:
 - come una collezione di ***lista d'adiacenza***

@@ -17,9 +17,9 @@ Solo che nel caso dello stack, le funzioni di $Insert$ e $Delete$ si chiamano ri
 | $Push(D):S$         | Inserisce in testa nello $Stack$ e restituisce il nuovo                             |
 | $Pop():S$           | Rimuove dallo $Stack$ e restituisce il nuovo                                        |
 | $Top():S$           | Restituisce la testa dello stack                                                    |
-| $Pop\&Top(): (S,D)$ | Restituisce la testa e il nuovo $Stack$, ed elimina la testa                        |
+| $Top\&Pop(): (S,D)$ | Restituisce la testa e il nuovo $Stack$, ed elimina la testa                        |
 
 ## Implementazione in C
 ```C
-
+// da implementare
 ```

@@ -15,28 +15,32 @@ def HeapSort(A, n):
 		Swap(A, 0, i)   # il max sta in A[0] perchè è un heap
 		Heapify(A, i, 0)
 ```
+^HeapSort
 
 ```python
 def BuildHeap(A, n):
 	for i = (n/2)-1 in range (0)
 		Heapify(A, n, i)
 ```
+^BuildHeap
 
 ```python
 def Heapify(A, n, i):
+	# Definiamo il figli della radice
 	max = i
-	l = L(i)   # L(i) = 2i + 1   indice del figlio sinistro
-	r = R(i)   # R(i) = 2i + 1   indice del figlio destro
-	if (l < n) and (A[max] < A[l]):
-		max = l
-	if (r < n) and (A[max] < A[r]):
-		max = r
-	if(max != i):
+	l = 2i + 1
+	r = 2i + 2
+	if l < n && A[i] < A[l]:
+	   max = l
+	if r < n && A[max] < A[r]:
+	   max = r
+	if max != i:
 		Swap(A, max, i)
 		Heapify(A, n, max)
 ```
+^Heapify
 
-Un [[array]] è già rappresentato in memoria come un [[Tree|albero]] quindi è possibile passare da una [[Struttura dati|struttura]] all'altra.
+Un [[Ricerca binaria]] è già rappresentato in memoria come un [[Tree|albero]] quindi è possibile passare da una [[Struttura dati|struttura]] all'altra.
 
 ---
 - Come prima cosa viene eseguito _BuildHeap_, che trasforma la sequenza in input in [[Proprietà Heap#^fd5f61|max-heap]]. 
@@ -81,7 +85,14 @@ _Heapify_ viene chiamata $n − 1$ volte nel for:
 $$\sum^{n-1}_{i=1}\log(i)= \log{(\prod^{n-1}_{i}i)}= \log((n-1)!)$$ applichiamo l'[approssimazione di stirling](https://it.wikipedia.org/wiki/Approssimazione_di_Stirling)
 $$=\log(\sqrt{2\pi n }(\frac{n}{e})^{n})= \log(\sqrt{2\pi}(\sqrt{n})(\frac{n^{n}}{e^{n}}))= \log(\sqrt{2\pi}) + \frac{1}{2}\log(n)+n\log(n)- n\log(e)$$
 #### Funzione BuildHeap
-![[Pasted image 20230828192202.png]]
+Il costo di Heapify ad ogni iterazione nel for è di $\frac{n}{2^{i+1}} \cdot i$, avrò quindi:
+$$
+\sum_{i=1}^k\left[\frac{n}{2^{i+1}} \cdot i\right]=\sum_{i=1}^k\left[\frac{n}{2^{i-1} 2^2} \cdot i\right]=\frac{n}{4}\sum_{i=1}^k\left[i \cdot \frac{1}{2^{i-1}}\right]=\frac{n}{4} \sum_{i=1}^k\left[i \cdot\left(\frac{1}{2}\right)^{i-1}\right]=\frac{n}{4} \sum_{i=1}^k\left[i \cdot x^{i-1}\right]_{x=\frac{1}{2}}$$
+
+Possiamo riscrivere $i \cdot x^{i-1}$ come la derivata di $x^i \quad \frac{d}{d x} x^i=i \cdot x^{i-1}$
+$=\left[\frac{n}{4} \sum_{i=1}^k \frac{d}{d x} x^i\right]_{x=\frac{1}{2}}=\left[\frac{n}{4} \frac{d}{d x} \sum_{i=1}^k x^i\right]_{x=\frac{1}{2}} \quad$ approssimo alla serie geometrica
+$=\left[\frac{n}{4} \frac{d}{d x} \sum_{i=1}^{\infty} x^i\right]_{x=\frac{1}{2}}=\left[\frac{n}{4} \frac{d}{d x} \frac{1}{1-x}\right]_{x=\frac{1}{2}}=\left[\frac{n}{4} \frac{1}{(1-x)^2}\right]_{x=\frac{1}{2}}=\frac{n}{4} \cdot 4=n$
+
 >[!Importante] 
 >Il costo dell’intero algoritmo sarà quindi $O(n \log(n))$
 

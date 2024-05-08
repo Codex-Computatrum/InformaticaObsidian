@@ -4,6 +4,7 @@ tags:
   - definition
   - operation/graph
   - theorem
+  - graph
 ---
 Un ***ordinamento topologico*** di un $\textbf{DAG}$ ($\textbf{Directed Acyclic Graph}$) è un ordinamento lineare di tutti i suoi vertici tale che se $\textbf{G}$ contiene un arco $(v, w)$, allora $v$ appare prima di $w$ nell’ordinamento.
 
@@ -64,11 +65,12 @@ def TopologicalOrdering(G):
 		(Q, v) = HeadAndDequeue(Q)
 		for w in Adj[v]:
 			ge(w) = ge(w) - 1
-			if ge(w) = 0:
+			if ge(w) == 0:
 				Q = Enqueue(Q, w)
 		π = Append(π, v)
 	return π	
 ```
+^Topological-Ordering
 
 - In coda entrano solo i nodi senza archi entranti.
 - Estraggo il nodo $v$ in coda e diminuisco il grado entrante di tutti i suoi adiacenti.
@@ -84,6 +86,7 @@ def EnteringDegree(G):
 			ge(w) = ge(w) + 1
 	return ge
 ```
+^Entering-Degree
 
 - Imposta prima tutti i gradi a $0$.
 - Successivamente se un nodo $w$ è adiacente di un altro nodo $v$, allora $w$ ha l’arco entrante $(v, w)$ quindi il grado di $w$ aumenta di $1$
@@ -91,10 +94,11 @@ def EnteringDegree(G):
 ```python
 def InitQueue(G, ge):
 	for v in V:
-		if ge(v) = 0:
+		if ge(v) == 0:
 			Q = Enqueue(Q, v)
 	return Q
 ```
+^Init-Queue-OT
 
 - Inserisce in coda solo i nodi che non hanno archi entranti.
 ---
@@ -112,6 +116,7 @@ def TopologicalOrdering(G):
 			S = DFSTopologicalOrdering(G, S, v, c)
 	return S
 ```
+^TopologicalOrdering-Depth
 
 ```python
 def DFSTopologicalOrdering(G, S, v, c):
@@ -122,3 +127,5 @@ def DFSTopologicalOrdering(G, S, v, c):
 	(c(v), S) = (nr, Push(S,v))
 	return S
 ```
+^DFS-TopologicalOrdering
+

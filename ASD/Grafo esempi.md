@@ -2,6 +2,7 @@
 author: Lorenzo Tecchia
 tags:
   - example
+  - graph
 ---
 ## Esempio generale
 ![[appuntiIngenito.pdf#page=56]]

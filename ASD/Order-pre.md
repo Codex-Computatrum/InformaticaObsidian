@@ -18,6 +18,7 @@ def DFVPre(X, F, a):
 		a = DFVPre(x.dx, F, a)
 	return a
 ```
+^DFV-PreOrder
 
 - $x$ è il nodo della radice di un albero (quindi anche i sotto-alberi)
 - $F$ è una funzione che restituisce un valore $F: D \times A \rightarrow A$

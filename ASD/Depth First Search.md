@@ -1,9 +1,13 @@
 ---
 tags:
   - definition
-  - operation/graph
   - to-do/implementation
+  - algorithm/graph/search
+  - graph
 author: Lorenzo Tecchia
+aliases:
+  - DFS
+  - dfs
 ---
 ![[Pasted image 20230908170349.png]]
 - Inizialmente tutti i nodi vengono colorati di **bianco**.
@@ -20,6 +24,7 @@ author: Lorenzo Tecchia
 - Anche $b$ ha terminato e viene colorato di **nero**.
 - Non essendoci più nodi da visitare, l’[[algoritmo]] termina.
 ## Funzionamento dell'algoritmo
+
 ```python
 def DFS(G):
 	(c,p) = Init(G)
@@ -29,10 +34,12 @@ def DFS(G):
 			(c, p, d, f, t) = DFSVisit(G, v, c, p ,d, f, t)
 	return (c, p, d, f)
 ```
+^DFS
 
 - La funzione $\textbf{DFS}$ esegue la visita su tutti i nodi bianchi del [[grafo]].
 - La funzione di visita $\textbf{DFSVisit}$ partirà da un certo nodo e scorrerà fino in fondo, colorando i nodi che incontra.
 - Di conseguenza, il $for each$ in $\textbf{DFS}$ non visiterà nuovamente i nodi già visitati da qualche altro nodo durante la visita $\textbf{DFSVisit}$
+ 
 ```python
 def DFSVisit(G, v, c, p, d, f, t):
 	(c(v), d(v), t) = (gr, t, t+1)
@@ -43,6 +50,7 @@ def DFSVisit(G, v, c, p, d, f, t):
 	(c(v), f(v), t) = (nr, t, t+1)
 	return (c, p, d, f, t)
 ```
+^DFS-Visit
 
 - La funzione $\textbf{DFSVisit}$ esegue la vera e propria visita.
 - Dato un nodo, $\textbf{DFSVisit}$ ha il compito di scendere, e quindi effettuare la visita, fin tanto che può; ossia finché arriva ad un nodo che non ha archi uscenti.

@@ -36,11 +36,13 @@ def Successor(x, d):
 			else
 				return s
 ```
+^SuccessorABR-Iterative
+
 ### Versione ricorsiva
 
 ```python
 def Successor(x, d, s):
-	if x = NULL:
+	if x == NULL:
 		return s
 	else
 		 if d >= x.dato:
@@ -48,6 +50,7 @@ def Successor(x, d, s):
 		else
 			return Successor(x.sx, d, x)
 ```
+^SuccessorABR-Recursive
 
 Viene passata la stima $s$ come parametro la quale verrà aggiornata solo se si scende a sinistra.  
 Nella prima chiamata sarà $\bot$ 

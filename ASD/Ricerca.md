@@ -11,7 +11,7 @@ Dato un puntatore alla radice e un dato, $Search$ ***restituisce il puntatore al
 def Search(x, d):
 	if x = NULL:
 		return NULL
-	else
+	else:
 		if d > x.dato:
 			return Search(x.dx, d)
 		else if d < x.dato:
@@ -19,6 +19,7 @@ def Search(x, d):
 		else
 			return x
 ```
+^Ricerca-ABR
 
 - Se il nodo attuale è `NULL`
 	- allora non ho trovato l’elemento e restituisco `NULL`.  

@@ -4,6 +4,9 @@ tags:
   - definition
   - to-do
   - dataStructure/abr
+aliases:
+  - PBT
+  - pbt
 ---
 >[!note] 
 >APB: Albero Perfettamente Bilanciato oppure PBT: Perfect Balanced Tree

@@ -4,6 +4,9 @@ tags:
   - definition
   - dataStructure/abr
   - to-do/implementation
+aliases:
+  - avl
+  - AVL
 ---
 Gli ***AVL*** sono [[Albero binario di ricerca|alberi binari di ricerca]] auto bilancianti. Per cui le proprietà:
 - $\forall x \in T, \lvert h(T_{x.sx})- h(T_{x.dx})\rvert \leq 1$ dove $T$ è l'albero, ossia l'[[altezza]] dei sotto alberi differisce al più di uno. 
@@ -81,21 +84,24 @@ Riparare, e quindi mantenere, la struttura di **AVL** dopo un inserimento, ha te
 
 ```python
 def L-R-Rotation(x):
-	y = x.sx
-	x.sx = y.dx # 1
-	y.dx = x    # 2
+	y = x -> sx
+	x -> sx = y -> dx # 1
+	y -> dx = x    # 2
 	return y  
 	 
 ```
+^L-R-Rotation
+
 ![[Pasted image 20231117124137.png|400]]
 ```python
 def R-L-Rotation(x):
-	y = x.dx
-	x.dx = y.sx # 1
-	y.sx = x    # 2
+	y = x -> dx
+	x -> dx = y -> sx # 1
+	y -> sx = x		  # 2
 	return y
 	
 ```
+^R-L-Rotation
 
 ![[Pasted image 20231117124320.png|400]]
 
@@ -118,16 +124,19 @@ def R-L-Rotation(x):
 def HgtAVL(x):
 	return (x = False ? -1 : x.ht)
 ```
+^HgtAVL
+
 - Essendo un semplice $if$ la funzione ha tempo costante $\Theta(1)$
 - ---
 - Aggiorna l’altezza dell’**AVL** con radice in $x$ (utilizzata dopo una rotazione)
 ```python
 def UpdateHgtAVL(x):
-	hl = HgtAVL(x.sx) # Prendo l'altezza del figlio sinistro
-	hr = HgtAVL(x.dx) # Prendo l'altezza del figlio destro
-	x.ht = max{hl, hr}
+	hl = HgtAVL(x -> sx) # Prendo l'altezza del figlio sinistro
+	hr = HgtAVL(x -> dx) # Prendo l'altezza del figlio destro
+	x -> ht = max{hl, hr}
 	
 ```
+^UpdateHgtAVL
 
 - Aggiorno l’altezza dell’albero radicato in $x$ con il massimo fra le altezze dei due figli
 - Tutte e tre le istruzioni sono chiamate a funzioni a tempo costante, quindi l’intera funzione è costante $\Theta(1)$ 
@@ -139,19 +148,21 @@ def L-R-AVLRotation(x):
 	UpdateHgtAVL(x)
 	UpdateHgtAVL(y)
 	return y
-	
 ```
+^L-R-AVLRotation
+
 - La rotazione su un **AVL** ha bisogno successivamente di aggiustare le altezze. Questa funzione racchiude le tre funzioni per fare ciò.
 - Dopo la rotazione, $x$ si trova ”più in basso” di $y$ , logicamente è importante che venga aggiornata prima la sua di altezza e poi quella di $y$
 - Essendo tutte le funzioni chiamate $\Theta(1)$, il costo totale sarà costante $\Theta(1)$
 ---
 
 ```python
-def L-D-AVLRotation(x):
-	x.sx = R-L-AVLRotation(x.sx)
-	return L-R-AVLRotation(x)
+def L-D-AVLRotation(T):
+	T -> sx = R-L-AVLRotation(T -> sx)
+	return L-R-AVLRotation(T)
 	
 ```
+^L-D-AVLRotation
 
 - Funzione che effettua la doppia rotazione al figlio sinistro (**Left-Double**)
 - Farà quindi prima una $\textbf{R-L Rotation}$ e poi una $\textbf{L-R rotation}$. Speculare sarà per $\textbf{R-D-AVLRotation}$
@@ -159,17 +170,18 @@ def L-D-AVLRotation(x):
 ---
 
 ```python
-def LBalanceAVL(x):
-	if HgtAVL(x.sx) - HgtAVL(x.dx) = 2:
-		if HgtAVL(x.sx.dx) < HgtAVL(x.sx.sx):
-			x = L-R-AVLRotation(x)
+def L-BalanceAVL(T):
+	if HgtAVL(T ->sx) - HgtAVL(T -> dx) == 2:
+		if HgtAVL(T -> sx -> dx) < HgtAVL(T -> sx -> sx):
+			T = L-R-AVLRotation(T)
 		else
-			x = L-D-AVLRotation(x)
+			T = L-D-AVLRotation(T)
 	else
-		UpdateHgtAVL(x)
-	return x	
-
+		UpdateHgtAVL(T)
+	return T	
 ```
+^L-Balance
+
 - Bilancia l’albero radicato in $x$ (input) nel caso in $h(x.sx) = h(x.dx) + 2$, ovvero l’altezza del sotto-albero sinistro è più $2$ del destro.
 - Speculare l’algoritmo $\textbf{RBalanceAVL}$ nel caso in cui sia il sotto-albero destro ad essere più alto di $2$.
 - Ad esempio, è importante chiamare questa funzione dopo un inserimento o una cancellazione.
@@ -178,67 +190,73 @@ def LBalanceAVL(x):
 ### Inserimento e cancellazione
 
 ```python
-def AVLInsert(x, d):
-	if x = False:
-		return BuildNodeAVL(d)
-	else
-		if d < x.dato:
-			x.sx = AVLInsert(x.sx, d)
-			x = LBalanceAVL(x)
-		else if d > x.dato:
-			x.dx = AVLInsert(x.dx, d)
-			x = RBalanceAVL(x)
-	return x
-	
+def AVLInsert(T, k):
+	if T != NULL:
+		if T -> key > k:
+			T -> sx = AVLInsert(T -> sx, k)
+			T = L-Balance(T)
+		if T -> key < k:
+			T -> dx = AVLInsert(T -> dx, k)
+			T = R-Balance(T)
+	else:
+		T = BuildNodeAVL()
+		T -> key = k
+		T -> sx = T -> dx = NULL
+		T -> h = 0
+	return T
 ```
+^AVLInsert
+
 - Simile all’inserimento in un **BST** ma con la differenza che bisogna bilanciare l’albero.
 - Se inserisco a sinistra, rendo potenzialmente il sotto-albero sinistro più profondo del destro, effettuo quindi un $\textbf{LeftBalanceAVL}$.
 - Discorso speculare se inserisco destra.
 ---
 
 ```python
-def AVLDelete(x, d):
-	if x != NULL:
-		if d < x.dato:
-			x.sx = AVLDelete(x.sx, d)
-			x = RBalanceAVL(x)
-		else if d > x.dato:
-			x.dx = AVLDelete(x.dx, d)
-			x = LBalanceAVL(x)
+def AVLDelete(T, k):
+	if T != NULL:
+		if T -> key > k:
+			T -> sx = AVLDelete(T -> sx, k)
+			T = R-BalanceAVL(T)
+		else if T -> key < k:
+			T -> dx = AVLDelete(T -> dx, k)
+			T = L-BalanceAVL(T)
 		else
-			x = DeleteNodeAVL(x)
-	return x
-
+			T = deleteNodeAVL(T)
+	return T
 ```
+^AVLDelete
+
 - Simile alla cancellazione in un BST ma con la differenza che bisogna bilanciare l’albero.
 - Se cancello a destra, rendo potenzialmente il sotto-albero destro più basso (o meno alto) e di conseguenza rendo il sinistro più profondo, effettuo quindi un $\textbf{LeftBalanceAVL}$.
 - Discorso speculare se cancello sinistra.
 ---
 
 ```python
-def DeleteNodeAVL(x):
-	if x.sx = NULL:
-		x = SkipRight(x)
-	else if x.dx = NULL:
-		x = SkipLeft(x)
+def DeleteNodeAVL(T):
+	if T -> sx = NULL:
+		T = SkipRight(T)
+	else if T -> dx = NULL:
+		T = SkipLeft(T)
 	else
-		x.dato = GetDeleteMinAVL(x.dx, x)
-		x = LBalanceAVL(x)
-	return x
+		T -> key = GetDeleteMinAVL(T -> dx, x)
+		T = L-BalanceAVL(T)
+	return T
 ```
+^DeleteNodeAVL
 
 ```python
-def GetDeleteMinAVL(x, p):
-	if x.sx = NULL:
-		d = x.dato
-		y = SkipRight(x)
+def GetDeleteMinAVL(T, p):
+	if T -> sx == NULL:
+		d = T -> key
+		y = SkipRight(T)
 	else
-		d = GetDeleteMinAVL(x.sx, x)
-		y = RBalanceAVL(x)
-	SwapChild(p, x, y)
+		d = GetDeleteMinAVL(T -> sx, T)
+		y = R-BalanceAVL(T)
+	SwapChild(p, T, y)
 	return d
-			
 ```
+^GetDeleteMinAVL
 
 ---
 >[!todo] 
@@ -246,5 +264,4 @@ def GetDeleteMinAVL(x, p):
 
 ```C
 //da implementare
-
 ```

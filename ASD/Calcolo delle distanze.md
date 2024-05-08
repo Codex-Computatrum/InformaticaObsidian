@@ -4,6 +4,7 @@ tags:
   - algorithm
   - operation/graph
   - to-do/implementation
+  - graph
 ---
 ## Funzionamento
 ```python
@@ -18,6 +19,7 @@ def DistanceBFS(G, v)
 		c(v) = nr
 	return (c, d, p)
 ```
+^DistanceBFS
 
 ```python
 def Init(G):
@@ -25,6 +27,7 @@ def Init(G):
 		(c(v), d(v), p(v)) = (bn, ∞, NULL)
 	return (c, d, p)
 ```
+^Init-Distance
 
 - Imposta il colore di tutti i nodi del grafo a **bianco**
 -  Imposta le distanze a **infinito** 

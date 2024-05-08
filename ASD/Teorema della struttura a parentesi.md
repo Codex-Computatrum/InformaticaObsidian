@@ -5,6 +5,7 @@ tags:
   - operation/graph
   - to-do
   - theorem
+  - graph
 ---
 Una proprietà della visita in profondità è che i tempi di scoperta e di completamento di un vertice, hanno una struttura a parentesi.
 
