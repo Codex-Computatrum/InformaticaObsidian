@@ -81,6 +81,7 @@ try{
 Sia `catch` che `finally` sono opzionali, ma **almeno uno dei due deve essere inserito**, l’inserimento del solo `try` causerebbe un errore di compilazione.
 Se esiste un blocco `finally`, esso **deve apparire** per ultimo.
 ## Gerarchie
+
 ```plantuml
 exception Object
 exception Throwable
@@ -125,7 +126,7 @@ Una clausola `catch(E e)` cattura ogni oggetto-eccezione di **tipo** `E` **o suo
 Una `exception E` verrà catturata dal primo `catch` in grado di catturarla.
 Un `catch` non utilizzabile (ad esempio un `catch` di una classe padre seguito da un `catch` di una sua classe figlia) darà un errore di compilazione (non sarebbe mai raggiungibile).
 - Eventuali eccezioni lanciate da un `catch` non potranno essere catturate da altri blocchi catch dello stesso `try`.
-    - Se necessario, i `try` - `catch` possono essere annidati.
+- Se necessario, i `try` - `catch` possono essere annidati.
 È preferibile utilizzare <span style="color:#ffbe0a">diverse</span> `catch` che catturano <span style="color:#ffbe0a">diverse</span> `Exception` piuttosto che usarne una sola che le cattura tutte.
 ### Esempio
 La classe `IndexOutOfBoundsException` ha due sottoclassi: `ArrayIndexOutOfBoundsException` e `StringIndexOutOfBoundsException`, è possibile creare un `catch(IndexOutOfBoundsException e)` che potrà catturarle entrambe.

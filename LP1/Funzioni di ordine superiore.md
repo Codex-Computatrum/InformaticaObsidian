@@ -9,10 +9,10 @@ tags:
 
 Le più comuni sono 3:
 - **Filter**
-- **Map**
-- **Reduce**
 ![[Filter]]
+- **Map**
 ![[Map]]
+- **Reduce**
 ![[Reduce]]
 ## Funzioni anonime
 ![[Funzioni anonime]]

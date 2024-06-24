@@ -50,4 +50,16 @@ area 2.0; (*la funzione area ha catturato l'ambiente nel momento in cui è stata
 dichiarata, quindi vale ancora 12*)
 ```
 
-
+### Trafiletto mem-env
+| Descrizione           | c/c++/ | mem&env               |
+| --------------------- | ------ | --------------------- |
+| operando a sx         | $x=?$    | env(x)                |
+| operando a dx         | $?=y$    | mem(env(y))           |
+| puntatore a sx        | $*x=?$   | mem(env(x))           |
+| puntatore a dx        | $?=*y$   | mem(mem(env(y)))      |
+| doppio puntatore a sx | $**x=?$  | mem(mem(env(x)))      |
+| doppio puntatire a dc | $?=**y$  | mem(mem(mem(env(y)))) |
+| array a sx            | $x[z]=?$ | env(x) + z            |
+| array a dx            | $?=y[z]$ | mem(env(y)) + z       |
+| indirizzo-di a sx     | $\&x=?$   | not allowed           |
+| indirizzo-di a dx     | $?=\&y$   | env(y)                |

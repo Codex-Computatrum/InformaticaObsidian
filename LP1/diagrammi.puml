@@ -1,0 +1,24 @@
+@startuml
+exception Object
+exception Throwable
+exception Error 
+exception Exception
+exception RuntimeException
+exception  Error_SubClasses
+exception  RuntimeException_SubClasses
+exception  Exception_SubClasses
+
+'-----------------------------'
+
+Object <|-- Throwable
+
+Throwable <|-- Error
+Throwable <|-- Exception
+
+Exception <|-- RuntimeException
+Exception <|-- Exception_SubClasses
+
+RuntimeException <|-- RuntimeException_SubClasses
+
+Error <|-- Error_SubClasses
+@enduml
